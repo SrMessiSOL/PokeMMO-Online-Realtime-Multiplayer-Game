@@ -5,6 +5,7 @@ import OnlinePlayer from "./OnlinePlayer";
 import Player from "./Player";
 
 let cursors, socketKey;
+const SAVE_KEY = 'pokemmo-save-v1';
 
 export class Scene2 extends Phaser.Scene {
     constructor() {
@@ -20,6 +21,9 @@ export class Scene2 extends Phaser.Scene {
 
         // Set container
         this.container = [];
+
+        this.spawnPointName = data.spawnPointName || 'Spawn Point';
+        this.initialState = data.gameState || null;
     }
 
     create() {
@@ -128,6 +132,8 @@ export class Scene2 extends Phaser.Scene {
 
         this.map = this.make.tilemap({key: this.mapName});
 
+        this.bootstrapInteractionState();
+
         console.log("this.mapName",this.mapName);
         console.log("this.map",this.map);
 
@@ -153,7 +159,7 @@ export class Scene2 extends Phaser.Scene {
         this.aboveLayer.setDepth(10);
 
         // Get spawn point from tiled map
-        const spawnPoint = this.map.findObject("SpawnPoints", obj => obj.name === "Spawn Point");
+        const spawnPoint = this.resolveSpawnPoint();
 
         // Set player
         this.player = new Player({
@@ -172,7 +178,7 @@ export class Scene2 extends Phaser.Scene {
 
         // Help text that has a "fixed" position on the screen
         this.add
-            .text(16, 16, "Arrow keys to move\nPress \"D\" to show hitboxes", {
+            .text(16, 16, "Arrow keys to move\nSPACE/ENTER to interact\nPress \"D\" to show hitboxes", {
                 font: "18px monospace",
                 fill: "#000000",
                 padding: {x: 20, y: 10},
@@ -184,6 +190,8 @@ export class Scene2 extends Phaser.Scene {
         this.debugGraphics();
 
         this.movementTimer();
+
+        this.renderQuestLog();
     }
 
     update(time, delta) {
@@ -259,6 +267,167 @@ export class Scene2 extends Phaser.Scene {
             room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'back'}))
         } else if (Phaser.Input.Keyboard.JustUp(cursors.down) === true) {
             room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'front'}))
+        }
+    }
+
+    bootstrapInteractionState() {
+        const save = this.initialState || this.loadSaveState();
+        this.gameState = save || {
+            flags: {},
+            objectives: ['Find the Town Guide near the spawn point.'],
+            checkpoint: null,
+            party: ['Misa'],
+            lastMap: this.mapName,
+            lastSpawnPoint: this.spawnPointName
+        };
+        this.dialogueActive = false;
+        this.currentPromptText = '';
+
+        this.interactionPrompt = this.add.text(16, 390, '', {
+            font: '16px monospace',
+            fill: '#ffffff',
+            backgroundColor: '#000000',
+            padding: { x: 10, y: 6 }
+        }).setScrollFactor(0).setDepth(40).setVisible(false);
+
+        this.questLogText = this.add.text(16, 72, '', {
+            font: '14px monospace',
+            fill: '#ffffff',
+            backgroundColor: '#1a1a1a',
+            padding: { x: 8, y: 6 }
+        }).setScrollFactor(0).setDepth(40);
+    }
+
+    resolveSpawnPoint() {
+        const checkpoint = this.gameState.checkpoint;
+        if (checkpoint && checkpoint.map === this.mapName) {
+            const checkpointSpawn = this.map.findObject('SpawnPoints', (obj) => obj.name === checkpoint.spawnPointName);
+            if (checkpointSpawn) return checkpointSpawn;
+        }
+
+        return this.map.findObject('SpawnPoints', (obj) => obj.name === this.spawnPointName)
+            || this.map.findObject('SpawnPoints', (obj) => obj.name === 'Spawn Point');
+    }
+
+    setPrompt(message = '') {
+        this.currentPromptText = message;
+        this.interactionPrompt.setText(message);
+        this.interactionPrompt.setVisible(Boolean(message));
+    }
+
+    readProperty(obj, name, fallback = null) {
+        const prop = obj.properties && obj.properties.find((property) => property.name === name);
+        return prop ? prop.value : fallback;
+    }
+
+    isInsideObject(obj, x, y) {
+        return y >= obj.y && y <= (obj.y + obj.height) && x >= obj.x && x <= (obj.x + obj.width);
+    }
+
+    hasFlag(flag) {
+        return !flag || Boolean(this.gameState.flags[flag]);
+    }
+
+    setFlag(flag, value = true) {
+        if (!flag) return;
+        this.gameState.flags[flag] = value;
+        this.persistSaveState();
+    }
+
+    addObjective(objective) {
+        if (!objective || this.gameState.objectives.includes(objective)) return;
+        this.gameState.objectives.push(objective);
+        this.renderQuestLog();
+        this.persistSaveState();
+    }
+
+    completeObjective(objective) {
+        if (!objective) return;
+        this.gameState.objectives = this.gameState.objectives.filter((item) => item !== objective);
+        this.renderQuestLog();
+        this.persistSaveState();
+    }
+
+    renderQuestLog() {
+        const objectives = this.gameState.objectives.length
+            ? this.gameState.objectives.map((objective, idx) => `${idx + 1}. ${objective}`).join('\n')
+            : 'All current objectives completed.';
+        this.questLogText.setText(`Objectives:\n${objectives}`);
+    }
+
+    runNpcInteraction(npc) {
+        if (this.dialogueActive) return;
+        const requiresFlag = this.readProperty(npc, 'requiresFlag');
+        if (!this.hasFlag(requiresFlag)) {
+            this.setPrompt('They seem busy. Complete current objective first.');
+            return;
+        }
+
+        const dialogue = this.readProperty(npc, 'dialogue', '...');
+        const lines = dialogue.split('|');
+        this.dialogueActive = true;
+        this.setPrompt(lines[0]);
+        this.time.delayedCall(1800, () => {
+            const nextLine = lines[1] || lines[0];
+            this.setPrompt(nextLine);
+            const setFlag = this.readProperty(npc, 'setsFlag');
+            const addObjective = this.readProperty(npc, 'addObjective');
+            const completeObjective = this.readProperty(npc, 'completeObjective');
+            this.setFlag(setFlag);
+            this.addObjective(addObjective);
+            this.completeObjective(completeObjective);
+            this.dialogueActive = false;
+        });
+    }
+
+    runCheckpoint(checkpointObj) {
+        const spawnPointName = this.readProperty(checkpointObj, 'spawnPointName', this.spawnPointName);
+        this.gameState.checkpoint = {
+            map: this.mapName,
+            spawnPointName,
+            x: this.player.x,
+            y: this.player.y,
+            party: this.gameState.party
+        };
+        this.persistSaveState();
+        this.setPrompt('Checkpoint saved.');
+    }
+
+    transitionToMap(targetMap, targetSpawn, facing = 'front') {
+        if (!targetMap || !this.cache.tilemap.exists(targetMap)) {
+            this.setPrompt('This path is blocked.');
+            return;
+        }
+
+        this.gameState.lastMap = targetMap;
+        this.gameState.lastSpawnPoint = targetSpawn || 'Spawn Point';
+        this.persistSaveState();
+
+        room.then((room) => room.send('PLAYER_CHANGED_MAP', { map: targetMap }));
+        this.scene.registry.destroy();
+        this.scene.events.off();
+        this.scene.scene.restart({
+            map: targetMap,
+            spawnPointName: targetSpawn || 'Spawn Point',
+            playerTexturePosition: facing,
+            gameState: this.gameState
+        });
+    }
+
+    loadSaveState() {
+        try {
+            const raw = window.localStorage.getItem(SAVE_KEY);
+            return raw ? JSON.parse(raw) : null;
+        } catch (err) {
+            return null;
+        }
+    }
+
+    persistSaveState() {
+        try {
+            window.localStorage.setItem(SAVE_KEY, JSON.stringify(this.gameState));
+        } catch (err) {
+            // no-op
         }
     }
 

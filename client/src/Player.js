@@ -1,6 +1,4 @@
 import Phaser from "phaser";
-import { room } from './SocketServer';
-
 
 export default class Player extends Phaser.GameObjects.Sprite {
     constructor(config) {
@@ -35,8 +33,9 @@ export default class Player extends Phaser.GameObjects.Sprite {
         // Player nickname text
         this.playerNickname = this.scene.add.text((this.x - this.width * 1.4), (this.y - (this.height / 2)), 'Player');
 
-        // Add spacebar input
+        // Add interaction input
         this.spacebar = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+        this.enterKey = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
     }
 
     update(time, delta) {
@@ -45,11 +44,8 @@ export default class Player extends Phaser.GameObjects.Sprite {
         // Show player nickname above player
         this.showPlayerNickname();
 
-        // Player door interaction
-        this.doorInteraction();
-
-        // Player world interaction
-        this.worldInteraction();
+        // Player interaction
+        this.handleInteraction();
 
         // Stop any previous movement from the last frame
         this.body.setVelocity(0);
@@ -106,37 +102,75 @@ export default class Player extends Phaser.GameObjects.Sprite {
         }
     }
 
-    doorInteraction() {
-        this.scene.map.findObject("Doors", obj => {
-            if ((this.y >= obj.y && this.y <= (obj.y + obj.height)) && (this.x >= obj.x && this.x <= (obj.x + obj.width))) {
-                console.log('Player is by ' + obj.name);
-                if (this.spacebar.isDown) {
-                    console.log('Door is open!')
+    handleInteraction() {
+        const canInteract = Phaser.Input.Keyboard.JustDown(this.spacebar) || Phaser.Input.Keyboard.JustDown(this.enterKey);
+        const nearbyPrompt = [];
+
+        const doors = this.scene.map.getObjectLayer('Doors');
+        if (doors && doors.objects) {
+            doors.objects.forEach((door) => {
+                if (this.scene.isInsideObject(door, this.x, this.y)) {
+                    nearbyPrompt.push('Press SPACE to use door');
+                    if (canInteract) {
+                        const requiredFlag = this.scene.readProperty(door, 'requiresFlag');
+                        if (!this.scene.hasFlag(requiredFlag)) {
+                            this.scene.setPrompt(this.scene.readProperty(door, 'lockedMessage', 'The door is locked.'));
+                            return;
+                        }
+                        this.scene.transitionToMap(
+                            this.scene.readProperty(door, 'targetMap'),
+                            this.scene.readProperty(door, 'targetSpawnPoint', 'Spawn Point'),
+                            this.scene.readProperty(door, 'playerTexturePosition', 'front')
+                        );
+                    }
                 }
-            }
-        });
-    }
+            });
+        }
 
-    worldInteraction() {
-        this.scene.map.findObject("Worlds", world => {
-            if ((this.y >= world.y && this.y <= (world.y + world.height)) && (this.x >= world.x && this.x <= (world.x + world.width))) {
-                console.log('Player is by world entry: ' + world.name);
+        const worlds = this.scene.map.getObjectLayer('Worlds');
+        if (worlds && worlds.objects) {
+            worlds.objects.forEach((world) => {
+                if (this.scene.isInsideObject(world, this.x, this.y)) {
+                    nearbyPrompt.push('Press SPACE to travel');
+                    if (canInteract) {
+                        this.scene.transitionToMap(
+                            this.scene.readProperty(world, 'targetMap', world.name),
+                            this.scene.readProperty(world, 'targetSpawnPoint', 'Spawn Point'),
+                            this.scene.readProperty(world, 'playerTexturePosition', 'front')
+                        );
+                    }
+                }
+            });
+        }
 
-                // Get playerTexturePosition from from Worlds object property
-                let playerTexturePosition;
-                if (world.properties) playerTexturePosition = world.properties.find((property) => property.name === 'playerTexturePosition');
-                if (playerTexturePosition) this.playerTexturePosition = playerTexturePosition.value;
+        const npcs = this.scene.map.getObjectLayer('NPCs');
+        if (npcs && npcs.objects) {
+            npcs.objects.forEach((npc) => {
+                if (this.scene.isInsideObject(npc, this.x, this.y)) {
+                    nearbyPrompt.push('Press SPACE to talk');
+                    if (canInteract) {
+                        this.scene.runNpcInteraction(npc);
+                    }
+                }
+            });
+        }
 
-                // Load new level (tiles map)
-                this.scene.registry.destroy();
-                this.scene.events.off();
-                this.scene.scene.restart({map: world.name, playerTexturePosition: this.playerTexturePosition});
+        const checkpoints = this.scene.map.getObjectLayer('Checkpoints');
+        if (checkpoints && checkpoints.objects) {
+            checkpoints.objects.forEach((checkpoint) => {
+                if (this.scene.isInsideObject(checkpoint, this.x, this.y)) {
+                    nearbyPrompt.push('Press SPACE to save checkpoint');
+                    if (canInteract) {
+                        this.scene.runCheckpoint(checkpoint);
+                    }
+                }
+            });
+        }
 
-                room.then((room) => room.send(
-                     "PLAYER_CHANGED_MAP",{
-                    map: world.name
-                }));
-            }
-        });
+        if (nearbyPrompt.length && !this.scene.dialogueActive) {
+            this.scene.setPrompt(nearbyPrompt[0]);
+        } else if (!this.scene.dialogueActive && this.scene.currentPromptText.startsWith('Press SPACE')) {
+            this.scene.setPrompt('');
+        }
     }
 }
