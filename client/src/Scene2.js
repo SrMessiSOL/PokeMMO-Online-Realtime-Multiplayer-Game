@@ -23,103 +23,174 @@ export class Scene2 extends Phaser.Scene {
     }
 
     create() {
+        const logEvent = (tag, message, payload) => {
+            console.log(`[SYNC:${tag}] ${message}`, payload || '');
+        };
+
+        const clearOnlinePlayerRef = (sessionId) => {
+            const player = onlinePlayers[sessionId];
+
+            if (!player) {
+                return;
+            }
+
+            if (player.scene) {
+                player.scene = null;
+            }
+
+            if (player.active !== false) {
+                player.destroy();
+            }
+
+            delete onlinePlayers[sessionId];
+        };
+
+        const upsertOnlinePlayer = (payload) => {
+            if (!payload || !payload.sessionId) {
+                return null;
+            }
+
+            const existingPlayer = onlinePlayers[payload.sessionId];
+
+            if (existingPlayer) {
+                existingPlayer.map = payload.map;
+
+                if (!existingPlayer.scene || existingPlayer.scene !== this) {
+                    clearOnlinePlayerRef(payload.sessionId);
+                } else {
+                    if (typeof payload.x === 'number') {
+                        existingPlayer.x = payload.x;
+                    }
+
+                    if (typeof payload.y === 'number') {
+                        existingPlayer.y = payload.y;
+                    }
+
+                    return existingPlayer;
+                }
+            }
+
+            onlinePlayers[payload.sessionId] = new OnlinePlayer({
+                scene: this,
+                playerId: payload.sessionId,
+                key: payload.sessionId,
+                map: payload.map,
+                x: payload.x,
+                y: payload.y
+            });
+
+            return onlinePlayers[payload.sessionId];
+        };
+
         room.then((room) => room.onMessage((data) => {
+                if (!data || !data.event) {
+                    logEvent('INVALID', 'Missing event payload, skipping message.', data);
+                    return;
+                }
+
                 if (data.event === 'CURRENT_PLAYERS') {
-                    console.log('CURRENT_PLAYERS');
+                    logEvent('CURRENT_PLAYERS', 'Processing current players snapshot.');
+
+                    if (!data.players) {
+                        return;
+                    }
 
                     Object.keys(data.players).forEach(playerId => {
                         let player = data.players[playerId];
 
                         if (playerId !== room.sessionId) {
-                            onlinePlayers[player.sessionId] = new OnlinePlayer({
-                                scene: this,
-                                playerId: player.sessionId,
-                                key: player.sessionId,
-                                map: player.map,
-                                x: player.x,
-                                y: player.y
-                            });
+                            upsertOnlinePlayer(player);
                         }
                     })
                 }
                 if (data.event === 'PLAYER_JOINED') {
-                    console.log('PLAYER_JOINED');
-
-                    if (!onlinePlayers[data.sessionId]) {
-                        onlinePlayers[data.sessionId] = new OnlinePlayer({
-                            scene: this,
-                            playerId: data.sessionId,
-                            key: data.sessionId,
-                            map: data.map,
-                            x: data.x,
-                            y: data.y
-                        });
+                    if (!data.sessionId) {
+                        logEvent('PLAYER_JOINED', 'Missing sessionId, skipping join event.', data);
+                        return;
                     }
+
+                    logEvent('PLAYER_JOINED', `Player joined: ${data.sessionId}`);
+
+                    upsertOnlinePlayer(data);
                 }
                 if (data.event === 'PLAYER_LEFT') {
-                    console.log('PLAYER_LEFT');
+                    if (!data.sessionId) {
+                        logEvent('PLAYER_LEFT', 'Missing sessionId, skipping left event.', data);
+                        return;
+                    }
+
+                    logEvent('PLAYER_LEFT', `Player left: ${data.sessionId}`);
 
                     if (onlinePlayers[data.sessionId]) {
-                        onlinePlayers[data.sessionId].destroy();
-                        delete onlinePlayers[data.sessionId];
+                        clearOnlinePlayerRef(data.sessionId);
                     }
                 }
                 if (data.event === 'PLAYER_MOVED') {
-                    //console.log('PLAYER_MOVED');
+                    if (!data.sessionId) {
+                        logEvent('PLAYER_MOVED', 'Missing sessionId, skipping movement event.', data);
+                        return;
+                    }
+
+                    const movedPlayer = onlinePlayers[data.sessionId];
+
+                    if (!movedPlayer) {
+                        logEvent('PLAYER_MOVED', `Unknown player ${data.sessionId}, waiting for snapshot/join.`);
+                        return;
+                    }
 
                     // If player is in same map
-                    if (this.mapName === onlinePlayers[data.sessionId].map) {
+                    if (this.mapName === movedPlayer.map) {
 
-                        // If player isn't registered in this scene (map changing bug..)
-                        if (!onlinePlayers[data.sessionId].scene) {
-                            onlinePlayers[data.sessionId] = new OnlinePlayer({
-                                scene: this,
-                                playerId: data.sessionId,
-                                key: data.sessionId,
-                                map: data.map,
-                                x: data.x,
-                                y: data.y
-                            });
+                        const currentPlayer = upsertOnlinePlayer(data);
+
+                        if (!currentPlayer) {
+                            return;
                         }
+
                         // Start animation and set sprite position
-                        onlinePlayers[data.sessionId].isWalking(data.position, data.x, data.y);
+                        currentPlayer.isWalking(data.position, data.x, data.y);
                     }
                 }
                 if (data.event === 'PLAYER_MOVEMENT_ENDED') {
-                    // If player is in same map
-                    if (this.mapName === onlinePlayers[data.sessionId].map) {
+                    if (!data.sessionId) {
+                        logEvent('PLAYER_MOVEMENT_ENDED', 'Missing sessionId, skipping movement ended event.', data);
+                        return;
+                    }
 
-                        // If player isn't registered in this scene (map changing bug..)
-                        if (!onlinePlayers[data.sessionId].scene) {
-                            onlinePlayers[data.sessionId] = new OnlinePlayer({
-                                scene: this,
-                                playerId: data.sessionId,
-                                key: data.sessionId,
-                                map: data.map,
-                                x: data.x,
-                                y: data.y
-                            });
+                    const endedPlayer = onlinePlayers[data.sessionId];
+
+                    if (!endedPlayer) {
+                        logEvent('PLAYER_MOVEMENT_ENDED', `Unknown player ${data.sessionId}, waiting for snapshot/join.`);
+                        return;
+                    }
+
+                    // If player is in same map
+                    if (this.mapName === endedPlayer.map) {
+
+                        const currentPlayer = upsertOnlinePlayer(data);
+
+                        if (!currentPlayer) {
+                            return;
                         }
+
                         // Stop animation & set sprite texture
-                        onlinePlayers[data.sessionId].stopWalking(data.position)
+                        currentPlayer.stopWalking(data.position)
                     }
                 }
                 if (data.event === 'PLAYER_CHANGED_MAP') {
-                    console.log('PLAYER_CHANGED_MAP');
+                    if (!data.sessionId) {
+                        logEvent('PLAYER_CHANGED_MAP', 'Missing sessionId, skipping map change event.', data);
+                        return;
+                    }
+
+                    logEvent('PLAYER_CHANGED_MAP', `Player changed map: ${data.sessionId}`);
 
                     if (onlinePlayers[data.sessionId]) {
-                        onlinePlayers[data.sessionId].destroy();
+                        clearOnlinePlayerRef(data.sessionId);
+                    }
 
-                        if (data.map === this.mapName && !onlinePlayers[data.sessionId].scene) {
-                            onlinePlayers[data.sessionId] = new OnlinePlayer({
-                                scene: this,
-                                playerId: data.sessionId,
-                                key: data.sessionId,
-                                map: data.map,
-                                x: data.x,
-                                y: data.y
-                            });
-                        }
+                    if (data.map === this.mapName) {
+                        upsertOnlinePlayer(data);
                     }
                 }
             })
