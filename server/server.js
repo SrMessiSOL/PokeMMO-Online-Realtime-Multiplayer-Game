@@ -6,12 +6,15 @@ const monitor = require("@colyseus/monitor").monitor;
 // const socialRoutes = require("@colyseus/social/express").default;
 
 const PokeWorld = require('./rooms/PokeWorld').PokeWorld;
+const npcRoutes = require("./routes/npcs");
+const npcEmotionService = require("./services/npcEmotionService");
 
 const port = process.env.PORT || 3000;
 const app = express()
 
 app.use(cors());
 app.use(express.json());
+app.use("/api", npcRoutes);
 
 const server = http.createServer(app);
 const gameServer = new colyseus.Server({
@@ -37,6 +40,8 @@ gameServer.define("poke_world", PokeWorld)
 
 // register colyseus monitor AFTER registering your room handlers
 app.use("/colyseus", monitor(gameServer));
+
+npcEmotionService.init();
 
 gameServer.listen(port);
 console.log(`Listening on ws://localhost:${port}`)

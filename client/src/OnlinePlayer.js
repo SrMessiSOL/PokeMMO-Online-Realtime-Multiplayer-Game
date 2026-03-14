@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { ENTITY_SIZE } from "./constants/entity";
 
 export default class OnlinePlayer extends Phaser.GameObjects.Sprite {
     constructor(config) {
@@ -8,13 +9,15 @@ export default class OnlinePlayer extends Phaser.GameObjects.Sprite {
         this.scene.physics.world.enableBody(this);
         this.scene.physics.add.collider(this, config.worldLayer);
 
-        this.setTexture("players", "bob_front.png").setScale(1.9, 2.1);
+        this.setTexture("players", "bob_front.png");
+        this.setDisplaySize(ENTITY_SIZE.width, ENTITY_SIZE.height);
 
         this.map = config.map;
         console.log(`Map of ${config.playerId} is ${this.map}`);
 
         // Player Offset
-        this.body.setOffset(0, 24);
+        this.body.setSize(ENTITY_SIZE.hitboxWidth, ENTITY_SIZE.hitboxHeight);
+        this.body.setOffset(0, ENTITY_SIZE.hitboxOffsetY);
 
         // Display playerId above player
         this.playerNickname = this.scene.add.text((this.x - 40), (this.y - 25), config.playerId)
