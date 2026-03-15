@@ -1,6 +1,8 @@
 import Phaser from "phaser";
 import { Scene1 } from "./Scene1";
 import { Scene2 } from "./Scene2";
+import WalletStartMenu from "./ui/WalletStartMenu";
+import { setTrainerName, updatePlayerData } from "./state/gameState";
 
 const Config = {
     type: Phaser.AUTO,
@@ -17,4 +19,21 @@ const Config = {
     scene: [Scene1, Scene2],
 };
 
-export default new Phaser.Game(Config);
+function startGameForProfile(profile) {
+    if (profile?.playerName) {
+        setTrainerName(profile.playerName);
+    }
+
+    if (profile?.characterId) {
+        updatePlayerData((player) => ({
+            ...player,
+            characterId: profile.characterId
+        }));
+    }
+
+    return new Phaser.Game(Config);
+}
+
+new WalletStartMenu((profile) => {
+    startGameForProfile(profile);
+});

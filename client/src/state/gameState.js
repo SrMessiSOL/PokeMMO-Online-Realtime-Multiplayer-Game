@@ -30,6 +30,7 @@ const DEFAULT_PLAYER_STATE = {
     id: DEFAULT_PLAYER_ID,
     gender: "male",
     rival: DEFAULT_RIVAL_NAME,
+    characterId: "misa",
     position: {
         mapId: "town",
         x: 352,
