@@ -1,4 +1,5 @@
-import TUXEMON_CATALOG from "../data/tuxemon/catalog.json";
+import TUXEMON_MONSTERS from "../data/tuxemon/monsters.json";
+import TUXEMON_MOVES from "../data/tuxemon/moves.json";
 
 const GAME_STATE_STORAGE_KEY = "pokemmo.game-state.v3";
 const POKEMON_CACHE_STORAGE_KEY = "pokemmo.pokemon-cache.v3";
@@ -14,7 +15,7 @@ const DEFAULT_SAVE_SLOT = 1;
 const DEFAULT_BOX_COUNT = 14;
 const DEFAULT_BOX_CAPACITY = 30;
 const KANTO_GENERATION_ID = 1;
-const KANTO_TARGET_COUNT = Number(TUXEMON_CATALOG?.meta?.monsterCount) || 151;
+const KANTO_TARGET_COUNT = Array.isArray(TUXEMON_MONSTERS) ? TUXEMON_MONSTERS.length : 151;
 const SUPPORTED_POKEDEX_LANGUAGES = ["en", "de"];
 const POKEMON_CACHE_LOCALIZATION_VERSION = 1;
 
@@ -679,7 +680,7 @@ async function fetchGenerationOneSpeciesIds() {
 
 async function fetchMoveCatalog() {
     const cache = getMoveCache();
-    const tuxemonMoves = Array.isArray(TUXEMON_CATALOG?.moves) ? TUXEMON_CATALOG.moves : [];
+    const tuxemonMoves = Array.isArray(TUXEMON_MOVES) ? TUXEMON_MOVES : [];
 
     tuxemonMoves.forEach((move) => {
         if (!move?.id) {
@@ -688,7 +689,7 @@ async function fetchMoveCatalog() {
 
         cache[move.id] = {
             id: move.id,
-            name: move.name,
+            name: move.slug || move.name,
             displayName: move.displayName || toTitleCase(move.name),
             power: move.power ?? null,
             accuracy: move.accuracy ?? null,
@@ -820,7 +821,7 @@ function buildCatalogEntry(pokemonPayload, speciesPayload) {
 
 async function fetchKantoCatalog() {
     const cache = getPokemonCache();
-    const tuxemonMonsters = Array.isArray(TUXEMON_CATALOG?.monsters) ? TUXEMON_CATALOG.monsters : [];
+    const tuxemonMonsters = Array.isArray(TUXEMON_MONSTERS) ? TUXEMON_MONSTERS : [];
     await fetchMoveCatalog();
 
     tuxemonMonsters.forEach((monster) => {
@@ -845,7 +846,7 @@ async function fetchKantoCatalog() {
             },
             moves: Array.isArray(monster.moves)
                 ? monster.moves.map((move) => {
-                    const moveEntry = moveCatalog[move.id];
+                    const moveEntry = moveCatalog[move.id] || Object.values(moveCatalog).find((entry) => entry.name === move.slug);
                     return moveEntry ? cloneMove(moveEntry) : null;
                 }).filter(Boolean)
                 : []
