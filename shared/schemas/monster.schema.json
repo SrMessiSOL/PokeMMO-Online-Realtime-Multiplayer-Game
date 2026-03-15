@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pokemmo.local/schemas/monster.schema.json",
+  "title": "Monster",
+  "description": "Normalized monster definition used by import scripts and runtime loaders.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "types", "baseStats", "learnset"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "baseStats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hp", "atk", "def", "spd"],
+      "properties": {
+        "hp": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "atk": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "def": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "spd": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "learnset": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sprite": {
+      "type": ["string", "null"]
+    }
+  }
+}

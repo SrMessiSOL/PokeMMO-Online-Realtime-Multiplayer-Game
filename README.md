@@ -46,3 +46,8 @@ node server.js
 cd client && npm start
 ```
 After successfully install go to [http://localhost:8080](http://localhost:8080/).
+
+### Browser MMO migration scaffold
+- See `docs/tuxemon-browser-mmo-scaffold.md` for a practical migration plan, API/event boundaries, and import workflow for Tuxemon + SolaMon style content.
+- PostgreSQL baseline schema is in `server/db/schema.sql`.
+- Starter multi-source import tool (supports `--sourceType tuxemon|solamon`) is in `tools/import-tuxemon/importMonsters.js`.
