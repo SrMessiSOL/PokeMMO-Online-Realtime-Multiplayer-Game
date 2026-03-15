@@ -52,13 +52,17 @@ export class Scene2 extends Phaser.Scene {
 
         // Parameters are the name you gave the tileset in Tiled and then the key of the tileset image in
         // Phaser's cache (i.e. the name you used in preload)
-        const tileset = this.map.addTilesetImage("tuxmon-sample-32px-extruded", "TilesTown");
+        const tilesets = (this.map.tilesets || [])
+            .map((tilesetConfig) => this.resolveTileset(tilesetConfig))
+            .filter(Boolean);
+
+        const layerTilesets = tilesets.length ? tilesets : undefined;
 
         // Parameters: layer name (or index) from Tiled, tileset, x, y
-        this.belowLayer = this.map.getLayer("Below Player") ? this.map.createLayer("Below Player", tileset, 0, 0) : null;
-        this.worldLayer = this.map.getLayer("World") ? this.map.createLayer("World", tileset, 0, 0) : null;
-        this.grassLayer = this.map.getLayer("Grass") ? this.map.createLayer("Grass", tileset, 0, 0) : null;
-        this.aboveLayer = this.map.getLayer("Above Player") ? this.map.createLayer("Above Player", tileset, 0, 0) : null;
+        this.belowLayer = this.map.getLayer("Below Player") ? this.map.createLayer("Below Player", layerTilesets, 0, 0) : null;
+        this.worldLayer = this.map.getLayer("World") ? this.map.createLayer("World", layerTilesets, 0, 0) : null;
+        this.grassLayer = this.map.getLayer("Grass") ? this.map.createLayer("Grass", layerTilesets, 0, 0) : null;
+        this.aboveLayer = this.map.getLayer("Above Player") ? this.map.createLayer("Above Player", layerTilesets, 0, 0) : null;
 
         if (this.worldLayer) {
             this.worldLayer.setCollisionByProperty({collides: true});
@@ -196,6 +200,24 @@ export class Scene2 extends Phaser.Scene {
                 this.syncWalletState();
             }
         });
+    }
+
+    resolveTileset(tilesetConfig) {
+        const fallbackKey = "tuxmon-sample-32px-extruded";
+        const imagePath = String(tilesetConfig?.image || "");
+        const imageFileName = imagePath.split("/").pop() || "";
+        const imageKey = imageFileName.replace(/\.[^/.]+$/, "") || fallbackKey;
+
+        try {
+            return this.map.addTilesetImage(tilesetConfig.name, imageKey);
+        } catch (error) {
+            if (imageKey !== fallbackKey) {
+                return this.map.addTilesetImage(tilesetConfig.name, fallbackKey);
+            }
+
+            console.warn(`Unable to load tileset for map ${this.mapName}:`, tilesetConfig?.name, error);
+            return null;
+        }
     }
 
 

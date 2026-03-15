@@ -1,16 +1,53 @@
 const fs = require("fs");
 const path = require("path");
 
-const MAP_DIRECTORY = path.join(__dirname, "..", "..", "client", "src", "assets", "tilemaps");
+const MAP_DIRECTORIES = [
+    path.join(__dirname, "..", "..", "client", "src", "assets", "tilemaps"),
+    path.join(__dirname, "..", "..", "client", "src", "assets", "tuxemon", "tilemaps"),
+    path.join(__dirname, "..", "..", "tuxemon", "tilemaps")
+];
 const mapCache = new Map();
+
+function listMapFiles(directory) {
+    if (!fs.existsSync(directory)) {
+        return [];
+    }
+
+    const entries = fs.readdirSync(directory, { withFileTypes: true });
+    return entries.flatMap((entry) => {
+        const entryPath = path.join(directory, entry.name);
+        if (entry.isDirectory()) {
+            return listMapFiles(entryPath);
+        }
+
+        return entry.isFile() && entry.name.endsWith(".json") ? [entryPath] : [];
+    });
+}
+
+function buildMapIndex() {
+    const index = new Map();
+
+    MAP_DIRECTORIES.forEach((directory) => {
+        listMapFiles(directory).forEach((mapPath) => {
+            const mapName = path.basename(mapPath, ".json");
+            if (!index.has(mapName)) {
+                index.set(mapName, mapPath);
+            }
+        });
+    });
+
+    return index;
+}
+
+const MAP_INDEX = buildMapIndex();
 
 function loadMap(mapName) {
     if (mapCache.has(mapName)) {
         return mapCache.get(mapName);
     }
 
-    const mapPath = path.join(MAP_DIRECTORY, `${mapName}.json`);
-    if (!fs.existsSync(mapPath)) {
+    const mapPath = MAP_INDEX.get(mapName);
+    if (!mapPath || !fs.existsSync(mapPath)) {
         mapCache.set(mapName, null);
         return null;
     }

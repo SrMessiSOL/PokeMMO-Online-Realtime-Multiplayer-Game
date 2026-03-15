@@ -1,7 +1,21 @@
-const tilemapContext = require.context("../assets/tilemaps", false, /\.json$/);
+const tilemapContext = require.context("../assets", true, /\.json$/);
 
-export const MAP_MANIFEST = tilemapContext.keys().reduce((manifest, relativePath) => {
-    const mapName = relativePath.replace("./", "").replace(/\.json$/, "");
-    manifest[mapName] = tilemapContext(relativePath);
+function getMapId(resourcePath) {
+    const normalizedPath = resourcePath.replace("./", "");
+    if (!normalizedPath.includes("tilemaps/")) {
+        return null;
+    }
+
+    const fileName = normalizedPath.split("/").pop() || "";
+    return fileName.replace(/\.json$/, "") || null;
+}
+
+export const MAP_MANIFEST = tilemapContext.keys().reduce((manifest, resourcePath) => {
+    const mapId = getMapId(resourcePath);
+    if (!mapId) {
+        return manifest;
+    }
+
+    manifest[mapId] = tilemapContext(resourcePath);
     return manifest;
 }, {});

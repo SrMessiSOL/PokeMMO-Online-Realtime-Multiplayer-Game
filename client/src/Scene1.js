@@ -1,11 +1,10 @@
 import Phaser from "phaser";
-import TilesTown from "./assets/tilesets/tuxmon-sample-32px-extruded.png";
-
 import PlayersAtlasJSON from "./assets/atlas/players";
 import PlayersAtlasPNG from "./assets/images/players/players.png";
 import { getPlayerData, getPokemonSpriteEntries, initializeGameState } from "./state/gameState";
 import { DEFAULT_CHARACTER_ID, PLAYER_CHARACTER_OPTIONS } from "./constants/playerCharacters";
 import { MAP_MANIFEST } from "./constants/mapManifest";
+import { TILESET_MANIFEST } from "./constants/tilesetManifest";
 
 export class Scene1 extends Phaser.Scene {
     constructor() {
@@ -13,7 +12,9 @@ export class Scene1 extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("TilesTown", TilesTown);
+        Object.entries(TILESET_MANIFEST).forEach(([tilesetKey, tilesetImage]) => {
+            this.load.image(tilesetKey, tilesetImage);
+        });
 
         Object.entries(MAP_MANIFEST).forEach(([mapName, mapJson]) => {
             this.load.tilemapTiledJSON(mapName, mapJson);
