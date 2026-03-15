@@ -9,11 +9,10 @@ import Route1JSON from "./assets/tilemaps/route1.json";
 import Route2JSON from "./assets/tilemaps/route2.json";
 import TilesTown from "./assets/tilesets/tuxmon-sample-32px-extruded.png";
 
-import AtlasJSON from "./assets/atlas/atlas";
-import AtlasPNG from "./assets/atlas/atlas.png";
 import PlayersAtlasJSON from "./assets/atlas/players";
 import PlayersAtlasPNG from "./assets/images/players/players.png";
 import { getPlayerData, getPokemonSpriteEntries, initializeGameState } from "./state/gameState";
+import { DEFAULT_CHARACTER_ID, PLAYER_CHARACTER_OPTIONS } from "./constants/playerCharacters";
 
 export class Scene1 extends Phaser.Scene {
     constructor() {
@@ -35,7 +34,6 @@ export class Scene1 extends Phaser.Scene {
         this.load.tilemapTiledJSON("pokemon_center_crysthaven", PokemonCenterCrysthavenJSON);
 
         // Load atlas
-        this.load.atlas("currentPlayer", AtlasPNG, AtlasJSON);
         this.load.atlas("players", PlayersAtlasPNG, PlayersAtlasJSON);
     }
 
@@ -79,6 +77,8 @@ export class Scene1 extends Phaser.Scene {
     startGame() {
         this.loadingText.setText("Loading game...\nStarting");
         const player = getPlayerData();
+        const characterId = player.characterId || DEFAULT_CHARACTER_ID;
+
         this.scene.start("playGame", {
             map: player.position.mapId,
             playerTexturePosition: player.position.facing,
@@ -86,58 +86,18 @@ export class Scene1 extends Phaser.Scene {
             playerPosition: {
                 x: player.position.x,
                 y: player.position.y
-            }
+            },
+            characterId,
+            playerName: player.name,
+            walletAddress: player.walletAddress || null,
+            disableNpcs: true
         });
     }
 
     createAnimations() {
-        // Create the player's walking animations from the texture currentPlayer. These are stored in the global
-        // animation manager so any sprite can access them.
-        this.anims.create({
-            key: "misa-left-walk",
-            frames: this.anims.generateFrameNames("currentPlayer", {
-                prefix: "misa-left-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
+        PLAYER_CHARACTER_OPTIONS.forEach(({ id }) => {
+            this.createCharacterAnimations(id);
         });
-        this.anims.create({
-            key: "misa-right-walk",
-            frames: this.anims.generateFrameNames("currentPlayer", {
-                prefix: "misa-right-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-        this.anims.create({
-            key: "misa-front-walk",
-            frames: this.anims.generateFrameNames("currentPlayer", {
-                prefix: "misa-front-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-        this.anims.create({
-            key: "misa-back-walk",
-            frames: this.anims.generateFrameNames("currentPlayer", {
-                prefix: "misa-back-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-
         // onlinePlayer animations
         this.anims.create({
             key: "onlinePlayer-left-walk", frames: this.anims.generateFrameNames("players", {
@@ -176,6 +136,57 @@ export class Scene1 extends Phaser.Scene {
             }), frameRate: 10, repeat: -1
         });
     }
+    createCharacterAnimations(characterId) {
+        this.anims.create({
+            key: `${characterId}-left-walk`,
+            frames: this.anims.generateFrameNames("players", {
+                prefix: `${characterId}_left_walk.`,
+                start: 0,
+                end: 3,
+                zeroPad: 3,
+                suffix: ".png"
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: `${characterId}-right-walk`,
+            frames: this.anims.generateFrameNames("players", {
+                prefix: `${characterId}_right_walk.`,
+                start: 0,
+                end: 3,
+                zeroPad: 3,
+                suffix: ".png"
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: `${characterId}-front-walk`,
+            frames: this.anims.generateFrameNames("players", {
+                prefix: `${characterId}_front_walk.`,
+                start: 0,
+                end: 3,
+                zeroPad: 3,
+                suffix: ".png"
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.create({
+            key: `${characterId}-back-walk`,
+            frames: this.anims.generateFrameNames("players", {
+                prefix: `${characterId}_back_walk.`,
+                start: 0,
+                end: 3,
+                zeroPad: 3,
+                suffix: ".png"
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
+    }
+
 }
 
 function waitForPixelFont() {

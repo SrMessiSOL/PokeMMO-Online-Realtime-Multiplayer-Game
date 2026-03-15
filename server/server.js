@@ -7,6 +7,7 @@ const monitor = require("@colyseus/monitor").monitor;
 
 const PokeWorld = require('./rooms/PokeWorld').PokeWorld;
 const npcRoutes = require("./routes/npcs");
+const walletRoutes = require("./routes/wallets");
 const npcEmotionService = require("./services/npcEmotionService");
 
 const port = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ const app = express()
 app.use(cors());
 app.use(express.json());
 app.use("/api", npcRoutes);
+app.use("/api", walletRoutes);
 
 const server = http.createServer(app);
 const gameServer = new colyseus.Server({

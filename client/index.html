@@ -26,6 +26,107 @@
         height: 450px;
       }
 
+      .wallet-start-menu {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        font-family: "Press Start 2P", monospace;
+      }
+
+      .wallet-card {
+        width: min(760px, 94vw);
+        background: #181b3b;
+        border: 2px solid #6f77ff;
+        color: #fff;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+
+      .wallet-card h2 {
+        margin-top: 0;
+        font-size: 18px;
+      }
+
+      .wallet-card button,
+      .wallet-card input {
+        font-family: "Press Start 2P", monospace;
+        font-size: 10px;
+      }
+
+      .wallet-actions {
+        display: flex;
+        gap: 12px;
+        margin: 12px 0;
+      }
+
+      .wallet-actions.hidden {
+        display: none;
+      }
+
+      .wallet-card button {
+        cursor: pointer;
+        background: #6f77ff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+      }
+
+      .wallet-status {
+        font-size: 10px;
+        line-height: 1.5;
+        min-height: 28px;
+      }
+
+      .character-form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .character-form.hidden {
+        display: none;
+      }
+
+      .character-form input {
+        padding: 8px;
+      }
+
+      .character-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .character-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid #6f77ff;
+        padding: 8px;
+        min-height: 78px;
+      }
+
+      .character-thumb {
+        display: inline-block;
+        background-repeat: no-repeat;
+        image-rendering: pixelated;
+        transform: scale(2);
+        transform-origin: center;
+      }
+
+      .character-label {
+        font-size: 8px;
+      }
+
+      .character-option.selected {
+        background: #2e39ad;
+      }
+
       canvas {
         display: block;
       }
