@@ -30,6 +30,8 @@ const DEFAULT_PLAYER_STATE = {
     id: DEFAULT_PLAYER_ID,
     gender: "male",
     rival: DEFAULT_RIVAL_NAME,
+    characterId: "misa",
+    walletAddress: null,
     position: {
         mapId: "town",
         x: 352,
@@ -1118,6 +1120,73 @@ export async function initializeGameState() {
     persistGameState();
     notifyPartyListeners();
     notifyStateListeners();
+    return getGameState();
+}
+
+
+
+export function createWalletSavePayload() {
+    const state = getGameState();
+    return {
+        schema: 1,
+        savedAt: Date.now(),
+        player: state.player,
+        party: state.party,
+        bag: state.bag,
+        badges: state.badges,
+        money: state.money,
+        playTime: state.playTime,
+        options: state.options,
+        saveSlot: state.saveSlot,
+        pokemonCenterState: state.pokemonCenterState
+    };
+}
+
+export function hydrateFromWalletGameState(remoteGameState) {
+    if (!remoteGameState || typeof remoteGameState !== "object") {
+        return getGameState();
+    }
+
+    const sourceState = remoteGameState.gameState && typeof remoteGameState.gameState === "object"
+        ? remoteGameState.gameState
+        : remoteGameState;
+
+    const nextState = {
+        ...cloneGameState(),
+        ...sourceState,
+        player: clonePlayer({
+            ...gameState.player,
+            ...(sourceState.player || {})
+        }),
+        party: normalizeParty(sourceState.party || gameState.party),
+        box: cloneBoxes(sourceState.box || gameState.box),
+        pokedex: normalizePokedex(sourceState.pokedex || gameState.pokedex, sourceState.party || gameState.party),
+        bag: normalizeBag(sourceState.bag || gameState.bag),
+        badges: normalizeBadges(sourceState.badges || gameState.badges),
+        options: {
+            ...DEFAULT_OPTIONS,
+            ...(sourceState.options || gameState.options || {})
+        },
+        pokemonCenterState: {
+            ...DEFAULT_POKEMON_CENTER_STATE,
+            ...(sourceState.pokemonCenterState || gameState.pokemonCenterState || {})
+        }
+    };
+
+    gameState.player = nextState.player;
+    gameState.party = nextState.party;
+    gameState.box = nextState.box;
+    gameState.pokedex = nextState.pokedex;
+    gameState.bag = nextState.bag;
+    gameState.badges = nextState.badges;
+    gameState.money = nextState.money ?? gameState.money;
+    gameState.playTime = Math.max(0, Number(nextState.playTime ?? gameState.playTime) || 0);
+    gameState.options = nextState.options;
+    gameState.saveSlot = nextState.saveSlot ?? gameState.saveSlot;
+    gameState.pokemonCenterState = nextState.pokemonCenterState;
+
+    markPartyCaughtInDex();
+    commitGameState();
     return getGameState();
 }
 
