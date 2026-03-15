@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ashveld",
+    "runtimeFormat": "tiled-json",
+    "runtimeAsset": "tilemaps/ashveld.json",
+    "source": null,
+    "defaultTilesetKey": "tuxmon-sample-32px-extruded",
+    "spawnPointName": "Spawn Point",
+    "traversable": true
+  },
+  {
+    "id": "crysthaven",
+    "runtimeFormat": "tiled-json",
+    "runtimeAsset": "tilemaps/crysthaven.json",
+    "source": null,
+    "defaultTilesetKey": "tuxmon-sample-32px-extruded",
+    "spawnPointName": "Spawn Point",
+    "traversable": true
+  },
+  {
+    "id": "pokemon_center_ashveld",
+    "runtimeFormat": "tiled-json",
+    "runtimeAsset": "tilemaps/pokemon_center_ashveld.json",
+    "source": null,
+    "defaultTilesetKey": "tuxmon-sample-32px-extruded",
+    "spawnPointName": "Spawn Point",
+    "traversable": true
+  },
+  {
+    "id": "pokemon_center_crysthaven",
+    "runtimeFormat": "tiled-json",
+    "runtimeAsset": "tilemaps/pokemon_center_crysthaven.json",
+    "source": null,
+    "defaultTilesetKey": "tuxmon-sample-32px-extruded",
+    "spawnPointName": "Spawn Point",
+    "traversable": true
+  },
+  {
+    "id": "pokemon_center_town",
+    "runtimeFormat": "tiled-json",
+    "runtimeAsset": "tilemaps/pokemon_center_town.json",
+    "source": null,
+    "defaultTilesetKey": "tuxmon-sample-32px-extruded",
+    "spawnPointName": "Spawn Point",
+    "traversable": true
+  },
+  {
+    "id": "route1",
+    "runtimeFormat": "tiled-json",
+    "runtimeAsset": "tilemaps/route1.json",
+    "source": "tuxemon/maps/route1",
+    "defaultTilesetKey": "tuxmon-sample-32px-extruded",
+    "spawnPointName": "Spawn Point",
+    "traversable": true
+  },
+  {
+    "id": "route2",
+    "runtimeFormat": "tiled-json",
+    "runtimeAsset": "tilemaps/route2.json",
+    "source": "tuxemon/maps/route2",
+    "defaultTilesetKey": "tuxmon-sample-32px-extruded",
+    "spawnPointName": "Spawn Point",
+    "traversable": true
+  },
+  {
+    "id": "town",
+    "runtimeFormat": "tiled-json",
+    "runtimeAsset": "tilemaps/town.json",
+    "source": null,
+    "defaultTilesetKey": "tuxmon-sample-32px-extruded",
+    "spawnPointName": "Spawn Point",
+    "traversable": true
+  }
+]

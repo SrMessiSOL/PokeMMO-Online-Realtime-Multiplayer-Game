@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { ROUTE_ENCOUNTERS } from "./data/encounters";
+import { getEncounterLevelForMap } from "./state/gameState";
 
 export default class WildEncounterManager {
     constructor(scene, battleUi) {
@@ -69,17 +70,25 @@ export default class WildEncounterManager {
         for (const entry of encounterConfig.pokemonPool) {
             roll -= entry.weight;
             if (roll <= 0) {
+                const mapLevel = getEncounterLevelForMap(this.scene.mapName);
+                const minLevel = Math.min(entry.minLevel, mapLevel);
+                const maxLevel = Math.max(entry.maxLevel, mapLevel);
+
                 return {
                     pokemonId: entry.pokemonId,
-                    level: Phaser.Math.Between(entry.minLevel, entry.maxLevel)
+                    level: Phaser.Math.Between(minLevel, maxLevel)
                 };
             }
         }
 
         const fallback = encounterConfig.pokemonPool[encounterConfig.pokemonPool.length - 1];
+        const mapLevel = getEncounterLevelForMap(this.scene.mapName);
+        const minLevel = Math.min(fallback.minLevel, mapLevel);
+        const maxLevel = Math.max(fallback.maxLevel, mapLevel);
+
         return {
             pokemonId: fallback.pokemonId,
-            level: Phaser.Math.Between(fallback.minLevel, fallback.maxLevel)
+            level: Phaser.Math.Between(minLevel, maxLevel)
         };
     }
 }

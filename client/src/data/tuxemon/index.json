@@ -1,0 +1,13 @@
+{
+  "generatedFrom": "tuxemon",
+  "counts": {
+    "monsters": 411,
+    "moves": 274,
+    "items": 223,
+    "elements": 14,
+    "encounters": 31,
+    "npcs": 123,
+    "missions": 1,
+    "maps": 292
+  }
+}

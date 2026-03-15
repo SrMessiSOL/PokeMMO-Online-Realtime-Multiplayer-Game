@@ -9,25 +9,23 @@ import {
     markPokemonSeen,
     updateParty
 } from "../state/gameState";
+import TUXEMON_ELEMENTS from "../data/tuxemon/elements.json";
 
 const FONT_FAMILY = "\"Press Start 2P\"";
 const TYPE_COLORS = {
     Fire: "#f83800",
     Water: "#6890f0",
-    Grass: "#78c850",
-    Electric: "#f8d030",
-    Psychic: "#f85888",
-    Ice: "#98d8d8",
-    Fighting: "#c03028",
-    Poison: "#a040a0",
-    Ground: "#e0c068",
-    Flying: "#a890f0",
-    Bug: "#a8b820",
-    Rock: "#b8a038",
-    Ghost: "#705898",
-    Dragon: "#7038f8",
-    Dark: "#705848",
-    Steel: "#b8b8d0",
+    Wood: "#78c850",
+    Lightning: "#f8d030",
+    Frost: "#98d8d8",
+    Heroic: "#c03028",
+    Venom: "#a040a0",
+    Earth: "#e0c068",
+    Sky: "#a890f0",
+    Aether: "#9f8fff",
+    Cosmic: "#7058c8",
+    Shadow: "#5a5069",
+    Metal: "#b8b8d0",
     Normal: "#a8a878"
 };
 const COLORS = {
@@ -68,26 +66,8 @@ const DAMAGE_VARIANCE_MIN = 0.85;
 const DAMAGE_VARIANCE_MAX = 1;
 const STAB_MULTIPLIER = 1.5;
 const NEUTRAL_EFFECTIVENESS = 1;
-const TYPE_EFFECTIVENESS = {
-    Normal: { Rock: 0.5, Ghost: 0, Steel: 0.5 },
-    Fire: { Fire: 0.5, Water: 0.5, Grass: 2, Ice: 2, Bug: 2, Rock: 0.5, Dragon: 0.5, Steel: 2 },
-    Water: { Fire: 2, Water: 0.5, Grass: 0.5, Ground: 2, Rock: 2, Dragon: 0.5 },
-    Electric: { Water: 2, Electric: 0.5, Grass: 0.5, Ground: 0, Flying: 2, Dragon: 0.5 },
-    Grass: { Fire: 0.5, Water: 2, Grass: 0.5, Poison: 0.5, Ground: 2, Flying: 0.5, Bug: 0.5, Rock: 2, Dragon: 0.5, Steel: 0.5 },
-    Ice: { Fire: 0.5, Water: 0.5, Grass: 2, Ground: 2, Flying: 2, Dragon: 2, Steel: 0.5, Ice: 0.5 },
-    Fighting: { Normal: 2, Ice: 2, Poison: 0.5, Flying: 0.5, Psychic: 0.5, Bug: 0.5, Rock: 2, Ghost: 0, Dark: 2, Steel: 2, Fairy: 0.5 },
-    Poison: { Grass: 2, Poison: 0.5, Ground: 0.5, Rock: 0.5, Ghost: 0.5, Steel: 0, Fairy: 2 },
-    Ground: { Fire: 2, Electric: 2, Grass: 0.5, Poison: 2, Flying: 0, Bug: 0.5, Rock: 2, Steel: 2 },
-    Flying: { Electric: 0.5, Grass: 2, Fighting: 2, Bug: 2, Rock: 0.5, Steel: 0.5 },
-    Psychic: { Fighting: 2, Poison: 2, Psychic: 0.5, Dark: 0, Steel: 0.5 },
-    Bug: { Fire: 0.5, Grass: 2, Fighting: 0.5, Poison: 0.5, Flying: 0.5, Psychic: 2, Ghost: 0.5, Dark: 2, Steel: 0.5, Fairy: 0.5 },
-    Rock: { Fire: 2, Ice: 2, Fighting: 0.5, Ground: 0.5, Flying: 2, Bug: 2, Steel: 0.5 },
-    Ghost: { Normal: 0, Psychic: 2, Ghost: 2, Dark: 0.5 },
-    Dragon: { Dragon: 2, Steel: 0.5, Fairy: 0 },
-    Dark: { Fighting: 0.5, Psychic: 2, Ghost: 2, Dark: 0.5, Fairy: 0.5 },
-    Steel: { Fire: 0.5, Water: 0.5, Electric: 0.5, Ice: 2, Rock: 2, Steel: 0.5, Fairy: 2 },
-    Fairy: { Fire: 0.5, Fighting: 2, Poison: 0.5, Dragon: 2, Dark: 2, Steel: 0.5 }
-};
+const STATUS_APPLICATION_CHANCE = 0.35;
+const ELEMENT_EFFECTIVENESS = buildElementEffectiveness(TUXEMON_ELEMENTS);
 
 export default class FireRedBattleUI {
     constructor(scene) {
@@ -679,6 +659,26 @@ export default class FireRedBattleUI {
                     continue;
                 }
 
+                const turnStatus = applyTurnStartStatus(turn.user);
+                if (turnStatus.damage > 0) {
+                    turn.user.stats.hp = clamp(turn.user.stats.hp - turnStatus.damage, 0, turn.user.stats.maxHp);
+                    this.refreshBattleView();
+                    await this.showBattleLog(`${turn.user.name} suffers from ${turn.user.status}!`, 280);
+                }
+
+                if (turn.user.stats.hp <= 0) {
+                    continue;
+                }
+
+                if (turnStatus.reason && !turnStatus.skipTurn && turnStatus.damage <= 0) {
+                    await this.showBattleLog(turnStatus.reason, 260);
+                }
+
+                if (turnStatus.skipTurn) {
+                    await this.showBattleLog(turnStatus.reason || `${turn.user.name} can't move!`, 280);
+                    continue;
+                }
+
                 turn.move.currentPp = Math.max(0, turn.move.currentPp - 1);
                 this.refreshBattleView();
 
@@ -712,6 +712,10 @@ export default class FireRedBattleUI {
                     await this.showBattleLog("It's super effective!", 320);
                 } else if (outcome.effectiveness > 0 && outcome.effectiveness < NEUTRAL_EFFECTIVENESS) {
                     await this.showBattleLog("It's not very effective...", 320);
+                }
+
+                if (outcome.appliedStatus) {
+                    await this.showBattleLog(`${turn.target.name} is now ${outcome.appliedStatus.toUpperCase()}!`, 320);
                 }
 
                 if (turn.target.stats.hp <= 0) {
@@ -1147,10 +1151,14 @@ class BattleAnimationQueue {
 }
 
 function calculateDamage(attacker, defender, move) {
+    const effectiveness = getTypeEffectiveness(move.type, defender.type);
+
     if (!move || move.damageClass === "status" || !move.power) {
+        const appliedStatus = tryApplyStatusEffect(defender, move, effectiveness);
         return {
             damage: 0,
-            effectiveness: NEUTRAL_EFFECTIVENESS
+            effectiveness,
+            appliedStatus
         };
     }
 
@@ -1158,24 +1166,142 @@ function calculateDamage(attacker, defender, move) {
     const attackStat = Math.max(1, isSpecial ? attacker.stats.spAttack : attacker.stats.attack);
     const defenseStat = Math.max(1, isSpecial ? defender.stats.spDefense : defender.stats.defense);
     const stab = attacker.type.includes(move.type) ? STAB_MULTIPLIER : 1;
-    const effectiveness = getTypeEffectiveness(move.type, defender.type);
     const randomFactor = DAMAGE_VARIANCE_MIN + (Math.random() * (DAMAGE_VARIANCE_MAX - DAMAGE_VARIANCE_MIN));
     const baseDamage = (((attacker.level * 0.4) + 2) * move.power * (attackStat / defenseStat) / 24) + 2;
     const damage = effectiveness === 0
         ? 0
         : Math.max(1, Math.floor(baseDamage * stab * effectiveness * randomFactor));
 
+    const appliedStatus = tryApplyStatusEffect(defender, move, effectiveness);
     return {
         damage,
-        effectiveness
+        effectiveness,
+        appliedStatus
     };
 }
 
 function getTypeEffectiveness(moveType, defenderTypes = []) {
     return (defenderTypes || []).reduce((multiplier, defenderType) => {
-        const typeChart = TYPE_EFFECTIVENESS[moveType] || {};
+        const typeChart = ELEMENT_EFFECTIVENESS[moveType] || {};
         return multiplier * (typeChart[defenderType] ?? NEUTRAL_EFFECTIVENESS);
     }, NEUTRAL_EFFECTIVENESS);
+}
+
+function buildElementEffectiveness(elements = []) {
+    const matrix = {};
+
+    (Array.isArray(elements) ? elements : []).forEach((element) => {
+        const moveType = toTitleCase(element?.name || element?.slug || "normal");
+        const matchupRows = Array.isArray(element?.matchups) ? element.matchups : [];
+
+        matrix[moveType] = matchupRows.reduce((acc, row) => {
+            const targetType = toTitleCase(row?.against || "");
+            if (targetType) {
+                acc[targetType] = Number.isFinite(row?.multiplier) ? row.multiplier : NEUTRAL_EFFECTIVENESS;
+            }
+            return acc;
+        }, {});
+    });
+
+    return matrix;
+}
+
+function tryApplyStatusEffect(defender, move, effectiveness) {
+    if (!defender || defender.stats.hp <= 0 || defender.status || effectiveness === 0) {
+        return null;
+    }
+
+    const inferredStatus = inferMoveStatus(move);
+    if (!inferredStatus) {
+        return null;
+    }
+
+    if (Math.random() > STATUS_APPLICATION_CHANCE) {
+        return null;
+    }
+
+    defender.status = inferredStatus;
+    return inferredStatus;
+}
+
+function inferMoveStatus(move) {
+    const effects = Array.isArray(move?.effects) ? move.effects : [];
+    const effectTokens = effects.flatMap((effect) => [effect?.type, ...(Array.isArray(effect?.parameters) ? effect.parameters : [])])
+        .filter(Boolean)
+        .map((token) => String(token).toLowerCase());
+
+    const slug = String(move?.name || move?.slug || "").toLowerCase();
+    const tokens = new Set([...effectTokens, slug]);
+
+    if (hasAnyToken(tokens, ["poison", "venom"])) return "poison";
+    if (hasAnyToken(tokens, ["burn", "fire"])) return "burn";
+    if (hasAnyToken(tokens, ["freeze", "frost"])) return "freeze";
+    if (hasAnyToken(tokens, ["paralyze", "paralysis", "shock", "stun"])) return "paralyze";
+    if (hasAnyToken(tokens, ["sleep", "doze", "hypnosis"])) return "sleep";
+    if (hasAnyToken(tokens, ["confuse", "confusion", "dizzy", "muddle"])) return "confusion";
+
+    return null;
+}
+
+function hasAnyToken(tokens, needleParts) {
+    return Array.from(tokens).some((token) => needleParts.some((needle) => token.includes(needle)));
+}
+
+function applyTurnStartStatus(pokemon) {
+    const status = String(pokemon?.status || "").toLowerCase();
+    const maxHp = Math.max(1, pokemon?.stats?.maxHp || 1);
+
+    if (!status) {
+        return { skipTurn: false, damage: 0, reason: null };
+    }
+
+    if (status === "sleep") {
+        if (Math.random() < 0.4) {
+            pokemon.status = null;
+            return { skipTurn: false, damage: 0, reason: `${pokemon.name} woke up!` };
+        }
+
+        return { skipTurn: true, damage: 0, reason: `${pokemon.name} is fast asleep...` };
+    }
+
+    if (status === "paralyze") {
+        if (Math.random() < 0.25) {
+            return { skipTurn: true, damage: 0, reason: `${pokemon.name} is paralyzed! It can't move!` };
+        }
+
+        return { skipTurn: false, damage: 0, reason: null };
+    }
+
+    if (status === "burn" || status === "poison") {
+        return {
+            skipTurn: false,
+            damage: Math.max(1, Math.floor(maxHp * 0.08)),
+            reason: null
+        };
+    }
+
+    if (status === "freeze") {
+        if (Math.random() < 0.2) {
+            pokemon.status = null;
+            return { skipTurn: false, damage: 0, reason: `${pokemon.name} thawed out!` };
+        }
+
+        return { skipTurn: true, damage: 0, reason: `${pokemon.name} is frozen solid!` };
+    }
+
+    if (status === "confusion") {
+        if (Math.random() < 0.33) {
+            return {
+                skipTurn: true,
+                damage: Math.max(1, Math.floor(maxHp * 0.05)),
+                reason: `${pokemon.name} hurt itself in confusion!`
+            };
+        }
+
+        return { skipTurn: false, damage: 0, reason: null };
+    }
+
+    return { skipTurn: false, damage: 0, reason: null };
 }
 
 function wrapMessage(message, width, maxLines) {
@@ -1225,6 +1351,14 @@ function getHpColor(percent) {
         return COLORS.hpYellow;
     }
     return COLORS.hpRed;
+}
+
+function toTitleCase(value = "") {
+    return String(value)
+        .split(/[_\s-]+/)
+        .filter(Boolean)
+        .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1).toLowerCase())
+        .join(" ");
 }
 
 function normalizeShowdownName(name) {

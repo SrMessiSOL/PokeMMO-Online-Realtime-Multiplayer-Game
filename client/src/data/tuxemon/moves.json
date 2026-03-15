@@ -1,0 +1,9014 @@
+[
+  {
+    "id": 1,
+    "slug": "sting",
+    "displayName": "Sting",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bug",
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sting.json"
+  },
+  {
+    "id": 2,
+    "slug": "spit_poison",
+    "displayName": "Spit Poison",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bug",
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/spit_poison.json"
+  },
+  {
+    "id": 3,
+    "slug": "fire_claw",
+    "displayName": "Fire Claw",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 175,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "burn",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "flame",
+      "claws"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fire_claw.json"
+  },
+  {
+    "id": 4,
+    "slug": "fire_ball",
+    "displayName": "Fire Ball",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 120,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bomber",
+      "flame"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fire_ball.json"
+  },
+  {
+    "id": 5,
+    "slug": "ram",
+    "displayName": "Ram",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 85,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ram.json"
+  },
+  {
+    "id": 6,
+    "slug": "rock",
+    "displayName": "Rock",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "rock"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/rock.json"
+  },
+  {
+    "id": 7,
+    "slug": "blade",
+    "displayName": "Blade",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 85,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "sharp",
+      "steel"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/blade.json"
+  },
+  {
+    "id": 8,
+    "slug": "bullet",
+    "displayName": "Bullet",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 85,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "soldier"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/bullet.json"
+  },
+  {
+    "id": 9,
+    "slug": "flow",
+    "displayName": "Flow",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 60,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "water"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/flow.json"
+  },
+  {
+    "id": 10,
+    "slug": "flood",
+    "displayName": "Flood",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 60,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "water"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/flood.json"
+  },
+  {
+    "id": 11,
+    "slug": "boulder",
+    "displayName": "Boulder",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "hardshell",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "rock",
+      "bug",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/boulder.json"
+  },
+  {
+    "id": 12,
+    "slug": "thunderball",
+    "displayName": "Thunderball",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "flinching",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "rock"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/thunderball.json"
+  },
+  {
+    "id": 13,
+    "slug": "glower",
+    "displayName": "Glower",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "softened",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "gaze",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/glower.json"
+  },
+  {
+    "id": 14,
+    "slug": "stampede",
+    "displayName": "Stampede",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "remove",
+        "parameters": [
+          "positive",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "megafauna",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/stampede.json"
+  },
+  {
+    "id": 15,
+    "slug": "static_field",
+    "displayName": "Static Field",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "hardshell",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/static_field.json"
+  },
+  {
+    "id": 16,
+    "slug": "shuriken",
+    "displayName": "Shuriken",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "diehard",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "soldier",
+      "steel"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/shuriken.json"
+  },
+  {
+    "id": 17,
+    "slug": "clamp_on",
+    "displayName": "Clamp On",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "diehard",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "bug",
+      "bite",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/clamp_on.json"
+  },
+  {
+    "id": 18,
+    "slug": "beam",
+    "displayName": "Beam",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "blinded",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "light"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/beam.json"
+  },
+  {
+    "id": 19,
+    "slug": "surge",
+    "displayName": "Surge",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "remove",
+        "parameters": [
+          "positive",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "electricity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/surge.json"
+  },
+  {
+    "id": 20,
+    "slug": "thunderclap",
+    "displayName": "Thunderclap",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 95,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "electricity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/thunderclap.json"
+  },
+  {
+    "id": 21,
+    "slug": "ice_claw",
+    "displayName": "Ice Claw",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ice",
+      "claws"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ice_claw.json"
+  },
+  {
+    "id": 22,
+    "slug": "energy_field",
+    "displayName": "Energy Field",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "charging",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "machine"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/energy_field.json"
+  },
+  {
+    "id": 23,
+    "slug": "icicle_spear",
+    "displayName": "Icicle Spear",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ice"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/icicle_spear.json"
+  },
+  {
+    "id": 24,
+    "slug": "biting_winds",
+    "displayName": "Biting Winds",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "softened",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/biting_winds.json"
+  },
+  {
+    "id": 25,
+    "slug": "snowstorm",
+    "displayName": "Snowstorm",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 60,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "calamity",
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/snowstorm.json"
+  },
+  {
+    "id": 26,
+    "slug": "blossom",
+    "displayName": "Blossom",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 85,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      },
+      {
+        "type": "prop_healing",
+        "parameters": [
+          "own_monster",
+          "0.2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bug",
+      "Plant",
+      "healing"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/blossom.json"
+  },
+  {
+    "id": 27,
+    "slug": "overgrowth",
+    "displayName": "Overgrowth",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "Plant",
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/overgrowth.json"
+  },
+  {
+    "id": 28,
+    "slug": "fume",
+    "displayName": "Fume",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "enraged",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fume.json"
+  },
+  {
+    "id": 29,
+    "slug": "take_cover",
+    "displayName": "Take Cover",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "sniping",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "bug",
+      "leadership",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/take_cover.json"
+  },
+  {
+    "id": 30,
+    "slug": "kindling_flame",
+    "displayName": "Kindling Flame",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "enraged",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "flame"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/kindling_flame.json"
+  },
+  {
+    "id": 31,
+    "slug": "energy_claws",
+    "displayName": "Energy Claws",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "sniping",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "claws"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/energy_claws.json"
+  },
+  {
+    "id": 32,
+    "slug": "sand_spray",
+    "displayName": "Sand Spray",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "blinded",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ground"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sand_spray.json"
+  },
+  {
+    "id": 33,
+    "slug": "avalanche",
+    "displayName": "Avalanche",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "calamity",
+      "ice",
+      "rock"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/avalanche.json"
+  },
+  {
+    "id": 34,
+    "slug": "give_all",
+    "displayName": "Give All",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "leadership",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/give_all.json"
+  },
+  {
+    "id": 35,
+    "slug": "eyebite",
+    "displayName": "Eyebite",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "gaze"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/eyebite.json"
+  },
+  {
+    "id": 36,
+    "slug": "feint",
+    "displayName": "Feint",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "focused",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "remove",
+        "parameters": [
+          "positive",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "sharp"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/feint.json"
+  },
+  {
+    "id": 37,
+    "slug": "petrify",
+    "displayName": "Petrify",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "stuck",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "rock"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/petrify.json"
+  },
+  {
+    "id": 38,
+    "slug": "rot",
+    "displayName": "Rot",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/rot.json"
+  },
+  {
+    "id": 39,
+    "slug": "goad",
+    "displayName": "Goad",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 175,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "enraged",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "speed",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/goad.json"
+  },
+  {
+    "id": 40,
+    "slug": "refresh",
+    "displayName": "Refresh",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "universal",
+      "healing"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/refresh.json"
+  },
+  {
+    "id": 41,
+    "slug": "splinter",
+    "displayName": "Splinter",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "blinded",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bomber",
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/splinter.json"
+  },
+  {
+    "id": 42,
+    "slug": "web",
+    "displayName": "Web",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bug"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/web.json"
+  },
+  {
+    "id": 43,
+    "slug": "muddle",
+    "displayName": "Muddle",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "focused",
+          "own_team:enemy_team"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ghost",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/muddle.json"
+  },
+  {
+    "id": 44,
+    "slug": "berserk",
+    "displayName": "Berserk",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "enraged",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/berserk.json"
+  },
+  {
+    "id": 45,
+    "slug": "hibernate",
+    "displayName": "Hibernate",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "noddingoff",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "prop_healing",
+        "parameters": [
+          "own_monster",
+          "0.66"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "megafauna"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/hibernate.json"
+  },
+  {
+    "id": 46,
+    "slug": "wallow",
+    "displayName": "Wallow",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "focused",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "megafauna"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/wallow.json"
+  },
+  {
+    "id": 47,
+    "slug": "proboscis",
+    "displayName": "Proboscis",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "lifeleech",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bug"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/proboscis.json"
+  },
+  {
+    "id": 48,
+    "slug": "font",
+    "displayName": "Font",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "water",
+      "healing"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/font.json"
+  },
+  {
+    "id": 49,
+    "slug": "sleeping_powder",
+    "displayName": "Sleeping Powder",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "noddingoff",
+          "enemy_team"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "bug"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sleeping_powder.json"
+  },
+  {
+    "id": 50,
+    "slug": "tonguespear",
+    "displayName": "Tonguespear",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "lifeleech",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bug",
+      "tongue"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/tonguespear.json"
+  },
+  {
+    "id": 51,
+    "slug": "shadow_boxing",
+    "displayName": "Shadow Boxing",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "fists",
+      "darkness"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/shadow_boxing.json"
+  },
+  {
+    "id": 52,
+    "slug": "one_two",
+    "displayName": "One Two",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "fists"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/one_two.json"
+  },
+  {
+    "id": 53,
+    "slug": "amnesia",
+    "displayName": "Amnesia",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "enemy_monster:own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/amnesia.json"
+  },
+  {
+    "id": 54,
+    "slug": "all_in",
+    "displayName": "All In",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "leadership",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/all_in.json"
+  },
+  {
+    "id": 55,
+    "slug": "midnight_mantle",
+    "displayName": "Midnight Mantle",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 60,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "darkness",
+      "celestial"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/midnight_mantle.json"
+  },
+  {
+    "id": 56,
+    "slug": "starfall",
+    "displayName": "Starfall",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "focused",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "remove",
+        "parameters": [
+          "positive",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "darkness",
+      "celestial",
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/starfall.json"
+  },
+  {
+    "id": 57,
+    "slug": "bubble_trap",
+    "displayName": "Bubble Trap",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 75,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "enemy_monster:own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "summoner",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/bubble_trap.json"
+  },
+  {
+    "id": 58,
+    "slug": "suck_poison",
+    "displayName": "Suck Poison",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "transfer",
+        "parameters": [
+          "poison",
+          "user_to_target"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/suck_poison.json"
+  },
+  {
+    "id": 59,
+    "slug": "sleep_bomb",
+    "displayName": "Sleep Bomb",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "noddingoff",
+          "own_team:enemy_team"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bomber"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sleep_bomb.json"
+  },
+  {
+    "id": 60,
+    "slug": "shrapnel",
+    "displayName": "Shrapnel",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 60,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bomber",
+      "steel"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/shrapnel.json"
+  },
+  {
+    "id": 61,
+    "slug": "perfect_cut",
+    "displayName": "Perfect Cut",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "sharp"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/perfect_cut.json"
+  },
+  {
+    "id": 62,
+    "slug": "empty",
+    "displayName": "Empty",
+    "typeSlug": "neutral",
+    "type": "Neutral",
+    "damageClass": "status",
+    "category": "status",
+    "sort": "meta",
+    "power": 0,
+    "accuracy": 0,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "empty"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "notype"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/empty.json"
+  },
+  {
+    "id": 62,
+    "slug": "wall_of_steel",
+    "displayName": "Wall Of Steel",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "hardshell",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/wall_of_steel.json"
+  },
+  {
+    "id": 63,
+    "slug": "invictus",
+    "displayName": "Invictus",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "enraged",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bite",
+      "fists",
+      "leadership",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/invictus.json"
+  },
+  {
+    "id": 64,
+    "slug": "breathe_fire",
+    "displayName": "Breathe Fire",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "flame"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/breathe_fire.json"
+  },
+  {
+    "id": 65,
+    "slug": "peregrine",
+    "displayName": "Peregrine",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 175,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird",
+      "speed"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/peregrine.json"
+  },
+  {
+    "id": 66,
+    "slug": "whirlwind",
+    "displayName": "Whirlwind",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/whirlwind.json"
+  },
+  {
+    "id": 67,
+    "slug": "sudden_glow",
+    "displayName": "Sudden Glow",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "focused",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "light",
+      "healing"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sudden_glow.json"
+  },
+  {
+    "id": 68,
+    "slug": "pseudopod",
+    "displayName": "Pseudopod",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "festering",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "pseudopod"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/pseudopod.json"
+  },
+  {
+    "id": 69,
+    "slug": "wing_tip",
+    "displayName": "Wing Tip",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/wing_tip.json"
+  },
+  {
+    "id": 70,
+    "slug": "peck",
+    "displayName": "Peck",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/peck.json"
+  },
+  {
+    "id": 71,
+    "slug": "fluff_up",
+    "displayName": "Fluff Up",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fluff_up.json"
+  },
+  {
+    "id": 72,
+    "slug": "hammerhead",
+    "displayName": "Hammerhead",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "rock"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/hammerhead.json"
+  },
+  {
+    "id": 73,
+    "slug": "flamethrower",
+    "displayName": "Flamethrower",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "burn",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "flame",
+      "gadgets"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/flamethrower.json"
+  },
+  {
+    "id": 74,
+    "slug": "strike",
+    "displayName": "Strike",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "appear"
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "fists"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/strike.json"
+  },
+  {
+    "id": 75,
+    "slug": "constrict",
+    "displayName": "Constrict",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 85,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "pseudopod"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/constrict.json"
+  },
+  {
+    "id": 76,
+    "slug": "electrical_storm",
+    "displayName": "Electrical Storm",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "electricity",
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/electrical_storm.json"
+  },
+  {
+    "id": 77,
+    "slug": "chill_mist",
+    "displayName": "Chill Mist",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 60,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/chill_mist.json"
+  },
+  {
+    "id": 78,
+    "slug": "fester",
+    "displayName": "Fester",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "festering",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fester.json"
+  },
+  {
+    "id": 79,
+    "slug": "blood_bond",
+    "displayName": "Blood Bond",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "lifeleech",
+          "enemy_monster:own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "love"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/blood_bond.json"
+  },
+  {
+    "id": 80,
+    "slug": "venomous_tentacle",
+    "displayName": "Venomous Tentacle",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "pseudopod"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/venomous_tentacle.json"
+  },
+  {
+    "id": 81,
+    "slug": "supernova",
+    "displayName": "Supernova",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 75,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "chargedup",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "light",
+      "celestial"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/supernova.json"
+  },
+  {
+    "id": 82,
+    "slug": "levitate",
+    "displayName": "Levitate",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "sniping",
+          "own_team:enemy_team"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "bird",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/levitate.json"
+  },
+  {
+    "id": 83,
+    "slug": "battery_discharge",
+    "displayName": "Battery Discharge",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      },
+      {
+        "type": "prop_healing",
+        "parameters": [
+          "own_monster",
+          "0.2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "machine"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/battery_discharge.json"
+  },
+  {
+    "id": 84,
+    "slug": "stone_rot",
+    "displayName": "Stone Rot",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/stone_rot.json"
+  },
+  {
+    "id": 85,
+    "slug": "salamander",
+    "displayName": "Salamander",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "amphibian",
+      "flame",
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/salamander.json"
+  },
+  {
+    "id": 86,
+    "slug": "rust_bomb",
+    "displayName": "Rust Bomb",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 60,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bomber",
+      "steel"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/rust_bomb.json"
+  },
+  {
+    "id": 87,
+    "slug": "frostbite",
+    "displayName": "Frostbite",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ice",
+      "bite"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/frostbite.json"
+  },
+  {
+    "id": 87,
+    "slug": "menu_forfeit",
+    "displayName": "Menu Forfeit",
+    "typeSlug": "neutral",
+    "type": "Neutral",
+    "damageClass": "status",
+    "category": "status",
+    "sort": "meta",
+    "power": 0,
+    "accuracy": 0,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "forfeit"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "notype"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/forfeit.json"
+  },
+  {
+    "id": 88,
+    "slug": "battery_acid",
+    "displayName": "Battery Acid",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "machine"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/battery_acid.json"
+  },
+  {
+    "id": 89,
+    "slug": "mudslide",
+    "displayName": "Mudslide",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "softened",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ground"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/mudslide.json"
+  },
+  {
+    "id": 90,
+    "slug": "quicksand",
+    "displayName": "Quicksand",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 225,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "stuck",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ground"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/quicksand.json"
+  },
+  {
+    "id": 91,
+    "slug": "geyser",
+    "displayName": "Geyser",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "switch",
+        "parameters": [
+          "enemy_monster",
+          "water"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/geyser.json"
+  },
+  {
+    "id": 92,
+    "slug": "tux_attack",
+    "displayName": "Tux Attack",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/tux_attack.json"
+  },
+  {
+    "id": 93,
+    "slug": "strangulation",
+    "displayName": "Strangulation",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/strangulation.json"
+  },
+  {
+    "id": 94,
+    "slug": "assault",
+    "displayName": "Assault",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 170,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "speed",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/assault.json"
+  },
+  {
+    "id": 95,
+    "slug": "ubuntu",
+    "displayName": "Ubuntu",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "switch",
+        "parameters": [
+          "enemy_monster",
+          "random"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ubuntu.json"
+  },
+  {
+    "id": 96,
+    "slug": "slime",
+    "displayName": "Slime",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 110,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "festering",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "pseudopod",
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/slime.json"
+  },
+  {
+    "id": 97,
+    "slug": "chameleon",
+    "displayName": "Chameleon",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "hardshell",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "switch",
+        "parameters": [
+          "own_monster",
+          "wood"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/chameleon.json"
+  },
+  {
+    "id": 98,
+    "slug": "fiery",
+    "displayName": "Fiery",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "switch",
+        "parameters": [
+          "enemy_monster",
+          "fire"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fiery.json"
+  },
+  {
+    "id": 99,
+    "slug": "gold_digger",
+    "displayName": "Gold Digger",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 60,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "money"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "gemstone"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/gold_digger.json"
+  },
+  {
+    "id": 100,
+    "slug": "oedipus",
+    "displayName": "Oedipus",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 220,
+    "accuracy": 85,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "confused",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/oedipus.json"
+  },
+  {
+    "id": 101,
+    "slug": "slice",
+    "displayName": "Slice",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 120,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "sharp"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/slice.json"
+  },
+  {
+    "id": 102,
+    "slug": "saber",
+    "displayName": "Saber",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 220,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "sharp",
+      "steel"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/saber.json"
+  },
+  {
+    "id": 103,
+    "slug": "meltdown",
+    "displayName": "Meltdown",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 280,
+    "accuracy": 70,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "festering",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bomber",
+      "calamity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/meltdown.json"
+  },
+  {
+    "id": 104,
+    "slug": "time_crisis",
+    "displayName": "Time Crisis",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "summoner",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/time_crisis.json"
+  },
+  {
+    "id": 105,
+    "slug": "clock",
+    "displayName": "Clock",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "confused",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "gadgets",
+      "leadership",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/clock.json"
+  },
+  {
+    "id": 106,
+    "slug": "greenstone",
+    "displayName": "Greenstone",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 60,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "gemstone"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/greenstone.json"
+  },
+  {
+    "id": 107,
+    "slug": "stonehenge",
+    "displayName": "Stonehenge",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 260,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "rock",
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/stonehenge.json"
+  },
+  {
+    "id": 108,
+    "slug": "stabilo",
+    "displayName": "Stabilo",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 60,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "multiattack",
+        "parameters": [
+          "3"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "sharp",
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/stabilo.json"
+  },
+  {
+    "id": 109,
+    "slug": "grinding",
+    "displayName": "Grinding",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 220,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "rock"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/grinding.json"
+  },
+  {
+    "id": 110,
+    "slug": "tip",
+    "displayName": "Tip",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 220,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "festering",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "sharp"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/tip.json"
+  },
+  {
+    "id": 111,
+    "slug": "hawk",
+    "displayName": "Hawk",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "appear"
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/hawk.json"
+  },
+  {
+    "id": 112,
+    "slug": "barking",
+    "displayName": "Barking",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "flinching",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "shapeshifter",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/barking.json"
+  },
+  {
+    "id": 113,
+    "slug": "poison_courtship",
+    "displayName": "Poison Courtship",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "bug"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/poison_courtship.json"
+  },
+  {
+    "id": 114,
+    "slug": "nest",
+    "displayName": "Nest",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "sniping",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird",
+      "healing"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/nest.json"
+  },
+  {
+    "id": 115,
+    "slug": "mobbing",
+    "displayName": "Mobbing",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 180,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "leadership"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/mobbing.json"
+  },
+  {
+    "id": 116,
+    "slug": "evasion",
+    "displayName": "Evasion",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "focused",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "bug",
+      "speed"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/evasion.json"
+  },
+  {
+    "id": 117,
+    "slug": "fledgling",
+    "displayName": "Fledgling",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 170,
+    "accuracy": 75,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fledgling.json"
+  },
+  {
+    "id": 118,
+    "slug": "cavity",
+    "displayName": "Cavity",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 290,
+    "accuracy": 70,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/cavity.json"
+  },
+  {
+    "id": 119,
+    "slug": "acid",
+    "displayName": "Acid",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 140,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/acid.json"
+  },
+  {
+    "id": 120,
+    "slug": "adamantine",
+    "displayName": "Adamantine",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/adamantine.json"
+  },
+  {
+    "id": 121,
+    "slug": "air_chain",
+    "displayName": "Air Chain",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 60,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "multiattack",
+        "parameters": [
+          "3"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/air_chain.json"
+  },
+  {
+    "id": 122,
+    "slug": "breath",
+    "displayName": "Breath",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "noddingoff",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/breath.json"
+  },
+  {
+    "id": 123,
+    "slug": "canine",
+    "displayName": "Canine",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "wild",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "shapeshifter",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/canine.json"
+  },
+  {
+    "id": 124,
+    "slug": "cat_calling",
+    "displayName": "Cat Calling",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "charmed",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "love",
+      "leadership"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/cat_calling.json"
+  },
+  {
+    "id": 125,
+    "slug": "clairaudience",
+    "displayName": "Clairaudience",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "feedback",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/clairaudience.json"
+  },
+  {
+    "id": 126,
+    "slug": "cloud_aether",
+    "displayName": "Cloud Aether",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "switch",
+        "parameters": [
+          "enemy_team:own_team",
+          "random"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "weather",
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/cloud_aether.json"
+  },
+  {
+    "id": 127,
+    "slug": "conjurer",
+    "displayName": "Conjurer",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/conjurer.json"
+  },
+  {
+    "id": 128,
+    "slug": "crystal",
+    "displayName": "Crystal",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "gemstone"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/crystal.json"
+  },
+  {
+    "id": 129,
+    "slug": "feline",
+    "displayName": "Feline",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "wild",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "speed",
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/feline.json"
+  },
+  {
+    "id": 130,
+    "slug": "insanity",
+    "displayName": "Insanity",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "diehard",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "mental",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/insanity.json"
+  },
+  {
+    "id": 131,
+    "slug": "ants",
+    "displayName": "Ants",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "switch",
+        "parameters": [
+          "enemy_monster",
+          "earth"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "bug",
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ants.json"
+  },
+  {
+    "id": 132,
+    "slug": "kraken",
+    "displayName": "Kraken",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "pseudopod",
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/kraken.json"
+  },
+  {
+    "id": 133,
+    "slug": "lantern",
+    "displayName": "Lantern",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "light",
+      "gadgets",
+      "leadership"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/lantern.json"
+  },
+  {
+    "id": 134,
+    "slug": "lava",
+    "displayName": "Lava",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 290,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "burn",
+          "own_team:enemy_team"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "calamity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/lava.json"
+  },
+  {
+    "id": 135,
+    "slug": "lineage",
+    "displayName": "Lineage",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ghost",
+      "leadership"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/lineage.json"
+  },
+  {
+    "id": 136,
+    "slug": "lust",
+    "displayName": "Lust",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "charmed",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "love"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/lust.json"
+  },
+  {
+    "id": 137,
+    "slug": "magma",
+    "displayName": "Magma",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 140,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "rock",
+      "flame"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/magma.json"
+  },
+  {
+    "id": 138,
+    "slug": "muck",
+    "displayName": "Muck",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/muck.json"
+  },
+  {
+    "id": 139,
+    "slug": "mystic_blending",
+    "displayName": "Mystic Blending",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "focused",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "healing",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/mystic_blending.json"
+  },
+  {
+    "id": 140,
+    "slug": "negation",
+    "displayName": "Negation",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "festering",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "toxic",
+      "healing",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/negation.json"
+  },
+  {
+    "id": 141,
+    "slug": "orbs",
+    "displayName": "Orbs",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      },
+      {
+        "type": "switch",
+        "parameters": [
+          "enemy_monster",
+          "random"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/orbs.json"
+  },
+  {
+    "id": 142,
+    "slug": "pit",
+    "displayName": "Pit",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 210,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "harpooned",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ground",
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/pit.json"
+  },
+  {
+    "id": 143,
+    "slug": "platinum",
+    "displayName": "Platinum",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 170,
+    "accuracy": 70,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "focused",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "softened",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "gemstone",
+      "machine",
+      "shielded",
+      "steel"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/platinum.json"
+  },
+  {
+    "id": 144,
+    "slug": "radiance",
+    "displayName": "Radiance",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 95,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "light",
+      "leadership"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/radiance.json"
+  },
+  {
+    "id": 145,
+    "slug": "ring",
+    "displayName": "Ring",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ring.json"
+  },
+  {
+    "id": 146,
+    "slug": "ruby",
+    "displayName": "Ruby",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "gemstone"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ruby.json"
+  },
+  {
+    "id": 147,
+    "slug": "demiurge",
+    "displayName": "Demiurge",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "confused",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/demiurge.json"
+  },
+  {
+    "id": 148,
+    "slug": "sylvan",
+    "displayName": "Sylvan",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "switch",
+        "parameters": [
+          "enemy_monster",
+          "wood"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "plant",
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sylvan.json"
+  },
+  {
+    "id": 149,
+    "slug": "terror",
+    "displayName": "Terror",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "lockdown",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/terror.json"
+  },
+  {
+    "id": 150,
+    "slug": "torch",
+    "displayName": "Torch",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 140,
+    "accuracy": 70,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "flinching",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "flame",
+      "gadgets"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/torch.json"
+  },
+  {
+    "id": 151,
+    "slug": "electroplate",
+    "displayName": "Electroplate",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "switch",
+        "parameters": [
+          "enemy_monster",
+          "metal"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "machine",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/electroplate.json"
+  },
+  {
+    "id": 152,
+    "slug": "undertaker",
+    "displayName": "Undertaker",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "prickly",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "sacrifice",
+        "parameters": [
+          "1"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ghost",
+      "ground"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/undertaker.json"
+  },
+  {
+    "id": 153,
+    "slug": "caustic_spray",
+    "displayName": "Caustic Spray",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 220,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/caustic_spray.json"
+  },
+  {
+    "id": 154,
+    "slug": "viper",
+    "displayName": "Viper",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 290,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "toxic"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/viper.json"
+  },
+  {
+    "id": 155,
+    "slug": "vorpal",
+    "displayName": "Vorpal",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 95,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "revenge",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/vorpal.json"
+  },
+  {
+    "id": 156,
+    "slug": "walls",
+    "displayName": "Walls",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "hardshell",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "summoner",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/walls.json"
+  },
+  {
+    "id": 157,
+    "slug": "webs_wind",
+    "displayName": "Webs Wind",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 50,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "multiattack",
+        "parameters": [
+          "5"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/webs_wind.json"
+  },
+  {
+    "id": 158,
+    "slug": "arcane_eye",
+    "displayName": "Arcane Eye",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "elementalshield",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "gaze",
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/arcane_eye.json"
+  },
+  {
+    "id": 159,
+    "slug": "sunburst",
+    "displayName": "Sunburst",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 110,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "blinded",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "flame",
+      "celestial"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sunburst.json"
+  },
+  {
+    "id": 160,
+    "slug": "shapechange",
+    "displayName": "Shapechange",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 220,
+    "accuracy": 70,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      },
+      {
+        "type": "switch",
+        "parameters": [
+          "own_monster",
+          "random"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/shapechange.json"
+  },
+  {
+    "id": 161,
+    "slug": "gust",
+    "displayName": "Gust",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 90,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/gust.json"
+  },
+  {
+    "id": 162,
+    "slug": "phantasmal_force",
+    "displayName": "Phantasmal Force",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 110,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ghost"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/phantasmal_force.json"
+  },
+  {
+    "id": 163,
+    "slug": "lightning_spheres",
+    "displayName": "Lightning Spheres",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 120,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "electricity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/lightning_spheres.json"
+  },
+  {
+    "id": 164,
+    "slug": "blood_nets",
+    "displayName": "Blood Nets",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "lifeleech",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "bug"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/blood_nets.json"
+  },
+  {
+    "id": 165,
+    "slug": "wall_fire",
+    "displayName": "Wall Fire",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 190,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "elementalshield",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "burn",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "summoner",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/wall_fire.json"
+  },
+  {
+    "id": 166,
+    "slug": "firestorm",
+    "displayName": "Firestorm",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bomber",
+      "calamity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/firestorm.json"
+  },
+  {
+    "id": 167,
+    "slug": "fire_shield",
+    "displayName": "Fire Shield",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "elementalshield",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "burn",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "soldier",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fire_shield.json"
+  },
+  {
+    "id": 168,
+    "slug": "earthquake",
+    "displayName": "Earthquake",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 290,
+    "accuracy": 70,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "calamity",
+      "ground"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/earthquake.json"
+  },
+  {
+    "id": 169,
+    "slug": "mending",
+    "displayName": "Mending",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "leadership"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/mending.json"
+  },
+  {
+    "id": 170,
+    "slug": "tsunami",
+    "displayName": "Tsunami",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 270,
+    "accuracy": 75,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "water",
+      "calamity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/tsunami.json"
+  },
+  {
+    "id": 171,
+    "slug": "ice_storm",
+    "displayName": "Ice Storm",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 60,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ice_storm.json"
+  },
+  {
+    "id": 172,
+    "slug": "ice_shield",
+    "displayName": "Ice Shield",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "elementalshield",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "soldier",
+      "ice",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ice_shield.json"
+  },
+  {
+    "id": 173,
+    "slug": "overfeed",
+    "displayName": "Overfeed",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 5,
+    "maxPp": 5,
+    "currentPp": 5,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/overfeed.json"
+  },
+  {
+    "id": 174,
+    "slug": "surf",
+    "displayName": "Surf",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 260,
+    "accuracy": 60,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "water"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/surf.json"
+  },
+  {
+    "id": 175,
+    "slug": "life_surge",
+    "displayName": "Life Surge",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "chargedup",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "healing"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/life_surge.json"
+  },
+  {
+    "id": 176,
+    "slug": "scope",
+    "displayName": "Scope",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "scope"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "universal"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/scope.json"
+  },
+  {
+    "id": 177,
+    "slug": "panjandrum",
+    "displayName": "Panjandrum",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 75,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "prop_damage",
+        "parameters": [
+          "enemy_monster",
+          "0.25"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "gadgets",
+      "calamity",
+      "bomber"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/panjandrum.json"
+  },
+  {
+    "id": 178,
+    "slug": "tinder",
+    "displayName": "Tinder",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "burn",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "flame",
+      "gadgets"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/tinder.json"
+  },
+  {
+    "id": 179,
+    "slug": "neutralize",
+    "displayName": "Neutralize",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "remove",
+        "parameters": [
+          "all",
+          "own_monster:enemy_monster"
+        ]
+      },
+      {
+        "type": "reverse",
+        "parameters": [
+          "enemy_team:own_team"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "universal"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/neutralize.json"
+  },
+  {
+    "id": 180,
+    "slug": "altitude",
+    "displayName": "Altitude",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 80,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "disappear",
+        "parameters": [
+          "hawk"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/altitude.json"
+  },
+  {
+    "id": 181,
+    "slug": "revenge_stance",
+    "displayName": "Revenge Stance",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "revenge",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "soldier",
+      "shielded",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/revenge_stance.json"
+  },
+  {
+    "id": 182,
+    "slug": "punch",
+    "displayName": "Punch",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "fists"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/punch.json"
+  },
+  {
+    "id": 183,
+    "slug": "changeling",
+    "displayName": "Changeling",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/changeling.json"
+  },
+  {
+    "id": 184,
+    "slug": "suplex",
+    "displayName": "Suplex",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 95,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "diehard",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/suplex.json"
+  },
+  {
+    "id": 185,
+    "slug": "mind_vise",
+    "displayName": "Mind Vise",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "stuck",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ghost",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/mind_vise.json"
+  },
+  {
+    "id": 186,
+    "slug": "one_million_talons",
+    "displayName": "One Million Talons",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "flinching",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/one_million_talons.json"
+  },
+  {
+    "id": 187,
+    "slug": "riposte",
+    "displayName": "Riposte",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "retaliate",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "sharp",
+      "speed",
+      "shielded"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/riposte.json"
+  },
+  {
+    "id": 188,
+    "slug": "ten_thousand_feathers",
+    "displayName": "Ten Thousand Feathers",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 90,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "charging",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bird"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/ten_thousand_feathers.json"
+  },
+  {
+    "id": 189,
+    "slug": "solar_synthesis",
+    "displayName": "Solar Synthesis",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "photogenesis",
+        "parameters": [
+          "6",
+          "12",
+          "18"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "plant",
+      "light"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/solar_synthesis.json"
+  },
+  {
+    "id": 190,
+    "slug": "shooting_star",
+    "displayName": "Shooting Star",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "photogenesis",
+        "parameters": [
+          "18",
+          "0",
+          "6"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "celestial",
+      "light",
+      "darkness"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/shooting_star.json"
+  },
+  {
+    "id": 191,
+    "slug": "energy_beam",
+    "displayName": "Energy Beam",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 95,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "burn",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "calamity",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/energy_beam.json"
+  },
+  {
+    "id": 191,
+    "slug": "menu_run",
+    "displayName": "Menu Run",
+    "typeSlug": "neutral",
+    "type": "Neutral",
+    "damageClass": "status",
+    "category": "status",
+    "sort": "meta",
+    "power": 0,
+    "accuracy": 0,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "run"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "notype"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/run.json"
+  },
+  {
+    "id": 192,
+    "slug": "divinity_beam",
+    "displayName": "Divinity Beam",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 95,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "blinded",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "celestial",
+      "calamity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/divinity_beam.json"
+  },
+  {
+    "id": 193,
+    "slug": "shadow_blast",
+    "displayName": "Shadow Blast",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 280,
+    "accuracy": 95,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "prop_healing",
+        "parameters": [
+          "own_monster",
+          "0.2"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ghost",
+      "darkness"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/shadow_blast.json"
+  },
+  {
+    "id": 194,
+    "slug": "tornado",
+    "displayName": "Tornado",
+    "typeSlug": "sky",
+    "type": "Sky",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 290,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "weather",
+      "calamity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/tornado.json"
+  },
+  {
+    "id": 195,
+    "slug": "water_blast",
+    "displayName": "Water Blast",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 230,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "water"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/water_blast.json"
+  },
+  {
+    "id": 196,
+    "slug": "needle",
+    "displayName": "Needle",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant",
+      "machine",
+      "steel"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/needle.json"
+  },
+  {
+    "id": 197,
+    "slug": "buzz",
+    "displayName": "Buzz",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 120,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "flinching",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "electricity",
+      "bug"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/buzz.json"
+  },
+  {
+    "id": 198,
+    "slug": "pouch",
+    "displayName": "Pouch",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "cooldown_modifier",
+        "parameters": [
+          "own_monster",
+          "0",
+          "sort",
+          "damage"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/pouch.json"
+  },
+  {
+    "id": 199,
+    "slug": "spiky_strike",
+    "displayName": "Spiky Strike",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 95,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "sharp"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/spiky_strike.json"
+  },
+  {
+    "id": 200,
+    "slug": "thorn_burst",
+    "displayName": "Thorn Burst",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 95,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "stuck",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/thorn_burst.json"
+  },
+  {
+    "id": 201,
+    "slug": "tail_lash",
+    "displayName": "Tail Lash",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 120,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "flinching",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "tail"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/tail_lash.json"
+  },
+  {
+    "id": 202,
+    "slug": "roll",
+    "displayName": "Roll",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 120,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "hardshell",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "shielded",
+      "speed"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/roll.json"
+  },
+  {
+    "id": 203,
+    "slug": "woodsmash",
+    "displayName": "Woodsmash",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 290,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/woodsmash.json"
+  },
+  {
+    "id": 204,
+    "slug": "burrow_blast",
+    "displayName": "Burrow Blast",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 80,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "disappear",
+        "parameters": [
+          "strike"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ground"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/burrow_blast.json"
+  },
+  {
+    "id": 204,
+    "slug": "skip",
+    "displayName": "Skip",
+    "typeSlug": "neutral",
+    "type": "Neutral",
+    "damageClass": "status",
+    "category": "status",
+    "sort": "meta",
+    "power": 0,
+    "accuracy": 0,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "notype"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/skip.json"
+  },
+  {
+    "id": 205,
+    "slug": "depth_charge",
+    "displayName": "Depth Charge",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 80,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "disappear",
+        "parameters": [
+          "strike"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "water",
+      "amphibian"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/depth_charge.json"
+  },
+  {
+    "id": 206,
+    "slug": "rift_dash",
+    "displayName": "Rift Dash",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 80,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "disappear",
+        "parameters": [
+          "strike"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "machine",
+      "electricity",
+      "speed"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/rift_dash.json"
+  },
+  {
+    "id": 207,
+    "slug": "staff_smash",
+    "displayName": "Staff Smash",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "staff"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/staff_smash.json"
+  },
+  {
+    "id": 208,
+    "slug": "pyrokinesis",
+    "displayName": "Pyrokinesis",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 80,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "flame",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/pyrokinesis.json"
+  },
+  {
+    "id": 209,
+    "slug": "lick_lash",
+    "displayName": "Lick Lash",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 80,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "flinching",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "tongue"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/lick_lash.json"
+  },
+  {
+    "id": 210,
+    "slug": "wiggle",
+    "displayName": "Wiggle",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "empty"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "weak"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/wiggle.json"
+  },
+  {
+    "id": 211,
+    "slug": "dreamwalk",
+    "displayName": "Dreamwalk",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 280,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/dreamwalk.json"
+  },
+  {
+    "id": 212,
+    "slug": "pollen_blast",
+    "displayName": "Pollen Blast",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 80,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "confused",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/pollen_blast.json"
+  },
+  {
+    "id": 213,
+    "slug": "water_bullet",
+    "displayName": "Water Bullet",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 125,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "soldier",
+      "water"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/water_bullet.json"
+  },
+  {
+    "id": 214,
+    "slug": "bubbles",
+    "displayName": "Bubbles",
+    "typeSlug": "water",
+    "type": "Water",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 140,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "amphibian",
+      "water"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/bubbles.json"
+  },
+  {
+    "id": 215,
+    "slug": "gnaw",
+    "displayName": "Gnaw",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bite"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/gnaw.json"
+  },
+  {
+    "id": 216,
+    "slug": "crushing_bite",
+    "displayName": "Crushing Bite",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 180,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "stuck",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bite"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/crushing_bite.json"
+  },
+  {
+    "id": 216,
+    "slug": "spyderbite",
+    "displayName": "Spyderbite",
+    "typeSlug": "neutral",
+    "type": "Neutral",
+    "damageClass": "status",
+    "category": "status",
+    "sort": "meta",
+    "power": 0,
+    "accuracy": 0,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "plague",
+        "parameters": [
+          "spyderbite"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "notype"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/spyderbite.json"
+  },
+  {
+    "id": 217,
+    "slug": "steel_jaws",
+    "displayName": "Steel Jaws",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 95,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bite",
+      "steel"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/steel_jaws.json"
+  },
+  {
+    "id": 218,
+    "slug": "infectious_bite",
+    "displayName": "Infectious Bite",
+    "typeSlug": "venom",
+    "type": "Venom",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 95,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "festering",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bite"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/infectious_bite.json"
+  },
+  {
+    "id": 219,
+    "slug": "trample",
+    "displayName": "Trample",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 90,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "stuck",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "megafauna",
+      "fury"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/trample.json"
+  },
+  {
+    "id": 220,
+    "slug": "electric_multibite",
+    "displayName": "Electric Multibite",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 120,
+    "accuracy": 90,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "multiattack",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bite",
+      "electricity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/electric_multibite.json"
+  },
+  {
+    "id": 221,
+    "slug": "stick",
+    "displayName": "Stick",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 140,
+    "accuracy": 95,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant",
+      "staff"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/stick.json"
+  },
+  {
+    "id": 222,
+    "slug": "leaf_stab",
+    "displayName": "Leaf Stab",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 120,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "burn",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/leaf_stab.json"
+  },
+  {
+    "id": 223,
+    "slug": "leaf_barrage",
+    "displayName": "Leaf Barrage",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 130,
+    "accuracy": 95,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "multiattack",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/leaf_barrage.json"
+  },
+  {
+    "id": 224,
+    "slug": "cutting_leaves",
+    "displayName": "Cutting Leaves",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 95,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/cutting_leaves.json"
+  },
+  {
+    "id": 225,
+    "slug": "mind_explosion",
+    "displayName": "Mind Explosion",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "confused",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/mind_explosion.json"
+  },
+  {
+    "id": 226,
+    "slug": "flower_armor",
+    "displayName": "Flower Armor",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "elementalshield",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/flower_armor.json"
+  },
+  {
+    "id": 227,
+    "slug": "flower_bloom",
+    "displayName": "Flower Bloom",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 95,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "splash",
+        "parameters": [
+          "2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/flower_bloom.json"
+  },
+  {
+    "id": 228,
+    "slug": "piece_of_cake",
+    "displayName": "Piece Of Cake",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "charging",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/piece_of_cake.json"
+  },
+  {
+    "id": 229,
+    "slug": "food_fight",
+    "displayName": "Food Fight",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 40,
+    "accuracy": 95,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      },
+      {
+        "type": "prop_healing",
+        "parameters": [
+          "own_monster",
+          "0.2"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/food_fight.json"
+  },
+  {
+    "id": 230,
+    "slug": "just_desserts",
+    "displayName": "Just Desserts",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 70,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "revenge",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "poison",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/just_desserts.json"
+  },
+  {
+    "id": 231,
+    "slug": "diet",
+    "displayName": "Diet",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "diehard",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "food",
+      "soldier"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/diet.json"
+  },
+  {
+    "id": 232,
+    "slug": "egg_smash",
+    "displayName": "Egg Smash",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "food",
+      "bird",
+      "amphibian"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/egg_smash.json"
+  },
+  {
+    "id": 233,
+    "slug": "heavenly_desserts",
+    "displayName": "Heavenly Desserts",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 90,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/heavenly_desserts.json"
+  },
+  {
+    "id": 234,
+    "slug": "gourmet",
+    "displayName": "Gourmet",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "recover",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/gourmet.json"
+  },
+  {
+    "id": 235,
+    "slug": "potluck",
+    "displayName": "Potluck",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "exhausted",
+          "own_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "noddingoff",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "healing"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/potluck.json"
+  },
+  {
+    "id": 236,
+    "slug": "oven",
+    "displayName": "Oven",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 80,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "disappear",
+        "parameters": [
+          "fire_ball"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "flame",
+      "food"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/oven.json"
+  },
+  {
+    "id": 237,
+    "slug": "magnetic_body",
+    "displayName": "Magnetic Body",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "grabbed",
+          "own_monster:enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "machine",
+      "steel",
+      "electricity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/magnetic_body.json"
+  },
+  {
+    "id": 237,
+    "slug": "swap",
+    "displayName": "Swap",
+    "typeSlug": "neutral",
+    "type": "Neutral",
+    "damageClass": "status",
+    "category": "status",
+    "sort": "meta",
+    "power": 0,
+    "accuracy": 0,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "swap"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "notype"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/swap.json"
+  },
+  {
+    "id": 238,
+    "slug": "laser_beam",
+    "displayName": "Laser Beam",
+    "typeSlug": "lightning",
+    "type": "Lightning",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 100,
+    "pp": 4,
+    "maxPp": 4,
+    "currentPp": 4,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "blinded",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "machine",
+      "electricity"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/laser_beam.json"
+  },
+  {
+    "id": 239,
+    "slug": "fungal_spore",
+    "displayName": "Fungal Spore",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 140,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "lifeleech",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "spore"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/fungal_spore.json"
+  },
+  {
+    "id": 240,
+    "slug": "hallucinogen_spore",
+    "displayName": "Hallucinogen Spore",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "confused",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "spore"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/hallucinogen_spore.json"
+  },
+  {
+    "id": 241,
+    "slug": "rocky_barrage",
+    "displayName": "Rocky Barrage",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 90,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "multiattack",
+        "parameters": [
+          "3"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ground",
+      "rock"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/rocky_barrage.json"
+  },
+  {
+    "id": 242,
+    "slug": "tooth_for_tooth",
+    "displayName": "Tooth For Tooth",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "prop_damage",
+        "parameters": [
+          "own_monster",
+          "0.5"
+        ]
+      },
+      {
+        "type": "prop_damage",
+        "parameters": [
+          "enemy_monster",
+          "0.5"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "reserved"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/tooth_for_tooth.json"
+  },
+  {
+    "id": 243,
+    "slug": "taunt",
+    "displayName": "Taunt",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "enraged",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "fury",
+      "mental",
+      "weak"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/taunt.json"
+  },
+  {
+    "id": 244,
+    "slug": "frighten",
+    "displayName": "Frighten",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "sniping",
+          "enemy_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {
+      "bypasses_selection": true
+    },
+    "tags": [
+      "ghost",
+      "mental"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/frighten.json"
+  },
+  {
+    "id": 245,
+    "slug": "horn",
+    "displayName": "Horn",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 75,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "megafauna"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/horn.json"
+  },
+  {
+    "id": 246,
+    "slug": "hook",
+    "displayName": "Hook",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 95,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "harpooned",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "water"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/hook.json"
+  },
+  {
+    "id": 247,
+    "slug": "harpoon",
+    "displayName": "Harpoon",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 280,
+    "accuracy": 85,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "harpooned",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ice",
+      "water",
+      "gadgets"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/harpoon.json"
+  },
+  {
+    "id": 248,
+    "slug": "entomb",
+    "displayName": "Entomb",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 300,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "earth",
+      "darkness"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/entomb.json"
+  },
+  {
+    "id": 249,
+    "slug": "sands_of_time",
+    "displayName": "Sands Of Time",
+    "typeSlug": "earth",
+    "type": "Earth",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 240,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "mental",
+      "celestial",
+      "earth"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sands_of_time.json"
+  },
+  {
+    "id": 250,
+    "slug": "wicked_wind",
+    "displayName": "Wicked Wind",
+    "typeSlug": "shadow",
+    "type": "Shadow",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 240,
+    "accuracy": 85,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "festering",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "weather"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/wicked_wind.json"
+  },
+  {
+    "id": 251,
+    "slug": "magic_spell",
+    "displayName": "Magic Spell",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 95,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "staff"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/magic_spell.json"
+  },
+  {
+    "id": 252,
+    "slug": "curse",
+    "displayName": "Curse",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 50,
+    "accuracy": 95,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "foresight",
+        "parameters": [
+          "2"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "staff"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/curse.json"
+  },
+  {
+    "id": 253,
+    "slug": "kiss",
+    "displayName": "Kiss",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "life_swap"
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "tongue"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/kiss.json"
+  },
+  {
+    "id": 254,
+    "slug": "inner_power",
+    "displayName": "Inner Power",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "move_type",
+        "parameters": [
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "universal"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/inner_power.json"
+  },
+  {
+    "id": 255,
+    "slug": "external_power",
+    "displayName": "External Power",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 100,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "move_type",
+        "parameters": [
+          "own_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "universal"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/external_power.json"
+  },
+  {
+    "id": 256,
+    "slug": "power_theft",
+    "displayName": "Power Theft",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 250,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "move_type",
+        "parameters": [
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "softened",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "shapeshifter",
+      "pseudopod"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/power_theft.json"
+  },
+  {
+    "id": 257,
+    "slug": "implosion",
+    "displayName": "Implosion",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 95,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "sacrifice",
+        "parameters": [
+          "1"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "gadgets"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/implosion.json"
+  },
+  {
+    "id": 258,
+    "slug": "sockpuppet",
+    "displayName": "Sockpuppet",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 5,
+    "maxPp": 5,
+    "currentPp": 5,
+    "effects": [
+      {
+        "type": "cooldown_modifier",
+        "parameters": [
+          "enemy_monster",
+          "5",
+          "sort",
+          "damage"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "machine",
+      "shielded",
+      "weak",
+      "gadgets"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/sockpuppet.json"
+  },
+  {
+    "id": 259,
+    "slug": "lock_horns",
+    "displayName": "Lock Horns",
+    "typeSlug": "heroic",
+    "type": "Heroic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 150,
+    "accuracy": 95,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "harpooned",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "megafauna"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/lock_horns.json"
+  },
+  {
+    "id": 260,
+    "slug": "healing_herb",
+    "displayName": "Healing Herb",
+    "typeSlug": "wood",
+    "type": "Wood",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 95,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "prop_healing",
+        "parameters": [
+          "own_team",
+          "0.33"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/healing_herb.json"
+  },
+  {
+    "id": 261,
+    "slug": "damage_division",
+    "displayName": "Damage Division",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 95,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "prop_healing",
+        "parameters": [
+          "own_monster",
+          "0.5"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "healing",
+      "summoner"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/damage_division.json"
+  },
+  {
+    "id": 262,
+    "slug": "counterspell",
+    "displayName": "Counterspell",
+    "typeSlug": "cosmic",
+    "type": "Cosmic",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 0,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "cooldown_modifier",
+        "parameters": [
+          "enemy_monster",
+          "2",
+          "melee",
+          "special"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "celestial",
+      "staff"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/counterspell.json"
+  },
+  {
+    "id": 263,
+    "slug": "combat_clone",
+    "displayName": "Combat Clone",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 3,
+    "maxPp": 3,
+    "currentPp": 3,
+    "effects": [
+      {
+        "type": "foresight",
+        "parameters": [
+          "3"
+        ]
+      },
+      {
+        "type": "give",
+        "parameters": [
+          "elementalshield",
+          "own_monster"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "plant",
+      "spore",
+      "shapeshifter"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/combat_clone.json"
+  },
+  {
+    "id": 264,
+    "slug": "data_swap",
+    "displayName": "Data Swap",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "life_share",
+        "parameters": [
+          "target_to_user",
+          "simple"
+        ]
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "machine"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/data_swap.json"
+  },
+  {
+    "id": 265,
+    "slug": "deletion_request",
+    "displayName": "Deletion Request",
+    "typeSlug": "metal",
+    "type": "Metal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 200,
+    "accuracy": 90,
+    "pp": 2,
+    "maxPp": 2,
+    "currentPp": 2,
+    "effects": [
+      {
+        "type": "foresight",
+        "parameters": [
+          "2"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "machine"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/deletion_request.json"
+  },
+  {
+    "id": 266,
+    "slug": "bomb",
+    "displayName": "Bomb",
+    "typeSlug": "fire",
+    "type": "Fire",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 80,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "foresight",
+        "parameters": [
+          "1"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "bomber"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/bomb.json"
+  },
+  {
+    "id": 267,
+    "slug": "snowball",
+    "displayName": "Snowball",
+    "typeSlug": "frost",
+    "type": "Frost",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 100,
+    "accuracy": 90,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "give",
+        "parameters": [
+          "slow",
+          "enemy_monster"
+        ]
+      },
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "ice"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/snowball.json"
+  },
+  {
+    "id": 268,
+    "slug": "struggle",
+    "displayName": "Struggle",
+    "typeSlug": "normal",
+    "type": "Normal",
+    "damageClass": "physical",
+    "category": "physical",
+    "sort": "damage",
+    "power": 50,
+    "accuracy": 100,
+    "pp": 1,
+    "maxPp": 1,
+    "currentPp": 1,
+    "effects": [
+      {
+        "type": "damage"
+      }
+    ],
+    "modifiers": [],
+    "behaviors": {},
+    "tags": [
+      "universal"
+    ],
+    "desc": "",
+    "source": "tuxemon/db/technique/struggle.json"
+  }
+]

@@ -1,0 +1,898 @@
+[
+  {
+    "slug": "aether",
+    "name": "Aether",
+    "icon": "gfx/ui/icons/element/aether_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 1
+      },
+      {
+        "against": "fire",
+        "multiplier": 1
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 1
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 1
+      },
+      {
+        "against": "wood",
+        "multiplier": 1
+      }
+    ],
+    "source": "tuxemon/db/element/aether.yaml"
+  },
+  {
+    "slug": "cosmic",
+    "name": "Cosmic",
+    "icon": "gfx/ui/icons/element/cosmic_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 1
+      },
+      {
+        "against": "fire",
+        "multiplier": 1
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 2
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 1
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 0.5
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 2
+      },
+      {
+        "against": "water",
+        "multiplier": 1
+      },
+      {
+        "against": "wood",
+        "multiplier": 1
+      }
+    ],
+    "source": "tuxemon/db/element/cosmic.yaml"
+  },
+  {
+    "slug": "earth",
+    "name": "Earth",
+    "icon": "gfx/ui/icons/element/earth_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 1
+      },
+      {
+        "against": "fire",
+        "multiplier": 2
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 2
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 1
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 0.5
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 1
+      },
+      {
+        "against": "wood",
+        "multiplier": 0.5
+      }
+    ],
+    "source": "tuxemon/db/element/earth.yaml"
+  },
+  {
+    "slug": "fire",
+    "name": "Fire",
+    "icon": "gfx/ui/icons/element/fire_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 0.5
+      },
+      {
+        "against": "fire",
+        "multiplier": 0.5
+      },
+      {
+        "against": "frost",
+        "multiplier": 0.5
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 2
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 2
+      },
+      {
+        "against": "water",
+        "multiplier": 0.5
+      },
+      {
+        "against": "wood",
+        "multiplier": 2
+      }
+    ],
+    "source": "tuxemon/db/element/fire.yaml"
+  },
+  {
+    "slug": "frost",
+    "name": "Frost",
+    "icon": "gfx/ui/icons/element/frost_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 2
+      },
+      {
+        "against": "fire",
+        "multiplier": 1
+      },
+      {
+        "against": "frost",
+        "multiplier": 0.5
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 0.5
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 0.5
+      },
+      {
+        "against": "sky",
+        "multiplier": 2
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 0.5
+      },
+      {
+        "against": "wood",
+        "multiplier": 2
+      }
+    ],
+    "source": "tuxemon/db/element/frost.yaml"
+  },
+  {
+    "slug": "heroic",
+    "name": "Heroic",
+    "icon": "gfx/ui/icons/element/heroic_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 1
+      },
+      {
+        "against": "fire",
+        "multiplier": 1
+      },
+      {
+        "against": "frost",
+        "multiplier": 2
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 0.5
+      },
+      {
+        "against": "metal",
+        "multiplier": 1
+      },
+      {
+        "against": "normal",
+        "multiplier": 2
+      },
+      {
+        "against": "shadow",
+        "multiplier": 2
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 0.5
+      },
+      {
+        "against": "water",
+        "multiplier": 1
+      },
+      {
+        "against": "wood",
+        "multiplier": 1
+      }
+    ],
+    "source": "tuxemon/db/element/heroic.yaml"
+  },
+  {
+    "slug": "lightning",
+    "name": "Lightning",
+    "icon": "gfx/ui/icons/element/lightning_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 0.5
+      },
+      {
+        "against": "fire",
+        "multiplier": 1
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 0.5
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 2
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 2
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 2
+      },
+      {
+        "against": "wood",
+        "multiplier": 0.5
+      }
+    ],
+    "source": "tuxemon/db/element/lightning.yaml"
+  },
+  {
+    "slug": "metal",
+    "name": "Metal",
+    "icon": "gfx/ui/icons/element/metal_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 2
+      },
+      {
+        "against": "fire",
+        "multiplier": 0.5
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 2
+      },
+      {
+        "against": "metal",
+        "multiplier": 0.5
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 0.5
+      },
+      {
+        "against": "wood",
+        "multiplier": 1
+      }
+    ],
+    "source": "tuxemon/db/element/metal.yaml"
+  },
+  {
+    "slug": "normal",
+    "name": "Normal",
+    "icon": "gfx/ui/icons/element/normal_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 1
+      },
+      {
+        "against": "fire",
+        "multiplier": 1
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 0.5
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 1
+      },
+      {
+        "against": "wood",
+        "multiplier": 1
+      }
+    ],
+    "source": "tuxemon/db/element/normal.yaml"
+  },
+  {
+    "slug": "shadow",
+    "name": "Shadow",
+    "icon": "gfx/ui/icons/element/shadow_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 0.5
+      },
+      {
+        "against": "fire",
+        "multiplier": 1
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 0.5
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 2
+      },
+      {
+        "against": "metal",
+        "multiplier": 1
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 2
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 1
+      },
+      {
+        "against": "wood",
+        "multiplier": 1
+      }
+    ],
+    "source": "tuxemon/db/element/shadow.yaml"
+  },
+  {
+    "slug": "sky",
+    "name": "Sky",
+    "icon": "gfx/ui/icons/element/sky_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 2
+      },
+      {
+        "against": "fire",
+        "multiplier": 0.5
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 2
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 1
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 1
+      },
+      {
+        "against": "wood",
+        "multiplier": 2
+      }
+    ],
+    "source": "tuxemon/db/element/sky.yaml"
+  },
+  {
+    "slug": "venom",
+    "name": "Venom",
+    "icon": "gfx/ui/icons/element/venom_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 0.5
+      },
+      {
+        "against": "fire",
+        "multiplier": 1
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 0.5
+      },
+      {
+        "against": "normal",
+        "multiplier": 2
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 0.5
+      },
+      {
+        "against": "water",
+        "multiplier": 0.5
+      },
+      {
+        "against": "wood",
+        "multiplier": 2
+      }
+    ],
+    "source": "tuxemon/db/element/venom.yaml"
+  },
+  {
+    "slug": "water",
+    "name": "Water",
+    "icon": "gfx/ui/icons/element/water_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 1
+      },
+      {
+        "against": "fire",
+        "multiplier": 2
+      },
+      {
+        "against": "frost",
+        "multiplier": 0.5
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 1
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 1
+      },
+      {
+        "against": "water",
+        "multiplier": 0.5
+      },
+      {
+        "against": "wood",
+        "multiplier": 0.5
+      }
+    ],
+    "source": "tuxemon/db/element/water.yaml"
+  },
+  {
+    "slug": "wood",
+    "name": "Wood",
+    "icon": "gfx/ui/icons/element/wood_type.png",
+    "matchups": [
+      {
+        "against": "aether",
+        "multiplier": 1
+      },
+      {
+        "against": "earth",
+        "multiplier": 2
+      },
+      {
+        "against": "fire",
+        "multiplier": 0.5
+      },
+      {
+        "against": "frost",
+        "multiplier": 1
+      },
+      {
+        "against": "heroic",
+        "multiplier": 1
+      },
+      {
+        "against": "lightning",
+        "multiplier": 1
+      },
+      {
+        "against": "cosmic",
+        "multiplier": 1
+      },
+      {
+        "against": "metal",
+        "multiplier": 1
+      },
+      {
+        "against": "normal",
+        "multiplier": 1
+      },
+      {
+        "against": "shadow",
+        "multiplier": 1
+      },
+      {
+        "against": "sky",
+        "multiplier": 1
+      },
+      {
+        "against": "venom",
+        "multiplier": 0.5
+      },
+      {
+        "against": "water",
+        "multiplier": 2
+      },
+      {
+        "against": "wood",
+        "multiplier": 0.5
+      }
+    ],
+    "source": "tuxemon/db/element/wood.yaml"
+  }
+]
