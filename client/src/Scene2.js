@@ -11,8 +11,12 @@ import PokemonCenterManager from "./PokemonCenterManager";
 import WildEncounterManager from "./WildEncounterManager";
 import { createWalletSavePayload, tickPlaySession } from "./state/gameState";
 import { saveWalletGameState } from "./api/wallets";
+import { MAP_REGISTRY } from "./constants/mapManifest";
+import { TILESET_MANIFEST } from "./constants/tilesetManifest";
 
 let cursors, socketKey;
+
+const MAP_CONFIG_BY_ID = new Map((Array.isArray(MAP_REGISTRY) ? MAP_REGISTRY : []).map((entry) => [entry.id, entry]));
 
 export class Scene2 extends Phaser.Scene {
     constructor() {
@@ -203,16 +207,22 @@ export class Scene2 extends Phaser.Scene {
     }
 
     resolveTileset(tilesetConfig) {
-        const fallbackKey = "tuxmon-sample-32px-extruded";
+        const mapConfig = MAP_CONFIG_BY_ID.get(this.mapName) || {};
+        const knownTilesetKeys = Object.keys(TILESET_MANIFEST || {});
+        const registryFallbackKey = mapConfig.defaultTilesetKey || knownTilesetKeys[0] || "tuxmon-sample-32px-extruded";
         const imagePath = String(tilesetConfig?.image || "");
         const imageFileName = imagePath.split("/").pop() || "";
-        const imageKey = imageFileName.replace(/\.[^/.]+$/, "") || fallbackKey;
+        const imageKey = imageFileName.replace(/\.[^/.]+$/, "") || registryFallbackKey;
 
         try {
             return this.map.addTilesetImage(tilesetConfig.name, imageKey);
         } catch (error) {
-            if (imageKey !== fallbackKey) {
-                return this.map.addTilesetImage(tilesetConfig.name, fallbackKey);
+            if (imageKey !== registryFallbackKey) {
+                try {
+                    return this.map.addTilesetImage(tilesetConfig.name, registryFallbackKey);
+                } catch (fallbackError) {
+                    console.warn(`Unable to load fallback tileset for map ${this.mapName}:`, tilesetConfig?.name, fallbackError);
+                }
             }
 
             console.warn(`Unable to load tileset for map ${this.mapName}:`, tilesetConfig?.name, error);

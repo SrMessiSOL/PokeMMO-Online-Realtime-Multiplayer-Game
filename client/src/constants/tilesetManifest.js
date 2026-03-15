@@ -1,4 +1,6 @@
-const tilesetContext = require.context("../assets", true, /\.(png|jpg|jpeg)$/i);
+import PRELOAD_MANIFEST from "../data/tuxemon/preloadManifest.json";
+
+const tilesetContext = require.context("../assets/tilesets", false, /\.(png|jpg|jpeg)$/i);
 
 function resolveAssetUrl(resource) {
     if (typeof resource === "string") {
@@ -12,19 +14,19 @@ function resolveAssetUrl(resource) {
     return null;
 }
 
-function getTilesetKey(resourcePath) {
-    const normalizedPath = resourcePath.replace("./", "");
-    if (!normalizedPath.includes("tilesets/")) {
-        return null;
-    }
-
-    const fileName = normalizedPath.split("/").pop() || "";
-    return fileName.replace(/\.[^/.]+$/, "") || null;
+function toResourcePath(runtimeAsset = "") {
+    const fileName = runtimeAsset.split("/").pop() || "";
+    return `./${fileName}`;
 }
 
-export const TILESET_MANIFEST = tilesetContext.keys().reduce((manifest, resourcePath) => {
-    const tilesetKey = getTilesetKey(resourcePath);
-    if (!tilesetKey) {
+const runtimeTilesets = Array.isArray(PRELOAD_MANIFEST?.runtimeLoad?.tilesets)
+    ? PRELOAD_MANIFEST.runtimeLoad.tilesets
+    : [];
+
+export const TILESET_MANIFEST = runtimeTilesets.reduce((manifest, tilesetEntry) => {
+    const resourcePath = toResourcePath(tilesetEntry?.runtimeAsset);
+
+    if (!tilesetContext.keys().includes(resourcePath)) {
         return manifest;
     }
 
@@ -33,6 +35,6 @@ export const TILESET_MANIFEST = tilesetContext.keys().reduce((manifest, resource
         return manifest;
     }
 
-    manifest[tilesetKey] = assetUrl;
+    manifest[tilesetEntry.key] = assetUrl;
     return manifest;
 }, {});

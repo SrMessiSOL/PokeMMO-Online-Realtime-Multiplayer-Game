@@ -1,4 +1,6 @@
-const tilemapContext = require.context("../assets", true, /\.json$/);
+import RUNTIME_MAP_REGISTRY from "../data/tuxemon/runtimeMapRegistry.json";
+
+const tilemapContext = require.context("../assets/tilemaps", false, /\.json$/);
 
 function resolveMapResource(resource) {
     if (!resource) {
@@ -16,19 +18,24 @@ function resolveMapResource(resource) {
     return resource;
 }
 
-function getMapId(resourcePath) {
-    const normalizedPath = resourcePath.replace("./", "");
-    if (!normalizedPath.includes("tilemaps/")) {
-        return null;
-    }
-
-    const fileName = normalizedPath.split("/").pop() || "";
-    return fileName.replace(/\.json$/, "") || null;
+function runtimeAssetToMapId(runtimeAsset = "") {
+    const fileName = runtimeAsset.split("/").pop() || "";
+    return fileName.replace(/\.json$/, "");
 }
 
-export const MAP_MANIFEST = tilemapContext.keys().reduce((manifest, resourcePath) => {
-    const mapId = getMapId(resourcePath);
-    if (!mapId) {
+export const MAP_REGISTRY = Array.isArray(RUNTIME_MAP_REGISTRY)
+    ? RUNTIME_MAP_REGISTRY
+    : [];
+
+export const MAP_MANIFEST = MAP_REGISTRY.reduce((manifest, entry) => {
+    if (!entry?.runtimeAsset || entry.runtimeFormat !== "tiled-json") {
+        return manifest;
+    }
+
+    const mapId = runtimeAssetToMapId(entry.runtimeAsset) || entry.id;
+    const resourcePath = `./${mapId}.json`;
+
+    if (!tilemapContext.keys().includes(resourcePath)) {
         return manifest;
     }
 
@@ -37,6 +44,6 @@ export const MAP_MANIFEST = tilemapContext.keys().reduce((manifest, resourcePath
         return manifest;
     }
 
-    manifest[mapId] = mapResource;
+    manifest[entry.id] = mapResource;
     return manifest;
 }, {});

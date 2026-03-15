@@ -1,3 +1,6 @@
+import TUXEMON_MONSTERS from "../data/tuxemon/monsters.json";
+import TUXEMON_MOVES from "../data/tuxemon/moves.json";
+
 const GAME_STATE_STORAGE_KEY = "pokemmo.game-state.v3";
 const POKEMON_CACHE_STORAGE_KEY = "pokemmo.pokemon-cache.v3";
 const MOVE_CACHE_STORAGE_KEY = "pokemmo.move-cache.v2";
@@ -12,7 +15,7 @@ const DEFAULT_SAVE_SLOT = 1;
 const DEFAULT_BOX_COUNT = 14;
 const DEFAULT_BOX_CAPACITY = 30;
 const KANTO_GENERATION_ID = 1;
-const KANTO_TARGET_COUNT = 151;
+const KANTO_TARGET_COUNT = Array.isArray(TUXEMON_MONSTERS) ? TUXEMON_MONSTERS.length : 151;
 const SUPPORTED_POKEDEX_LANGUAGES = ["en", "de"];
 const POKEMON_CACHE_LOCALIZATION_VERSION = 1;
 
@@ -677,25 +680,28 @@ async function fetchGenerationOneSpeciesIds() {
 
 async function fetchMoveCatalog() {
     const cache = getMoveCache();
-    const missingMoveIds = getDefaultMoveIds().filter((moveId) => !cache[moveId]);
+    const tuxemonMoves = Array.isArray(TUXEMON_MOVES) ? TUXEMON_MOVES : [];
 
-    for (const moveId of missingMoveIds) {
-        const payload = await fetchJson(`https://pokeapi.co/api/v2/move/${moveId}`);
-        cache[moveId] = {
-            id: payload.id,
-            name: payload.name,
-            displayName: toTitleCase(payload.name),
-            power: payload.power ?? null,
-            accuracy: payload.accuracy ?? null,
-            type: toTitleCase(payload.type?.name),
-            damageClass: payload.damage_class?.name || "physical",
-            category: payload.damage_class?.name || "physical",
-            pp: payload.pp || 15,
-            maxPp: payload.pp || 15,
-            currentPp: payload.pp || 15,
-            desc: buildMoveDescription(payload)
+    tuxemonMoves.forEach((move) => {
+        if (!move?.id) {
+            return;
+        }
+
+        cache[move.id] = {
+            id: move.id,
+            name: move.slug || move.name,
+            displayName: move.displayName || toTitleCase(move.name),
+            power: move.power ?? null,
+            accuracy: move.accuracy ?? null,
+            type: move.type || "Neutral",
+            damageClass: move.damageClass || move.category || "physical",
+            category: move.category || move.damageClass || "physical",
+            pp: move.pp || 10,
+            maxPp: move.maxPp || move.pp || 10,
+            currentPp: move.currentPp || move.pp || 10,
+            desc: move.desc || ""
         };
-    }
+    });
 
     moveCatalog = cache;
     persistMoveCache(cache);
@@ -815,41 +821,41 @@ function buildCatalogEntry(pokemonPayload, speciesPayload) {
 
 async function fetchKantoCatalog() {
     const cache = getPokemonCache();
-    const hasCompleteCatalog = cache.__meta?.kantoComplete
-        && cache.__meta?.localizationVersion === POKEMON_CACHE_LOCALIZATION_VERSION
-        && Object.keys(cache).filter((key) => key !== "__meta").length >= KANTO_TARGET_COUNT;
-
-    if (hasCompleteCatalog) {
-        kantoCatalog = cache;
-        return cache;
-    }
-
+    const tuxemonMonsters = Array.isArray(TUXEMON_MONSTERS) ? TUXEMON_MONSTERS : [];
     await fetchMoveCatalog();
-    const speciesIds = await fetchGenerationOneSpeciesIds();
-    const missingSpeciesIds = speciesIds.filter((id) => {
-        const entry = cache[id];
-        return !entry
-            || !entry.localizedDex?.en?.name
-            || !entry.localizedDex?.de?.name;
+
+    tuxemonMonsters.forEach((monster) => {
+        cache[monster.id] = {
+            id: monster.id,
+            name: monster.name,
+            frontSprite: monster.frontSprite || "",
+            backSprite: monster.backSprite || monster.frontSprite || "",
+            type: Array.isArray(monster.type) ? [...monster.type] : ["Neutral"],
+            height: monster.height || 0,
+            weight: monster.weight || 0,
+            category: monster.category || "",
+            description: monster.description || "",
+            localizedDex: cloneLocalizedDex(monster.localizedDex),
+            baseStats: {
+                hp: monster.baseStats?.hp ?? 40,
+                attack: monster.baseStats?.attack ?? 40,
+                defense: monster.baseStats?.defense ?? 40,
+                spAtk: monster.baseStats?.spAtk ?? 40,
+                spDef: monster.baseStats?.spDef ?? 40,
+                speed: monster.baseStats?.speed ?? 40
+            },
+            moves: Array.isArray(monster.moves)
+                ? monster.moves.map((move) => {
+                    const moveEntry = moveCatalog[move.id] || Object.values(moveCatalog).find((entry) => entry.name === move.slug);
+                    return moveEntry ? cloneMove(moveEntry) : null;
+                }).filter(Boolean)
+                : []
+        };
     });
-    const batchSize = 10;
-
-    for (let index = 0; index < missingSpeciesIds.length; index += batchSize) {
-        const batchIds = missingSpeciesIds.slice(index, index + batchSize);
-        const batchEntries = await Promise.all(batchIds.map(async (id) => {
-            const pokemonPayload = await fetchJson(`https://pokeapi.co/api/v2/pokemon/${id}`);
-            const speciesPayload = pokemonPayload.species?.url ? await fetchJson(pokemonPayload.species.url) : null;
-            return buildCatalogEntry(pokemonPayload, speciesPayload);
-        }));
-
-        batchEntries.forEach((entry) => {
-            cache[entry.id] = entry;
-        });
-    }
 
     cache.__meta = {
         kantoComplete: true,
-        generationId: KANTO_GENERATION_ID,
+        generationId: "tuxemon",
         localizationVersion: POKEMON_CACHE_LOCALIZATION_VERSION,
         updatedAt: Date.now()
     };
