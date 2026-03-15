@@ -1,3 +1,6 @@
+import TUXEMON_MONSTERS from "../data/tuxemon/monsters.json";
+import TUXEMON_MOVES from "../data/tuxemon/moves.json";
+
 const GAME_STATE_STORAGE_KEY = "pokemmo.game-state.v3";
 const POKEMON_CACHE_STORAGE_KEY = "pokemmo.pokemon-cache.v3";
 const MOVE_CACHE_STORAGE_KEY = "pokemmo.move-cache.v2";
@@ -12,7 +15,7 @@ const DEFAULT_SAVE_SLOT = 1;
 const DEFAULT_BOX_COUNT = 14;
 const DEFAULT_BOX_CAPACITY = 30;
 const KANTO_GENERATION_ID = 1;
-const KANTO_TARGET_COUNT = 151;
+const KANTO_TARGET_COUNT = Array.isArray(TUXEMON_MONSTERS) ? TUXEMON_MONSTERS.length : 151;
 const SUPPORTED_POKEDEX_LANGUAGES = ["en", "de"];
 const POKEMON_CACHE_LOCALIZATION_VERSION = 1;
 
@@ -44,6 +47,12 @@ const DEFAULT_POKEMON_CENTER_STATE = {
     isInsideCenter: false,
     hasInteractedWithJoy: false,
     healCount: 0
+};
+
+const DEFAULT_MAP_PROGRESS_STATE = {
+    discoveredLocations: [],
+    respawnPoints: {},
+    lastWarp: null
 };
 
 const MOVE_IDS = {
@@ -132,7 +141,8 @@ export const gameState = {
     playTime: 0,
     options: { ...DEFAULT_OPTIONS },
     saveSlot: DEFAULT_SAVE_SLOT,
-    pokemonCenterState: { ...DEFAULT_POKEMON_CENTER_STATE }
+    pokemonCenterState: { ...DEFAULT_POKEMON_CENTER_STATE },
+    mapProgress: { ...DEFAULT_MAP_PROGRESS_STATE }
 };
 
 function canUseStorage() {
@@ -360,6 +370,26 @@ function cloneBag(bag) {
     return result;
 }
 
+function cloneMapProgress(mapProgress) {
+    return {
+        discoveredLocations: Array.isArray(mapProgress?.discoveredLocations)
+            ? [...new Set(mapProgress.discoveredLocations.filter(Boolean))].sort((first, second) => first.localeCompare(second))
+            : [],
+        respawnPoints: {
+            ...((mapProgress && typeof mapProgress.respawnPoints === "object" && mapProgress.respawnPoints) || {})
+        },
+        lastWarp: mapProgress?.lastWarp && typeof mapProgress.lastWarp === "object"
+            ? {
+                fromMapId: mapProgress.lastWarp.fromMapId || null,
+                toMapId: mapProgress.lastWarp.toMapId || null,
+                spawnPointName: mapProgress.lastWarp.spawnPointName || "Spawn Point",
+                facing: mapProgress.lastWarp.facing || "front",
+                timestamp: mapProgress.lastWarp.timestamp || Date.now()
+            }
+            : null
+    };
+}
+
 function cloneGameState(state = gameState) {
     return {
         player: clonePlayer(state.player),
@@ -378,7 +408,8 @@ function cloneGameState(state = gameState) {
         pokemonCenterState: {
             ...DEFAULT_POKEMON_CENTER_STATE,
             ...(state.pokemonCenterState || {})
-        }
+        },
+        mapProgress: cloneMapProgress(state.mapProgress)
     };
 }
 
@@ -604,7 +635,8 @@ function loadPersistedGameState() {
             playTime: 0,
             options: { ...DEFAULT_OPTIONS },
             saveSlot: DEFAULT_SAVE_SLOT,
-            pokemonCenterState: { ...DEFAULT_POKEMON_CENTER_STATE }
+            pokemonCenterState: { ...DEFAULT_POKEMON_CENTER_STATE },
+            mapProgress: { ...DEFAULT_MAP_PROGRESS_STATE }
         };
     }
 
@@ -637,7 +669,8 @@ function loadPersistedGameState() {
         pokemonCenterState: {
             ...DEFAULT_POKEMON_CENTER_STATE,
             ...(persistedState.pokemonCenterState || {})
-        }
+        },
+        mapProgress: cloneMapProgress(persistedState.mapProgress || DEFAULT_MAP_PROGRESS_STATE)
     };
 }
 
@@ -677,25 +710,28 @@ async function fetchGenerationOneSpeciesIds() {
 
 async function fetchMoveCatalog() {
     const cache = getMoveCache();
-    const missingMoveIds = getDefaultMoveIds().filter((moveId) => !cache[moveId]);
+    const tuxemonMoves = Array.isArray(TUXEMON_MOVES) ? TUXEMON_MOVES : [];
 
-    for (const moveId of missingMoveIds) {
-        const payload = await fetchJson(`https://pokeapi.co/api/v2/move/${moveId}`);
-        cache[moveId] = {
-            id: payload.id,
-            name: payload.name,
-            displayName: toTitleCase(payload.name),
-            power: payload.power ?? null,
-            accuracy: payload.accuracy ?? null,
-            type: toTitleCase(payload.type?.name),
-            damageClass: payload.damage_class?.name || "physical",
-            category: payload.damage_class?.name || "physical",
-            pp: payload.pp || 15,
-            maxPp: payload.pp || 15,
-            currentPp: payload.pp || 15,
-            desc: buildMoveDescription(payload)
+    tuxemonMoves.forEach((move) => {
+        if (!move?.id) {
+            return;
+        }
+
+        cache[move.id] = {
+            id: move.id,
+            name: move.slug || move.name,
+            displayName: move.displayName || toTitleCase(move.name),
+            power: move.power ?? null,
+            accuracy: move.accuracy ?? null,
+            type: move.type || "Neutral",
+            damageClass: move.damageClass || move.category || "physical",
+            category: move.category || move.damageClass || "physical",
+            pp: move.pp || 10,
+            maxPp: move.maxPp || move.pp || 10,
+            currentPp: move.currentPp || move.pp || 10,
+            desc: move.desc || ""
         };
-    }
+    });
 
     moveCatalog = cache;
     persistMoveCache(cache);
@@ -815,41 +851,41 @@ function buildCatalogEntry(pokemonPayload, speciesPayload) {
 
 async function fetchKantoCatalog() {
     const cache = getPokemonCache();
-    const hasCompleteCatalog = cache.__meta?.kantoComplete
-        && cache.__meta?.localizationVersion === POKEMON_CACHE_LOCALIZATION_VERSION
-        && Object.keys(cache).filter((key) => key !== "__meta").length >= KANTO_TARGET_COUNT;
-
-    if (hasCompleteCatalog) {
-        kantoCatalog = cache;
-        return cache;
-    }
-
+    const tuxemonMonsters = Array.isArray(TUXEMON_MONSTERS) ? TUXEMON_MONSTERS : [];
     await fetchMoveCatalog();
-    const speciesIds = await fetchGenerationOneSpeciesIds();
-    const missingSpeciesIds = speciesIds.filter((id) => {
-        const entry = cache[id];
-        return !entry
-            || !entry.localizedDex?.en?.name
-            || !entry.localizedDex?.de?.name;
+
+    tuxemonMonsters.forEach((monster) => {
+        cache[monster.id] = {
+            id: monster.id,
+            name: monster.name,
+            frontSprite: monster.frontSprite || "",
+            backSprite: monster.backSprite || monster.frontSprite || "",
+            type: Array.isArray(monster.type) ? [...monster.type] : ["Neutral"],
+            height: monster.height || 0,
+            weight: monster.weight || 0,
+            category: monster.category || "",
+            description: monster.description || "",
+            localizedDex: cloneLocalizedDex(monster.localizedDex),
+            baseStats: {
+                hp: monster.baseStats?.hp ?? 40,
+                attack: monster.baseStats?.attack ?? 40,
+                defense: monster.baseStats?.defense ?? 40,
+                spAtk: monster.baseStats?.spAtk ?? 40,
+                spDef: monster.baseStats?.spDef ?? 40,
+                speed: monster.baseStats?.speed ?? 40
+            },
+            moves: Array.isArray(monster.moves)
+                ? monster.moves.map((move) => {
+                    const moveEntry = moveCatalog[move.id] || Object.values(moveCatalog).find((entry) => entry.name === move.slug);
+                    return moveEntry ? cloneMove(moveEntry) : null;
+                }).filter(Boolean)
+                : []
+        };
     });
-    const batchSize = 10;
-
-    for (let index = 0; index < missingSpeciesIds.length; index += batchSize) {
-        const batchIds = missingSpeciesIds.slice(index, index + batchSize);
-        const batchEntries = await Promise.all(batchIds.map(async (id) => {
-            const pokemonPayload = await fetchJson(`https://pokeapi.co/api/v2/pokemon/${id}`);
-            const speciesPayload = pokemonPayload.species?.url ? await fetchJson(pokemonPayload.species.url) : null;
-            return buildCatalogEntry(pokemonPayload, speciesPayload);
-        }));
-
-        batchEntries.forEach((entry) => {
-            cache[entry.id] = entry;
-        });
-    }
 
     cache.__meta = {
         kantoComplete: true,
-        generationId: KANTO_GENERATION_ID,
+        generationId: "tuxemon",
         localizationVersion: POKEMON_CACHE_LOCALIZATION_VERSION,
         updatedAt: Date.now()
     };
@@ -963,6 +999,7 @@ export async function initializeGameState() {
         ...DEFAULT_POKEMON_CENTER_STATE,
         ...(persistedState.pokemonCenterState || {})
     };
+    gameState.mapProgress = cloneMapProgress(persistedState.mapProgress || DEFAULT_MAP_PROGRESS_STATE);
 
     markPartyCaughtInDex();
     persistGameState();
@@ -986,7 +1023,8 @@ export function createWalletSavePayload() {
         playTime: state.playTime,
         options: state.options,
         saveSlot: state.saveSlot,
-        pokemonCenterState: state.pokemonCenterState
+        pokemonCenterState: state.pokemonCenterState,
+        mapProgress: state.mapProgress
     };
 }
 
@@ -1018,7 +1056,8 @@ export function hydrateFromWalletGameState(remoteGameState) {
         pokemonCenterState: {
             ...DEFAULT_POKEMON_CENTER_STATE,
             ...(sourceState.pokemonCenterState || gameState.pokemonCenterState || {})
-        }
+        },
+        mapProgress: cloneMapProgress(sourceState.mapProgress || gameState.mapProgress || DEFAULT_MAP_PROGRESS_STATE)
     };
 
     gameState.player = nextState.player;
@@ -1032,6 +1071,7 @@ export function hydrateFromWalletGameState(remoteGameState) {
     gameState.options = nextState.options;
     gameState.saveSlot = nextState.saveSlot ?? gameState.saveSlot;
     gameState.pokemonCenterState = nextState.pokemonCenterState;
+    gameState.mapProgress = nextState.mapProgress;
 
     markPartyCaughtInDex();
     commitGameState();
@@ -1143,6 +1183,70 @@ export function updatePlayerPosition(position) {
             ...(position || {})
         }
     }));
+}
+
+export function getMapProgress() {
+    return cloneMapProgress(gameState.mapProgress);
+}
+
+export function markMapDiscovered(mapId) {
+    if (!mapId) {
+        return getMapProgress();
+    }
+
+    const discoveredLocations = new Set(gameState.mapProgress?.discoveredLocations || []);
+    discoveredLocations.add(mapId);
+
+    gameState.mapProgress = cloneMapProgress({
+        ...(gameState.mapProgress || DEFAULT_MAP_PROGRESS_STATE),
+        discoveredLocations: Array.from(discoveredLocations)
+    });
+
+    commitGameState({ notifyParty: false });
+    return getMapProgress();
+}
+
+export function setRespawnPoint(mapId, spawnPointName = "Spawn Point") {
+    if (!mapId) {
+        return getMapProgress();
+    }
+
+    gameState.mapProgress = cloneMapProgress({
+        ...(gameState.mapProgress || DEFAULT_MAP_PROGRESS_STATE),
+        respawnPoints: {
+            ...(gameState.mapProgress?.respawnPoints || {}),
+            [mapId]: spawnPointName || "Spawn Point"
+        }
+    });
+
+    commitGameState({ notifyParty: false });
+    return getMapProgress();
+}
+
+export function recordMapWarp({ fromMapId = null, toMapId = null, spawnPointName = "Spawn Point", facing = "front" } = {}) {
+    gameState.mapProgress = cloneMapProgress({
+        ...(gameState.mapProgress || DEFAULT_MAP_PROGRESS_STATE),
+        lastWarp: {
+            fromMapId,
+            toMapId,
+            spawnPointName: spawnPointName || "Spawn Point",
+            facing,
+            timestamp: Date.now()
+        }
+    });
+
+    commitGameState({ notifyParty: false });
+    return getMapProgress();
+}
+
+export function getPreferredSpawnPoint(mapId, fallbackSpawnPoint = "Spawn Point") {
+    const lastWarp = gameState.mapProgress?.lastWarp;
+    if (lastWarp?.toMapId === mapId && lastWarp.spawnPointName) {
+        return lastWarp.spawnPointName;
+    }
+
+    const respawnPoint = gameState.mapProgress?.respawnPoints?.[mapId];
+    return respawnPoint || fallbackSpawnPoint;
 }
 
 export function incrementPlayTime(seconds = 1) {

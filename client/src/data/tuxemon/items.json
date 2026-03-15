@@ -1,0 +1,3345 @@
+[
+  {
+    "id": "aardant",
+    "slug": "aardant",
+    "name": "Aardant",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/aardant.json"
+  },
+  {
+    "id": "allies_address",
+    "slug": "allies_address",
+    "name": "Allies Address",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/allies_address.json"
+  },
+  {
+    "id": "alpha_seep",
+    "slug": "alpha_seep",
+    "name": "Alpha Seep",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "repellent",
+        "parameters": [
+          "100"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/alpha_seep.json"
+  },
+  {
+    "id": "ancient_egg",
+    "slug": "ancient_egg",
+    "name": "Ancient Egg",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/ancient_egg.json"
+  },
+  {
+    "id": "ancient_tea",
+    "slug": "ancient_tea",
+    "name": "Ancient Tea",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "gain_xp",
+        "parameters": [
+          "1500"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/ancient_tea.json"
+  },
+  {
+    "id": "antidote_grapes",
+    "slug": "antidote_grapes",
+    "name": "Antidote Grapes",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/antidote_grapes.json"
+  },
+  {
+    "id": "app_banking",
+    "slug": "app_banking",
+    "name": "App Banking",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/app_banking.json"
+  },
+  {
+    "id": "app_contacts",
+    "slug": "app_contacts",
+    "name": "App Contacts",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/app_contacts.json"
+  },
+  {
+    "id": "app_map",
+    "slug": "app_map",
+    "name": "App Map",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/app_map.json"
+  },
+  {
+    "id": "app_radio",
+    "slug": "app_radio",
+    "name": "App Radio",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/app_radio.json"
+  },
+  {
+    "id": "app_renaming",
+    "slug": "app_renaming",
+    "name": "App Renaming",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/app_renaming.json"
+  },
+  {
+    "id": "app_tuxepedia",
+    "slug": "app_tuxepedia",
+    "name": "App Tuxepedia",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/app_tuxepedia.json"
+  },
+  {
+    "id": "archeologist_sensor",
+    "slug": "archeologist_sensor",
+    "name": "Archeologist Sensor",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_archeologist_sensor.json"
+  },
+  {
+    "id": "beastmoss",
+    "slug": "beastmoss",
+    "name": "Beastmoss",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_beastmoss.json"
+  },
+  {
+    "id": "bio_sample",
+    "slug": "bio_sample",
+    "name": "Bio Sample",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_bio_sample.json"
+  },
+  {
+    "id": "bite_of_despair",
+    "slug": "bite_of_despair",
+    "name": "Bite Of Despair",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "-100",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/bite_of_despair.json"
+  },
+  {
+    "id": "bivouac",
+    "slug": "bivouac",
+    "name": "Bivouac",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "bivouac"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/bivouac.json"
+  },
+  {
+    "id": "book_wishes",
+    "slug": "book_wishes",
+    "name": "Book Wishes",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/book_wishes.json"
+  },
+  {
+    "id": "boost_armour",
+    "slug": "boost_armour",
+    "name": "Boost Armour",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "buff",
+        "parameters": [
+          "armour",
+          "0.2"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/boost_armour.json"
+  },
+  {
+    "id": "boost_dodge",
+    "slug": "boost_dodge",
+    "name": "Boost Dodge",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "buff",
+        "parameters": [
+          "dodge",
+          "0.2"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/boost_dodge.json"
+  },
+  {
+    "id": "boost_melee",
+    "slug": "boost_melee",
+    "name": "Boost Melee",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "buff",
+        "parameters": [
+          "melee",
+          "0.2"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/boost_melee.json"
+  },
+  {
+    "id": "boost_ranged",
+    "slug": "boost_ranged",
+    "name": "Boost Ranged",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "buff",
+        "parameters": [
+          "ranged",
+          "0.2"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/boost_ranged.json"
+  },
+  {
+    "id": "boost_speed",
+    "slug": "boost_speed",
+    "name": "Boost Speed",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "buff",
+        "parameters": [
+          "speed",
+          "0.2"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/boost_speed.json"
+  },
+  {
+    "id": "booster_tech",
+    "slug": "booster_tech",
+    "name": "Booster Tech",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/booster_tech.json"
+  },
+  {
+    "id": "buzz_resonator",
+    "slug": "buzz_resonator",
+    "name": "Buzz Resonator",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_buzz_resonator.json"
+  },
+  {
+    "id": "cheesecake",
+    "slug": "cheesecake",
+    "name": "Cheesecake",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_refined",
+          "taste_soft"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_cheesecake.json"
+  },
+  {
+    "id": "cosmic_berry",
+    "slug": "cosmic_berry",
+    "name": "Cosmic Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "cosmic"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/cosmic_berry.json"
+  },
+  {
+    "id": "crackle_salt",
+    "slug": "crackle_salt",
+    "name": "Crackle Salt",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_crackle_salt.json"
+  },
+  {
+    "id": "cream_puffs",
+    "slug": "cream_puffs",
+    "name": "Cream Puffs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_refined",
+          "taste_sweet"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_cream_puffs.json"
+  },
+  {
+    "id": "cream_puffs",
+    "slug": "cream_puffs",
+    "name": "Cream Puffs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_aura_tuner.json"
+  },
+  {
+    "id": "cream_puffs",
+    "slug": "cream_puffs",
+    "name": "Cream Puffs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_echo_wand.json"
+  },
+  {
+    "id": "cream_puffs",
+    "slug": "cream_puffs",
+    "name": "Cream Puffs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_environmental_scanner.json"
+  },
+  {
+    "id": "cream_puffs",
+    "slug": "cream_puffs",
+    "name": "Cream Puffs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_encrypted_fragment.json"
+  },
+  {
+    "id": "cream_puffs",
+    "slug": "cream_puffs",
+    "name": "Cream Puffs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_mysterious_data_slate.json"
+  },
+  {
+    "id": "cream_puffs",
+    "slug": "cream_puffs",
+    "name": "Cream Puffs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_prismatic_crystal.json"
+  },
+  {
+    "id": "crepes",
+    "slug": "crepes",
+    "name": "Crepes",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_refined",
+          "taste_flakey"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_crepes.json"
+  },
+  {
+    "id": "croissants",
+    "slug": "croissants",
+    "name": "Croissants",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_salty",
+          "taste_flakey"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_croissants.json"
+  },
+  {
+    "id": "cure_festering",
+    "slug": "cure_festering",
+    "name": "Cure Festering",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/cure_festering.json"
+  },
+  {
+    "id": "cureall",
+    "slug": "cureall",
+    "name": "Cureall",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "1.0",
+          "percentage"
+        ]
+      },
+      {
+        "type": "restore"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/cureall.json"
+  },
+  {
+    "id": "die",
+    "slug": "die",
+    "name": "Die",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "die",
+        "parameters": [
+          "sniping:enraged"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/die.json"
+  },
+  {
+    "id": "dojo_pass",
+    "slug": "dojo_pass",
+    "name": "Dojo Pass",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/dojo_pass.json"
+  },
+  {
+    "id": "dread_omelette",
+    "slug": "dread_omelette",
+    "name": "Dread Omelette",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "-50",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/dread_omelette.json"
+  },
+  {
+    "id": "drone",
+    "slug": "drone",
+    "name": "Drone",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "drone"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/drone.json"
+  },
+  {
+    "id": "dusty_datalog",
+    "slug": "dusty_datalog",
+    "name": "Dusty Datalog",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_dusty_datalog.json"
+  },
+  {
+    "id": "earth_berry",
+    "slug": "earth_berry",
+    "name": "Earth Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "earth"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/earth_berry.json"
+  },
+  {
+    "id": "earth_booster",
+    "slug": "earth_booster",
+    "name": "Earth Booster",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/earth_booster.json"
+  },
+  {
+    "id": "earthmover_key",
+    "slug": "earthmover_key",
+    "name": "Earthmover Key",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/earthmover_key.json"
+  },
+  {
+    "id": "echo_core",
+    "slug": "echo_core",
+    "name": "Echo Core",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_echo_core.json"
+  },
+  {
+    "id": "encoded_chip",
+    "slug": "encoded_chip",
+    "name": "Encoded Chip",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_encoded_chip.json"
+  },
+  {
+    "id": "escape_key",
+    "slug": "escape_key",
+    "name": "Escape Key",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "teleport_item",
+        "parameters": [
+          "center"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/escape_key.json"
+  },
+  {
+    "id": "feather",
+    "slug": "feather",
+    "name": "Feather",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/feather.json"
+  },
+  {
+    "id": "field_greens",
+    "slug": "field_greens",
+    "name": "Field Greens",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_field_greens.json"
+  },
+  {
+    "id": "field_transcriber",
+    "slug": "field_transcriber",
+    "name": "Field Transcriber",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_field_transcriber.json"
+  },
+  {
+    "id": "fire_berry",
+    "slug": "fire_berry",
+    "name": "Fire Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "fire"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/fire_berry.json"
+  },
+  {
+    "id": "fire_booster",
+    "slug": "fire_booster",
+    "name": "Fire Booster",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/fire_booster.json"
+  },
+  {
+    "id": "fishing_rod",
+    "slug": "fishing_rod",
+    "name": "Fishing Rod",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "fishing"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/fishing_rod.json"
+  },
+  {
+    "id": "flamehorn_shank",
+    "slug": "flamehorn_shank",
+    "name": "Flamehorn Shank",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_flamehorn_shank.json"
+  },
+  {
+    "id": "flickering_drive",
+    "slug": "flickering_drive",
+    "name": "Flickering Drive",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_flickering_drive.json"
+  },
+  {
+    "id": "flintstone",
+    "slug": "flintstone",
+    "name": "Flintstone",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/flintstone.json"
+  },
+  {
+    "id": "flute",
+    "slug": "flute",
+    "name": "Flute",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/flute.json"
+  },
+  {
+    "id": "friendship_scroll",
+    "slug": "friendship_scroll",
+    "name": "Friendship Scroll",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/friendship_scroll.json"
+  },
+  {
+    "id": "frost_berry",
+    "slug": "frost_berry",
+    "name": "Frost Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "frost"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/frost_berry.json"
+  },
+  {
+    "id": "glowfat",
+    "slug": "glowfat",
+    "name": "Glowfat",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_glowfat.json"
+  },
+  {
+    "id": "gold_pass",
+    "slug": "gold_pass",
+    "name": "Gold Pass",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/gold_pass.json"
+  },
+  {
+    "id": "greenwash_badge",
+    "slug": "greenwash_badge",
+    "name": "Greenwash Badge",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/greenwash_badge.json"
+  },
+  {
+    "id": "hash",
+    "slug": "hash",
+    "name": "Hash",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_hearty",
+          "taste_mild"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_hash.json"
+  },
+  {
+    "id": "hatchet",
+    "slug": "hatchet",
+    "name": "Hatchet",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "remove_entity"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/hatchet.json"
+  },
+  {
+    "id": "heroic_berry",
+    "slug": "heroic_berry",
+    "name": "Heroic Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "heroic"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/heroic_berry.json"
+  },
+  {
+    "id": "honey_cake",
+    "slug": "honey_cake",
+    "name": "Honey Cake",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_hearty",
+          "taste_sweet"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_honey_cake.json"
+  },
+  {
+    "id": "horseshoe",
+    "slug": "horseshoe",
+    "name": "Horseshoe",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/horseshoe.json"
+  },
+  {
+    "id": "imperial_potion",
+    "slug": "imperial_potion",
+    "name": "Imperial Potion",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "500",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/imperial_potion.json"
+  },
+  {
+    "id": "imperial_tea",
+    "slug": "imperial_tea",
+    "name": "Imperial Tea",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "gain_xp",
+        "parameters": [
+          "3000"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/imperial_tea.json"
+  },
+  {
+    "id": "inferno_custard",
+    "slug": "inferno_custard",
+    "name": "Inferno Custard",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "-200",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/inferno_custard.json"
+  },
+  {
+    "id": "latent_relic",
+    "slug": "latent_relic",
+    "name": "Latent Relic",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_latent_relic.json"
+  },
+  {
+    "id": "lightning_berry",
+    "slug": "lightning_berry",
+    "name": "Lightning Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "lightning"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/lightning_berry.json"
+  },
+  {
+    "id": "lima_pie",
+    "slug": "lima_pie",
+    "name": "Lima Pie",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/lima_pie.json"
+  },
+  {
+    "id": "lucky_bamboo",
+    "slug": "lucky_bamboo",
+    "name": "Lucky Bamboo",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/lucky_bamboo.json"
+  },
+  {
+    "id": "marble",
+    "slug": "marble",
+    "name": "Marble",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/marble.json"
+  },
+  {
+    "id": "mashed_potatoes",
+    "slug": "mashed_potatoes",
+    "name": "Mashed Potatoes",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_salty",
+          "taste_mild"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_mashed_potatoes.json"
+  },
+  {
+    "id": "meal_dust",
+    "slug": "meal_dust",
+    "name": "Meal Dust",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_meal_dust.json"
+  },
+  {
+    "id": "meatballs",
+    "slug": "meatballs",
+    "name": "Meatballs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_zesty",
+          "taste_mild"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_meatballs.json"
+  },
+  {
+    "id": "mega_potion",
+    "slug": "mega_potion",
+    "name": "Mega Potion",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "200",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/mega_potion.json"
+  },
+  {
+    "id": "metal_berry",
+    "slug": "metal_berry",
+    "name": "Metal Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "metal"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/metal_berry.json"
+  },
+  {
+    "id": "metal_booster",
+    "slug": "metal_booster",
+    "name": "Metal Booster",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/metal_booster.json"
+  },
+  {
+    "id": "miaow_milk",
+    "slug": "miaow_milk",
+    "name": "Miaow Milk",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/miaow_milk.json"
+  },
+  {
+    "id": "mille_feuille",
+    "slug": "mille_feuille",
+    "name": "Mille Feuille",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_refined",
+          "taste_mild"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_mille_feuille.json"
+  },
+  {
+    "id": "mistflour_eggs",
+    "slug": "mistflour_eggs",
+    "name": "Mistflour Eggs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_mistflour_eggs.json"
+  },
+  {
+    "id": "mm_earth",
+    "slug": "mm_earth",
+    "name": "Mm Earth",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_mm",
+        "parameters": [
+          "earth"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/mm_earth.json"
+  },
+  {
+    "id": "mm_fire",
+    "slug": "mm_fire",
+    "name": "Mm Fire",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_mm",
+        "parameters": [
+          "fire"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/mm_fire.json"
+  },
+  {
+    "id": "mm_metal",
+    "slug": "mm_metal",
+    "name": "Mm Metal",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_mm",
+        "parameters": [
+          "metal"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/mm_metal.json"
+  },
+  {
+    "id": "mm_water",
+    "slug": "mm_water",
+    "name": "Mm Water",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_mm",
+        "parameters": [
+          "water"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/mm_water.json"
+  },
+  {
+    "id": "mm_wood",
+    "slug": "mm_wood",
+    "name": "Mm Wood",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_mm",
+        "parameters": [
+          "wood"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/mm_wood.json"
+  },
+  {
+    "id": "moo_bloom",
+    "slug": "moo_bloom",
+    "name": "Moo Bloom",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_moo_bloom.json"
+  },
+  {
+    "id": "mystery_analyzer",
+    "slug": "mystery_analyzer",
+    "name": "Mystery Analyzer",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_mystery_analyzer.json"
+  },
+  {
+    "id": "mystery_tea",
+    "slug": "mystery_tea",
+    "name": "Mystery Tea",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "gain_xp",
+        "parameters": [
+          "500"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/mystery_tea.json"
+  },
+  {
+    "id": "neptune",
+    "slug": "neptune",
+    "name": "Neptune",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "fishing"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/neptune.json"
+  },
+  {
+    "id": "nimrod_badge",
+    "slug": "nimrod_badge",
+    "name": "Nimrod Badge",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/nimrod_badge.json"
+  },
+  {
+    "id": "normal_berry",
+    "slug": "normal_berry",
+    "name": "Normal Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "normal"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/normal_berry.json"
+  },
+  {
+    "id": "nu_phone",
+    "slug": "nu_phone",
+    "name": "Nu Phone",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/nu_phone.json"
+  },
+  {
+    "id": "omnichannel_badge",
+    "slug": "omnichannel_badge",
+    "name": "Omnichannel Badge",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/omnichannel_badge.json"
+  },
+  {
+    "id": "open_hand",
+    "slug": "open_hand",
+    "name": "Open Hand",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/open_hand.json"
+  },
+  {
+    "id": "ox_stick",
+    "slug": "ox_stick",
+    "name": "Ox Stick",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/ox_stick.json"
+  },
+  {
+    "id": "p_monsters_eyes",
+    "slug": "p_monsters_eyes",
+    "name": "P Monsters Eyes",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/p_monsters_eyes_meet.json"
+  },
+  {
+    "id": "p_starry_night",
+    "slug": "p_starry_night",
+    "name": "P Starry Night",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/p_starry_night.json"
+  },
+  {
+    "id": "p_trepidation",
+    "slug": "p_trepidation",
+    "name": "P Trepidation",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/p_trepidation.json"
+  },
+  {
+    "id": "pancakes",
+    "slug": "pancakes",
+    "name": "Pancakes",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_peppy",
+          "taste_soft"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_pancakes.json"
+  },
+  {
+    "id": "pastry",
+    "slug": "pastry",
+    "name": "Pastry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_peppy",
+          "taste_flakey"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_pastry.json"
+  },
+  {
+    "id": "peace_lily",
+    "slug": "peace_lily",
+    "name": "Peace Lily",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/peace_lily.json"
+  },
+  {
+    "id": "petrified_dung",
+    "slug": "petrified_dung",
+    "name": "Petrified Dung",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/petrified_dung.json"
+  },
+  {
+    "id": "phyllo",
+    "slug": "phyllo",
+    "name": "Phyllo",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_zesty",
+          "taste_flakey"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_phyllo.json"
+  },
+  {
+    "id": "pie",
+    "slug": "pie",
+    "name": "Pie",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_hearty",
+          "taste_pie"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_pie.json"
+  },
+  {
+    "id": "pita",
+    "slug": "pita",
+    "name": "Pita",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_peppy",
+          "taste_dry"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_pita.json"
+  },
+  {
+    "id": "pollen_decoder",
+    "slug": "pollen_decoder",
+    "name": "Pollen Decoder",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_pollen_decoder.json"
+  },
+  {
+    "id": "poseidon",
+    "slug": "poseidon",
+    "name": "Poseidon",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "fishing"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/poseidon.json"
+  },
+  {
+    "id": "potato_casserole",
+    "slug": "potato_casserole",
+    "name": "Potato Casserole",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_zesty",
+          "taste_sweet"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_potato_casserole.json"
+  },
+  {
+    "id": "potato_fries",
+    "slug": "potato_fries",
+    "name": "Potato Fries",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_salty",
+          "taste_sweet"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_potato_fries.json"
+  },
+  {
+    "id": "potion",
+    "slug": "potion",
+    "name": "Potion",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "50",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/potion.json"
+  },
+  {
+    "id": "pretzels",
+    "slug": "pretzels",
+    "name": "Pretzels",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_salty",
+          "taste_soft"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_pretzels.json"
+  },
+  {
+    "id": "pudding",
+    "slug": "pudding",
+    "name": "Pudding",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_peppy",
+          "taste_sweet"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_pudding.json"
+  },
+  {
+    "id": "pyramidion",
+    "slug": "pyramidion",
+    "name": "Pyramidion",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/pyramidion.json"
+  },
+  {
+    "id": "raise_armour",
+    "slug": "raise_armour",
+    "name": "Raise Armour",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "change_stat",
+        "parameters": [
+          "armour",
+          "0.05"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/raise_armour.json"
+  },
+  {
+    "id": "raise_dodge",
+    "slug": "raise_dodge",
+    "name": "Raise Dodge",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "change_stat",
+        "parameters": [
+          "dodge",
+          "0.05"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/raise_dodge.json"
+  },
+  {
+    "id": "raise_hp",
+    "slug": "raise_hp",
+    "name": "Raise Hp",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "change_stat",
+        "parameters": [
+          "hp",
+          "0.05"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/raise_hp.json"
+  },
+  {
+    "id": "raise_melee",
+    "slug": "raise_melee",
+    "name": "Raise Melee",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "change_stat",
+        "parameters": [
+          "melee",
+          "0.05"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/raise_melee.json"
+  },
+  {
+    "id": "raise_ranged",
+    "slug": "raise_ranged",
+    "name": "Raise Ranged",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "change_stat",
+        "parameters": [
+          "ranged",
+          "0.05"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/raise_ranged.json"
+  },
+  {
+    "id": "raise_speed",
+    "slug": "raise_speed",
+    "name": "Raise Speed",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "change_stat",
+        "parameters": [
+          "speed",
+          "0.05"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/raise_speed.json"
+  },
+  {
+    "id": "refreshing_slice",
+    "slug": "refreshing_slice",
+    "name": "Refreshing Slice",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/refreshing_slice.json"
+  },
+  {
+    "id": "reg_papers",
+    "slug": "reg_papers",
+    "name": "Reg Papers",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/reg_papers.json"
+  },
+  {
+    "id": "researcher_stylus",
+    "slug": "researcher_stylus",
+    "name": "Researcher Stylus",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_researcher_stylus.json"
+  },
+  {
+    "id": "restoration",
+    "slug": "restoration",
+    "name": "Restoration",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "restore"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/restoration.json"
+  },
+  {
+    "id": "revive",
+    "slug": "revive",
+    "name": "Revive",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "restore"
+      },
+      {
+        "type": "heal",
+        "parameters": [
+          "20",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/revive.json"
+  },
+  {
+    "id": "rhincus_fossil",
+    "slug": "rhincus_fossil",
+    "name": "Rhincus Fossil",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/rhincus_fossil.json"
+  },
+  {
+    "id": "root_beast_bark",
+    "slug": "root_beast_bark",
+    "name": "Root Beast Bark",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_root_beast_bark.json"
+  },
+  {
+    "id": "rub_chicken",
+    "slug": "rub_chicken",
+    "name": "Rub Chicken",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_salty",
+          "taste_dry"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_rub_chicken.json"
+  },
+  {
+    "id": "rub_pork_chops",
+    "slug": "rub_pork_chops",
+    "name": "Rub Pork Chops",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_refined",
+          "taste_dry"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_rub_pork_chops.json"
+  },
+  {
+    "id": "rub_ribs",
+    "slug": "rub_ribs",
+    "name": "Rub Ribs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_hearty",
+          "taste_dry"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_rub_ribs.json"
+  },
+  {
+    "id": "rub_steak",
+    "slug": "rub_steak",
+    "name": "Rub Steak",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_zesty",
+          "taste_dry"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_rub_steak.json"
+  },
+  {
+    "id": "scoop_badge",
+    "slug": "scoop_badge",
+    "name": "Scoop Badge",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/scoop_badge.json"
+  },
+  {
+    "id": "sea_girdle",
+    "slug": "sea_girdle",
+    "name": "Sea Girdle",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/sea_girdle.json"
+  },
+  {
+    "id": "shadow_berry",
+    "slug": "shadow_berry",
+    "name": "Shadow Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "shadow"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/shadow_berry.json"
+  },
+  {
+    "id": "shaft_badge",
+    "slug": "shaft_badge",
+    "name": "Shaft Badge",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/shaft_badge.json"
+  },
+  {
+    "id": "shammer_fossil",
+    "slug": "shammer_fossil",
+    "name": "Shammer Fossil",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/shammer_fossil.json"
+  },
+  {
+    "id": "shell_tacos",
+    "slug": "shell_tacos",
+    "name": "Shell Tacos",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_zesty",
+          "taste_soft"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_shell_tacos.json"
+  },
+  {
+    "id": "signal_node",
+    "slug": "signal_node",
+    "name": "Signal Node",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/trace_signal_node.json"
+  },
+  {
+    "id": "sky_berry",
+    "slug": "sky_berry",
+    "name": "Sky Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "sky"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/sky_berry.json"
+  },
+  {
+    "id": "sky_feather",
+    "slug": "sky_feather",
+    "name": "Sky Feather",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_sky_feather.json"
+  },
+  {
+    "id": "sledgehammer",
+    "slug": "sledgehammer",
+    "name": "Sledgehammer",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "remove_entity"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/sledgehammer.json"
+  },
+  {
+    "id": "souffle",
+    "slug": "souffle",
+    "name": "Souffle",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_hearty",
+          "taste_soft"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_souffle.json"
+  },
+  {
+    "id": "spice_dust",
+    "slug": "spice_dust",
+    "name": "Spice Dust",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_spice_dust.json"
+  },
+  {
+    "id": "spyder_pass",
+    "slug": "spyder_pass",
+    "name": "Spyder Pass",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/spyder_pass.json"
+  },
+  {
+    "id": "starlight_lens",
+    "slug": "starlight_lens",
+    "name": "Starlight Lens",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_starlight_lens.json"
+  },
+  {
+    "id": "starpepper",
+    "slug": "starpepper",
+    "name": "Starpepper",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_starpapper.json"
+  },
+  {
+    "id": "stonefruit_bulbs",
+    "slug": "stonefruit_bulbs",
+    "name": "Stonefruit Bulbs",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_stonefruit_bulbs.json"
+  },
+  {
+    "id": "stovepipe",
+    "slug": "stovepipe",
+    "name": "Stovepipe",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/stovepipe.json"
+  },
+  {
+    "id": "suncrust_butter",
+    "slug": "suncrust_butter",
+    "name": "Suncrust Butter",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_suncrust_butter.json"
+  },
+  {
+    "id": "super_potion",
+    "slug": "super_potion",
+    "name": "Super Potion",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "100",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/super_potion.json"
+  },
+  {
+    "id": "surfboard",
+    "slug": "surfboard",
+    "name": "Surfboard",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/surfboard.json"
+  },
+  {
+    "id": "sweet_sand",
+    "slug": "sweet_sand",
+    "name": "Sweet Sand",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/sweet_sand.json"
+  },
+  {
+    "id": "sweetroot",
+    "slug": "sweetroot",
+    "name": "Sweetroot",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_sweetroot.json"
+  },
+  {
+    "id": "tachyon_collector",
+    "slug": "tachyon_collector",
+    "name": "Tachyon Collector",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tool_tachyon_collector.json"
+  },
+  {
+    "id": "tea",
+    "slug": "tea",
+    "name": "Tea",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "gain_xp",
+        "parameters": [
+          "125"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tea.json"
+  },
+  {
+    "id": "tectonic_drill",
+    "slug": "tectonic_drill",
+    "name": "Tectonic Drill",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tectonic_drill.json"
+  },
+  {
+    "id": "thunderstone",
+    "slug": "thunderstone",
+    "name": "Thunderstone",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/thunderstone.json"
+  },
+  {
+    "id": "tm_acid",
+    "slug": "tm_acid",
+    "name": "Tm Acid",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "acid"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_acid.json"
+  },
+  {
+    "id": "tm_all_in",
+    "slug": "tm_all_in",
+    "name": "Tm All In",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "all_in"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_all_in.json"
+  },
+  {
+    "id": "tm_avalanche",
+    "slug": "tm_avalanche",
+    "name": "Tm Avalanche",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "avalanche"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_avalanche.json"
+  },
+  {
+    "id": "tm_blade",
+    "slug": "tm_blade",
+    "name": "Tm Blade",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "blade"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_blade.json"
+  },
+  {
+    "id": "tm_blossom",
+    "slug": "tm_blossom",
+    "name": "Tm Blossom",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "blossom"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_blossom.json"
+  },
+  {
+    "id": "tm_earth",
+    "slug": "tm_earth",
+    "name": "Tm Earth",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_earth.json"
+  },
+  {
+    "id": "tm_fire",
+    "slug": "tm_fire",
+    "name": "Tm Fire",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_fire.json"
+  },
+  {
+    "id": "tm_frostbite",
+    "slug": "tm_frostbite",
+    "name": "Tm Frostbite",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "frostbite"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_frostbite.json"
+  },
+  {
+    "id": "tm_ice_shield",
+    "slug": "tm_ice_shield",
+    "name": "Tm Ice Shield",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "ice_shield"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_ice_shield.json"
+  },
+  {
+    "id": "tm_metal",
+    "slug": "tm_metal",
+    "name": "Tm Metal",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_metal.json"
+  },
+  {
+    "id": "tm_panjandrum",
+    "slug": "tm_panjandrum",
+    "name": "Tm Panjandrum",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "panjandrum"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_panjandrum.json"
+  },
+  {
+    "id": "tm_scope",
+    "slug": "tm_scope",
+    "name": "Tm Scope",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "scope"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_scope.json"
+  },
+  {
+    "id": "tm_shadow_boxing",
+    "slug": "tm_shadow_boxing",
+    "name": "Tm Shadow Boxing",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "shadow_boxing"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_shadow_boxing.json"
+  },
+  {
+    "id": "tm_supernova",
+    "slug": "tm_supernova",
+    "name": "Tm Supernova",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "supernova"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_supernova.json"
+  },
+  {
+    "id": "tm_surf",
+    "slug": "tm_surf",
+    "name": "Tm Surf",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "surf"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_surf.json"
+  },
+  {
+    "id": "tm_ubuntu",
+    "slug": "tm_ubuntu",
+    "name": "Tm Ubuntu",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "ubuntu"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_ubuntu.json"
+  },
+  {
+    "id": "tm_vorpal",
+    "slug": "tm_vorpal",
+    "name": "Tm Vorpal",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "learn_tm",
+        "parameters": [
+          "vorpal"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_vorpal.json"
+  },
+  {
+    "id": "tm_water",
+    "slug": "tm_water",
+    "name": "Tm Water",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_water.json"
+  },
+  {
+    "id": "tm_wood",
+    "slug": "tm_wood",
+    "name": "Tm Wood",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/tm_wood.json"
+  },
+  {
+    "id": "toy_bear",
+    "slug": "toy_bear",
+    "name": "Toy Bear",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/toy_bear.json"
+  },
+  {
+    "id": "tuxeball",
+    "slug": "tuxeball",
+    "name": "Tuxeball",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball.json"
+  },
+  {
+    "id": "tuxeball_ancient",
+    "slug": "tuxeball_ancient",
+    "name": "Tuxeball Ancient",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_ancient.json"
+  },
+  {
+    "id": "tuxeball_candy",
+    "slug": "tuxeball_candy",
+    "name": "Tuxeball Candy",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_candy.json"
+  },
+  {
+    "id": "tuxeball_crusher",
+    "slug": "tuxeball_crusher",
+    "name": "Tuxeball Crusher",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_crusher.json"
+  },
+  {
+    "id": "tuxeball_diurnal",
+    "slug": "tuxeball_diurnal",
+    "name": "Tuxeball Diurnal",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_diurnal.json"
+  },
+  {
+    "id": "tuxeball_earth",
+    "slug": "tuxeball_earth",
+    "name": "Tuxeball Earth",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_earth.json"
+  },
+  {
+    "id": "tuxeball_female",
+    "slug": "tuxeball_female",
+    "name": "Tuxeball Female",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_female.json"
+  },
+  {
+    "id": "tuxeball_fire",
+    "slug": "tuxeball_fire",
+    "name": "Tuxeball Fire",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_fire.json"
+  },
+  {
+    "id": "tuxeball_gambler",
+    "slug": "tuxeball_gambler",
+    "name": "Tuxeball Gambler",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_gambler.json"
+  },
+  {
+    "id": "tuxeball_grand",
+    "slug": "tuxeball_grand",
+    "name": "Tuxeball Grand",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_grand.json"
+  },
+  {
+    "id": "tuxeball_hardened",
+    "slug": "tuxeball_hardened",
+    "name": "Tuxeball Hardened",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_hardened.json"
+  },
+  {
+    "id": "tuxeball_hearty",
+    "slug": "tuxeball_hearty",
+    "name": "Tuxeball Hearty",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_hearty.json"
+  },
+  {
+    "id": "tuxeball_lavish",
+    "slug": "tuxeball_lavish",
+    "name": "Tuxeball Lavish",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_lavish.json"
+  },
+  {
+    "id": "tuxeball_majestic",
+    "slug": "tuxeball_majestic",
+    "name": "Tuxeball Majestic",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_majestic.json"
+  },
+  {
+    "id": "tuxeball_male",
+    "slug": "tuxeball_male",
+    "name": "Tuxeball Male",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_male.json"
+  },
+  {
+    "id": "tuxeball_metal",
+    "slug": "tuxeball_metal",
+    "name": "Tuxeball Metal",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_metal.json"
+  },
+  {
+    "id": "tuxeball_neuter",
+    "slug": "tuxeball_neuter",
+    "name": "Tuxeball Neuter",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_neuter.json"
+  },
+  {
+    "id": "tuxeball_noble",
+    "slug": "tuxeball_noble",
+    "name": "Tuxeball Noble",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_noble.json"
+  },
+  {
+    "id": "tuxeball_nocturnal",
+    "slug": "tuxeball_nocturnal",
+    "name": "Tuxeball Nocturnal",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_nocturnal.json"
+  },
+  {
+    "id": "tuxeball_omni",
+    "slug": "tuxeball_omni",
+    "name": "Tuxeball Omni",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture_combined",
+        "parameters": [
+          "monster",
+          "omni",
+          "0.3",
+          "1.4"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_omni.json"
+  },
+  {
+    "id": "tuxeball_park",
+    "slug": "tuxeball_park",
+    "name": "Tuxeball Park",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "park",
+        "parameters": [
+          "capture"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_park.json"
+  },
+  {
+    "id": "tuxeball_peppy",
+    "slug": "tuxeball_peppy",
+    "name": "Tuxeball Peppy",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_peppy.json"
+  },
+  {
+    "id": "tuxeball_refined",
+    "slug": "tuxeball_refined",
+    "name": "Tuxeball Refined",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_refined.json"
+  },
+  {
+    "id": "tuxeball_salty",
+    "slug": "tuxeball_salty",
+    "name": "Tuxeball Salty",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_salty.json"
+  },
+  {
+    "id": "tuxeball_water",
+    "slug": "tuxeball_water",
+    "name": "Tuxeball Water",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_water.json"
+  },
+  {
+    "id": "tuxeball_wood",
+    "slug": "tuxeball_wood",
+    "name": "Tuxeball Wood",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_wood.json"
+  },
+  {
+    "id": "tuxeball_xero",
+    "slug": "tuxeball_xero",
+    "name": "Tuxeball Xero",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture_combined",
+        "parameters": [
+          "monster",
+          "xero",
+          "0.3",
+          "1.4"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_xero.json"
+  },
+  {
+    "id": "tuxeball_zesty",
+    "slug": "tuxeball_zesty",
+    "name": "Tuxeball Zesty",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "capture"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/tuxeball_zesty.json"
+  },
+  {
+    "id": "unknown_object",
+    "slug": "unknown_object",
+    "name": "Unknown Object",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/unknown_object.json"
+  },
+  {
+    "id": "venom_berry",
+    "slug": "venom_berry",
+    "name": "Venom Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "venom"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/venom_berry.json"
+  },
+  {
+    "id": "water_berry",
+    "slug": "water_berry",
+    "name": "Water Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "water"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/water_berry.json"
+  },
+  {
+    "id": "water_booster",
+    "slug": "water_booster",
+    "name": "Water Booster",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/water_booster.json"
+  },
+  {
+    "id": "whispersoup",
+    "slug": "whispersoup",
+    "name": "Whispersoup",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "heal",
+        "parameters": [
+          "-500",
+          "fixed"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/whispersoup.json"
+  },
+  {
+    "id": "wings",
+    "slug": "wings",
+    "name": "Wings",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "food_preference",
+        "parameters": [
+          "taste_peppy",
+          "taste_mild"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/food_wings.json"
+  },
+  {
+    "id": "wood_berry",
+    "slug": "wood_berry",
+    "name": "Wood Berry",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "switch_type",
+        "parameters": [
+          "wood"
+        ]
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/wood_berry.json"
+  },
+  {
+    "id": "wood_booster",
+    "slug": "wood_booster",
+    "name": "Wood Booster",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [
+      {
+        "type": "evolve"
+      }
+    ],
+    "desc": "",
+    "source": "tuxemon/db/item/wood_booster.json"
+  },
+  {
+    "id": "xp_feeder",
+    "slug": "xp_feeder",
+    "name": "Xp Feeder",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/xp_feeder.json"
+  },
+  {
+    "id": "xp_transmitter",
+    "slug": "xp_transmitter",
+    "name": "Xp Transmitter",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/xp_transmitter.json"
+  },
+  {
+    "id": "zestroot_wraps",
+    "slug": "zestroot_wraps",
+    "name": "Zestroot Wraps",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_zestroot_wraps.json"
+  },
+  {
+    "id": "zestsap",
+    "slug": "zestsap",
+    "name": "Zestsap",
+    "category": "Items",
+    "quantity": 0,
+    "holdable": false,
+    "effect": [],
+    "desc": "",
+    "source": "tuxemon/db/item/food_zestsap.json"
+  }
+]

@@ -1,0 +1,1754 @@
+[
+  {
+    "id": "37707_tower",
+    "file": "37707_tower.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/37707_tower.tmx"
+  },
+  {
+    "id": "37707_town",
+    "file": "37707_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/37707_town.tmx"
+  },
+  {
+    "id": "37707_town_missing",
+    "file": "37707_town_missing.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/37707_town_missing.tmx"
+  },
+  {
+    "id": "azure_town",
+    "file": "azure_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/azure_town.tmx"
+  },
+  {
+    "id": "azure_town_hall",
+    "file": "azure_town_hall.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/azure_town_hall.tmx"
+  },
+  {
+    "id": "battle_menu",
+    "file": "battle_menu.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/battle_menu.yaml"
+  },
+  {
+    "id": "bedroom_test",
+    "file": "bedroom_test.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/bedroom_test.tmx"
+  },
+  {
+    "id": "buddha_mountain",
+    "file": "buddha_mountain.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/buddha_mountain.tmx"
+  },
+  {
+    "id": "candy_town",
+    "file": "candy_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/candy_town.tmx"
+  },
+  {
+    "id": "city1_mart_junkyard",
+    "file": "city1_mart_junkyard.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/city1_mart_junkyard.tmx"
+  },
+  {
+    "id": "citypark",
+    "file": "citypark.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/citypark.tmx"
+  },
+  {
+    "id": "citypark_house1",
+    "file": "citypark_house1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/citypark_house1.tmx"
+  },
+  {
+    "id": "cotton_cafe",
+    "file": "cotton_cafe.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_cafe.tmx"
+  },
+  {
+    "id": "cotton_cafe_basement",
+    "file": "cotton_cafe_basement.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_cafe_basement.tmx"
+  },
+  {
+    "id": "cotton_cathedral",
+    "file": "cotton_cathedral.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_cathedral.tmx"
+  },
+  {
+    "id": "cotton_daycare",
+    "file": "cotton_daycare.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_daycare.tmx"
+  },
+  {
+    "id": "cotton_misa_house",
+    "file": "cotton_misa_house.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_misa_house.tmx"
+  },
+  {
+    "id": "cotton_misa_house_upstairs",
+    "file": "cotton_misa_house_upstairs.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_misa_house_upstairs.tmx"
+  },
+  {
+    "id": "cotton_scoop",
+    "file": "cotton_scoop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_scoop.tmx"
+  },
+  {
+    "id": "cotton_town",
+    "file": "cotton_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_town.tmx"
+  },
+  {
+    "id": "cotton_underground",
+    "file": "cotton_underground.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/cotton_underground.tmx"
+  },
+  {
+    "id": "dojo1",
+    "file": "dojo1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/dojo1.tmx"
+  },
+  {
+    "id": "dojo2",
+    "file": "dojo2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/dojo2.tmx"
+  },
+  {
+    "id": "dojo3",
+    "file": "dojo3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/dojo3.tmx"
+  },
+  {
+    "id": "downstairs_test",
+    "file": "downstairs_test.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/downstairs_test.tmx"
+  },
+  {
+    "id": "dragonscave",
+    "file": "dragonscave.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/dragonscave.tmx"
+  },
+  {
+    "id": "dryadsgrove",
+    "file": "dryadsgrove.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/dryadsgrove.tmx"
+  },
+  {
+    "id": "eclipse",
+    "file": "eclipse.world",
+    "ext": "world",
+    "source": "tuxemon/maps/eclipse.world"
+  },
+  {
+    "id": "eclipse",
+    "file": "eclipse.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse.yaml"
+  },
+  {
+    "id": "eclipse_crystal_bank1",
+    "file": "eclipse_crystal_bank1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_crystal_bank1.tmx"
+  },
+  {
+    "id": "eclipse_crystal_bank1",
+    "file": "eclipse_crystal_bank1.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_crystal_bank1.yaml"
+  },
+  {
+    "id": "eclipse_crystal_bank2",
+    "file": "eclipse_crystal_bank2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_crystal_bank2.tmx"
+  },
+  {
+    "id": "eclipse_crystal_bank2",
+    "file": "eclipse_crystal_bank2.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_crystal_bank2.yaml"
+  },
+  {
+    "id": "eclipse_crystal_bank3",
+    "file": "eclipse_crystal_bank3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_crystal_bank3.tmx"
+  },
+  {
+    "id": "eclipse_crystal_bank3",
+    "file": "eclipse_crystal_bank3.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_crystal_bank3.yaml"
+  },
+  {
+    "id": "eclipse_crystal_center",
+    "file": "eclipse_crystal_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_crystal_center.tmx"
+  },
+  {
+    "id": "eclipse_crystal_center",
+    "file": "eclipse_crystal_center.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_crystal_center.yaml"
+  },
+  {
+    "id": "eclipse_crystal_town",
+    "file": "eclipse_crystal_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_crystal_town.tmx"
+  },
+  {
+    "id": "eclipse_crystal_town",
+    "file": "eclipse_crystal_town.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_crystal_town.yaml"
+  },
+  {
+    "id": "eclipse_crystal_town_cafe",
+    "file": "eclipse_crystal_town_cafe.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_crystal_town_cafe.tmx"
+  },
+  {
+    "id": "eclipse_crystal_town_cafe",
+    "file": "eclipse_crystal_town_cafe.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_crystal_town_cafe.yaml"
+  },
+  {
+    "id": "eclipse_crystal_town_house",
+    "file": "eclipse_crystal_town_house.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_crystal_town_house.tmx"
+  },
+  {
+    "id": "eclipse_crystal_town_house",
+    "file": "eclipse_crystal_town_house.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_crystal_town_house.yaml"
+  },
+  {
+    "id": "eclipse_lion_mountain_high",
+    "file": "eclipse_lion_mountain_high.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_lion_mountain_high.tmx"
+  },
+  {
+    "id": "eclipse_lion_mountain_high",
+    "file": "eclipse_lion_mountain_high.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_lion_mountain_high.yaml"
+  },
+  {
+    "id": "eclipse_lion_mountain_low",
+    "file": "eclipse_lion_mountain_low.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_lion_mountain_low.tmx"
+  },
+  {
+    "id": "eclipse_lion_mountain_low",
+    "file": "eclipse_lion_mountain_low.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_lion_mountain_low.yaml"
+  },
+  {
+    "id": "eclipse_lion_mountain_middle",
+    "file": "eclipse_lion_mountain_middle.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_lion_mountain_middle.tmx"
+  },
+  {
+    "id": "eclipse_lion_mountain_middle",
+    "file": "eclipse_lion_mountain_middle.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_lion_mountain_middle.yaml"
+  },
+  {
+    "id": "eclipse_obsidian_center",
+    "file": "eclipse_obsidian_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_obsidian_center.tmx"
+  },
+  {
+    "id": "eclipse_obsidian_center",
+    "file": "eclipse_obsidian_center.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_obsidian_center.yaml"
+  },
+  {
+    "id": "eclipse_obsidian_town",
+    "file": "eclipse_obsidian_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_obsidian_town.tmx"
+  },
+  {
+    "id": "eclipse_obsidian_town",
+    "file": "eclipse_obsidian_town.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_obsidian_town.yaml"
+  },
+  {
+    "id": "eclipse_obsidian_town_house",
+    "file": "eclipse_obsidian_town_house.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_obsidian_town_house.tmx"
+  },
+  {
+    "id": "eclipse_obsidian_town_house",
+    "file": "eclipse_obsidian_town_house.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_obsidian_town_house.yaml"
+  },
+  {
+    "id": "eclipse_park",
+    "file": "eclipse_park.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_park.tmx"
+  },
+  {
+    "id": "eclipse_park",
+    "file": "eclipse_park.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_park.yaml"
+  },
+  {
+    "id": "eclipse_park_cabin",
+    "file": "eclipse_park_cabin.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_park_cabin.tmx"
+  },
+  {
+    "id": "eclipse_park_cabin",
+    "file": "eclipse_park_cabin.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_park_cabin.yaml"
+  },
+  {
+    "id": "eclipse_park_cave",
+    "file": "eclipse_park_cave.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_park_cave.tmx"
+  },
+  {
+    "id": "eclipse_park_cave",
+    "file": "eclipse_park_cave.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_park_cave.yaml"
+  },
+  {
+    "id": "eclipse_park_entrance",
+    "file": "eclipse_park_entrance.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_park_entrance.tmx"
+  },
+  {
+    "id": "eclipse_park_entrance",
+    "file": "eclipse_park_entrance.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_park_entrance.yaml"
+  },
+  {
+    "id": "eclipse_park_south",
+    "file": "eclipse_park_south.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_park_south.tmx"
+  },
+  {
+    "id": "eclipse_park_south",
+    "file": "eclipse_park_south.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_park_south.yaml"
+  },
+  {
+    "id": "eclipse_route7",
+    "file": "eclipse_route7.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_route7.tmx"
+  },
+  {
+    "id": "eclipse_route7",
+    "file": "eclipse_route7.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_route7.yaml"
+  },
+  {
+    "id": "eclipse_routef",
+    "file": "eclipse_routef.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_routef.tmx"
+  },
+  {
+    "id": "eclipse_routef",
+    "file": "eclipse_routef.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_routef.yaml"
+  },
+  {
+    "id": "eclipse_routeg",
+    "file": "eclipse_routeg.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_routeg.tmx"
+  },
+  {
+    "id": "eclipse_routeg",
+    "file": "eclipse_routeg.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_routeg.yaml"
+  },
+  {
+    "id": "eclipse_routeh",
+    "file": "eclipse_routeh.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_routeh.tmx"
+  },
+  {
+    "id": "eclipse_routeh",
+    "file": "eclipse_routeh.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_routeh.yaml"
+  },
+  {
+    "id": "eclipse_routei",
+    "file": "eclipse_routei.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/eclipse_routei.tmx"
+  },
+  {
+    "id": "eclipse_routei",
+    "file": "eclipse_routei.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/eclipse_routei.yaml"
+  },
+  {
+    "id": "flower_city",
+    "file": "flower_city.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/flower_city.tmx"
+  },
+  {
+    "id": "gadget_store1",
+    "file": "gadget_store1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/gadget_store1.tmx"
+  },
+  {
+    "id": "gaming_hall",
+    "file": "gaming_hall.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/gaming_hall.tmx"
+  },
+  {
+    "id": "gotmx",
+    "file": "gotmx.go",
+    "ext": "go",
+    "source": "tuxemon/maps/gotmx.go"
+  },
+  {
+    "id": "healing_center",
+    "file": "healing_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/healing_center.tmx"
+  },
+  {
+    "id": "leather_scoop",
+    "file": "leather_scoop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/leather_scoop.tmx"
+  },
+  {
+    "id": "leather_shaft1",
+    "file": "leather_shaft1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/leather_shaft1.tmx"
+  },
+  {
+    "id": "leather_shaft2",
+    "file": "leather_shaft2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/leather_shaft2.tmx"
+  },
+  {
+    "id": "leather_town",
+    "file": "leather_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/leather_town.tmx"
+  },
+  {
+    "id": "manhattan_beach",
+    "file": "manhattan_beach.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/manhattan_beach.tmx"
+  },
+  {
+    "id": "mansion",
+    "file": "mansion.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/mansion.tmx"
+  },
+  {
+    "id": "mansion_basement",
+    "file": "mansion_basement.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/mansion_basement.tmx"
+  },
+  {
+    "id": "mansion_top",
+    "file": "mansion_top.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/mansion_top.tmx"
+  },
+  {
+    "id": "Map Helper",
+    "file": "Map Helper.xlsx",
+    "ext": "xlsx",
+    "source": "tuxemon/maps/Map Helper.xlsx"
+  },
+  {
+    "id": "maple_bedroom",
+    "file": "maple_bedroom.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/maple_bedroom.tmx"
+  },
+  {
+    "id": "maple_bedroom",
+    "file": "maple_bedroom.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/maple_bedroom.yaml"
+  },
+  {
+    "id": "maple_house",
+    "file": "maple_house.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/maple_house.tmx"
+  },
+  {
+    "id": "normal",
+    "file": "normal.world",
+    "ext": "world",
+    "source": "tuxemon/maps/normal.world"
+  },
+  {
+    "id": "objecttypes",
+    "file": "objecttypes.xml",
+    "ext": "xml",
+    "source": "tuxemon/maps/objecttypes.xml"
+  },
+  {
+    "id": "omnichannel0",
+    "file": "omnichannel0.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/omnichannel0.tmx"
+  },
+  {
+    "id": "omnichannel1",
+    "file": "omnichannel1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/omnichannel1.tmx"
+  },
+  {
+    "id": "omnichannel2",
+    "file": "omnichannel2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/omnichannel2.tmx"
+  },
+  {
+    "id": "omnichannel3",
+    "file": "omnichannel3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/omnichannel3.tmx"
+  },
+  {
+    "id": "omnichannel4",
+    "file": "omnichannel4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/omnichannel4.tmx"
+  },
+  {
+    "id": "player_house_bedroom",
+    "file": "player_house_bedroom.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/player_house_bedroom.tmx"
+  },
+  {
+    "id": "player_house_bedroom",
+    "file": "player_house_bedroom.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/player_house_bedroom.yaml"
+  },
+  {
+    "id": "player_house_downstairs",
+    "file": "player_house_downstairs.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/player_house_downstairs.tmx"
+  },
+  {
+    "id": "professor_lab",
+    "file": "professor_lab.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/professor_lab.tmx"
+  },
+  {
+    "id": "route1",
+    "file": "route1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/route1.tmx"
+  },
+  {
+    "id": "route1_sanglorian",
+    "file": "route1_sanglorian.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/route1_sanglorian.tmx"
+  },
+  {
+    "id": "route2",
+    "file": "route2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/route2.tmx"
+  },
+  {
+    "id": "route3",
+    "file": "route3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/route3.tmx"
+  },
+  {
+    "id": "route4",
+    "file": "route4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/route4.tmx"
+  },
+  {
+    "id": "route5",
+    "file": "route5.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/route5.tmx"
+  },
+  {
+    "id": "route6",
+    "file": "route6.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/route6.tmx"
+  },
+  {
+    "id": "routea",
+    "file": "routea.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/routea.tmx"
+  },
+  {
+    "id": "routec",
+    "file": "routec.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/routec.tmx"
+  },
+  {
+    "id": "rubberduck_cave_01",
+    "file": "rubberduck_cave_01.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/rubberduck_cave_01.tmx"
+  },
+  {
+    "id": "rubberduck_city_01",
+    "file": "rubberduck_city_01.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/rubberduck_city_01.tmx"
+  },
+  {
+    "id": "rubberduck_route_01",
+    "file": "rubberduck_route_01.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/rubberduck_route_01.tmx"
+  },
+  {
+    "id": "russell_practice_1",
+    "file": "russell_practice_1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/russell_practice_1.tmx"
+  },
+  {
+    "id": "scoop1",
+    "file": "scoop1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/scoop1.tmx"
+  },
+  {
+    "id": "scoop2",
+    "file": "scoop2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/scoop2.tmx"
+  },
+  {
+    "id": "scoop3",
+    "file": "scoop3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/scoop3.tmx"
+  },
+  {
+    "id": "scoop4",
+    "file": "scoop4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/scoop4.tmx"
+  },
+  {
+    "id": "sphalian_center",
+    "file": "sphalian_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/sphalian_center.tmx"
+  },
+  {
+    "id": "sphalian_town",
+    "file": "sphalian_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/sphalian_town.tmx"
+  },
+  {
+    "id": "sphalian_town_house",
+    "file": "sphalian_town_house.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/sphalian_town_house.tmx"
+  },
+  {
+    "id": "spyder",
+    "file": "spyder.world",
+    "ext": "world",
+    "source": "tuxemon/maps/spyder.world"
+  },
+  {
+    "id": "spyder",
+    "file": "spyder.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder.yaml"
+  },
+  {
+    "id": "spyder_bedroom",
+    "file": "spyder_bedroom.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_bedroom.tmx"
+  },
+  {
+    "id": "spyder_bedroom",
+    "file": "spyder_bedroom.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_bedroom.yaml"
+  },
+  {
+    "id": "spyder_brideswood",
+    "file": "spyder_brideswood.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_brideswood.tmx"
+  },
+  {
+    "id": "spyder_candy_cafe",
+    "file": "spyder_candy_cafe.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_cafe.tmx"
+  },
+  {
+    "id": "spyder_candy_cafe",
+    "file": "spyder_candy_cafe.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_candy_cafe.yaml"
+  },
+  {
+    "id": "spyder_candy_center",
+    "file": "spyder_candy_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_center.tmx"
+  },
+  {
+    "id": "spyder_candy_center",
+    "file": "spyder_candy_center.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_candy_center.yaml"
+  },
+  {
+    "id": "spyder_candy_hospital1",
+    "file": "spyder_candy_hospital1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_hospital1.tmx"
+  },
+  {
+    "id": "spyder_candy_hospital2",
+    "file": "spyder_candy_hospital2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_hospital2.tmx"
+  },
+  {
+    "id": "spyder_candy_hospital3",
+    "file": "spyder_candy_hospital3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_hospital3.tmx"
+  },
+  {
+    "id": "spyder_candy_house1",
+    "file": "spyder_candy_house1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_house1.tmx"
+  },
+  {
+    "id": "spyder_candy_house2",
+    "file": "spyder_candy_house2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_house2.tmx"
+  },
+  {
+    "id": "spyder_candy_house3",
+    "file": "spyder_candy_house3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_house3.tmx"
+  },
+  {
+    "id": "spyder_candy_inn1",
+    "file": "spyder_candy_inn1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_inn1.tmx"
+  },
+  {
+    "id": "spyder_candy_inn1",
+    "file": "spyder_candy_inn1.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_candy_inn1.yaml"
+  },
+  {
+    "id": "spyder_candy_inn2",
+    "file": "spyder_candy_inn2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_inn2.tmx"
+  },
+  {
+    "id": "spyder_candy_inn2",
+    "file": "spyder_candy_inn2.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_candy_inn2.yaml"
+  },
+  {
+    "id": "spyder_candy_port",
+    "file": "spyder_candy_port.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_port.tmx"
+  },
+  {
+    "id": "spyder_candy_port",
+    "file": "spyder_candy_port.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_candy_port.yaml"
+  },
+  {
+    "id": "spyder_candy_scoop",
+    "file": "spyder_candy_scoop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_scoop.tmx"
+  },
+  {
+    "id": "spyder_candy_town",
+    "file": "spyder_candy_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_candy_town.tmx"
+  },
+  {
+    "id": "spyder_cathedral",
+    "file": "spyder_cathedral.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_cathedral.yaml"
+  },
+  {
+    "id": "spyder_citypark",
+    "file": "spyder_citypark.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_citypark.tmx"
+  },
+  {
+    "id": "spyder_citypark_house1",
+    "file": "spyder_citypark_house1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_citypark_house1.tmx"
+  },
+  {
+    "id": "spyder_cotton_artshop",
+    "file": "spyder_cotton_artshop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_cotton_artshop.tmx"
+  },
+  {
+    "id": "spyder_cotton_cafe",
+    "file": "spyder_cotton_cafe.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_cotton_cafe.tmx"
+  },
+  {
+    "id": "spyder_cotton_house1",
+    "file": "spyder_cotton_house1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_cotton_house1.tmx"
+  },
+  {
+    "id": "spyder_cotton_house2",
+    "file": "spyder_cotton_house2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_cotton_house2.tmx"
+  },
+  {
+    "id": "spyder_cotton_scoop",
+    "file": "spyder_cotton_scoop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_cotton_scoop.tmx"
+  },
+  {
+    "id": "spyder_cotton_town",
+    "file": "spyder_cotton_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_cotton_town.tmx"
+  },
+  {
+    "id": "spyder_cotton_tunnel",
+    "file": "spyder_cotton_tunnel.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_cotton_tunnel.tmx"
+  },
+  {
+    "id": "spyder_cotton_tunnel",
+    "file": "spyder_cotton_tunnel.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_cotton_tunnel.yaml"
+  },
+  {
+    "id": "spyder_datacenter",
+    "file": "spyder_datacenter.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_datacenter.tmx"
+  },
+  {
+    "id": "spyder_diamond_hill",
+    "file": "spyder_diamond_hill.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_diamond_hill.tmx"
+  },
+  {
+    "id": "spyder_diamond_hill",
+    "file": "spyder_diamond_hill.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_diamond_hill.yaml"
+  },
+  {
+    "id": "spyder_dojo1",
+    "file": "spyder_dojo1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_dojo1.tmx"
+  },
+  {
+    "id": "spyder_dojo1",
+    "file": "spyder_dojo1.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_dojo1.yaml"
+  },
+  {
+    "id": "spyder_dojo2",
+    "file": "spyder_dojo2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_dojo2.tmx"
+  },
+  {
+    "id": "spyder_dojo3",
+    "file": "spyder_dojo3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_dojo3.tmx"
+  },
+  {
+    "id": "spyder_dojo4",
+    "file": "spyder_dojo4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_dojo4.tmx"
+  },
+  {
+    "id": "spyder_downstairs",
+    "file": "spyder_downstairs.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_downstairs.tmx"
+  },
+  {
+    "id": "spyder_dragonscave",
+    "file": "spyder_dragonscave.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_dragonscave.tmx"
+  },
+  {
+    "id": "spyder_dryadsgrove",
+    "file": "spyder_dryadsgrove.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_dryadsgrove.tmx"
+  },
+  {
+    "id": "spyder_flower_center",
+    "file": "spyder_flower_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_flower_center.tmx"
+  },
+  {
+    "id": "spyder_flower_center",
+    "file": "spyder_flower_center.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_flower_center.yaml"
+  },
+  {
+    "id": "spyder_flower_city",
+    "file": "spyder_flower_city.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_flower_city.tmx"
+  },
+  {
+    "id": "spyder_flower_house1",
+    "file": "spyder_flower_house1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_flower_house1.tmx"
+  },
+  {
+    "id": "spyder_flower_house1",
+    "file": "spyder_flower_house1.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_flower_house1.yaml"
+  },
+  {
+    "id": "spyder_flower_house2",
+    "file": "spyder_flower_house2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_flower_house2.tmx"
+  },
+  {
+    "id": "spyder_flower_house2",
+    "file": "spyder_flower_house2.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_flower_house2.yaml"
+  },
+  {
+    "id": "spyder_flower_petshop",
+    "file": "spyder_flower_petshop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_flower_petshop.tmx"
+  },
+  {
+    "id": "spyder_flower_petshop",
+    "file": "spyder_flower_petshop.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_flower_petshop.yaml"
+  },
+  {
+    "id": "spyder_flower_scoop",
+    "file": "spyder_flower_scoop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_flower_scoop.tmx"
+  },
+  {
+    "id": "spyder_flower_scoop",
+    "file": "spyder_flower_scoop.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_flower_scoop.yaml"
+  },
+  {
+    "id": "spyder_greenwash",
+    "file": "spyder_greenwash.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_greenwash.tmx"
+  },
+  {
+    "id": "spyder_greenwash_greenhouse",
+    "file": "spyder_greenwash_greenhouse.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_greenwash_greenhouse.tmx"
+  },
+  {
+    "id": "spyder_greenwash_level2",
+    "file": "spyder_greenwash_level2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_greenwash_level2.tmx"
+  },
+  {
+    "id": "spyder_greenwash_level3",
+    "file": "spyder_greenwash_level3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_greenwash_level3.tmx"
+  },
+  {
+    "id": "spyder_greenwash_level3",
+    "file": "spyder_greenwash_level3.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_greenwash_level3.yaml"
+  },
+  {
+    "id": "spyder_healing_center",
+    "file": "spyder_healing_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_healing_center.tmx"
+  },
+  {
+    "id": "spyder_healing_center",
+    "file": "spyder_healing_center.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_healing_center.yaml"
+  },
+  {
+    "id": "spyder_leather_center",
+    "file": "spyder_leather_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_center.tmx"
+  },
+  {
+    "id": "spyder_leather_center",
+    "file": "spyder_leather_center.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_leather_center.yaml"
+  },
+  {
+    "id": "spyder_leather_gym",
+    "file": "spyder_leather_gym.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_gym.tmx"
+  },
+  {
+    "id": "spyder_leather_gym",
+    "file": "spyder_leather_gym.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_leather_gym.yaml"
+  },
+  {
+    "id": "spyder_leather_house1",
+    "file": "spyder_leather_house1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_house1.tmx"
+  },
+  {
+    "id": "spyder_leather_house2",
+    "file": "spyder_leather_house2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_house2.tmx"
+  },
+  {
+    "id": "spyder_leather_museum",
+    "file": "spyder_leather_museum.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_museum.tmx"
+  },
+  {
+    "id": "spyder_leather_museum",
+    "file": "spyder_leather_museum.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_leather_museum.yaml"
+  },
+  {
+    "id": "spyder_leather_scoop",
+    "file": "spyder_leather_scoop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_scoop.tmx"
+  },
+  {
+    "id": "spyder_leather_shaft1",
+    "file": "spyder_leather_shaft1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_shaft1.tmx"
+  },
+  {
+    "id": "spyder_leather_shaft2",
+    "file": "spyder_leather_shaft2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_shaft2.tmx"
+  },
+  {
+    "id": "spyder_leather_town",
+    "file": "spyder_leather_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_leather_town.tmx"
+  },
+  {
+    "id": "spyder_mansion",
+    "file": "spyder_mansion.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_mansion.tmx"
+  },
+  {
+    "id": "spyder_mansion_basement",
+    "file": "spyder_mansion_basement.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_mansion_basement.tmx"
+  },
+  {
+    "id": "spyder_mansion_top",
+    "file": "spyder_mansion_top.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_mansion_top.tmx"
+  },
+  {
+    "id": "spyder_nimrod_bottom",
+    "file": "spyder_nimrod_bottom.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_nimrod_bottom.tmx"
+  },
+  {
+    "id": "spyder_nimrod_middle",
+    "file": "spyder_nimrod_middle.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_nimrod_middle.tmx"
+  },
+  {
+    "id": "spyder_nimrod_room",
+    "file": "spyder_nimrod_room.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_nimrod_room.tmx"
+  },
+  {
+    "id": "spyder_nimrod_room",
+    "file": "spyder_nimrod_room.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_nimrod_room.yaml"
+  },
+  {
+    "id": "spyder_nimrod_top",
+    "file": "spyder_nimrod_top.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_nimrod_top.tmx"
+  },
+  {
+    "id": "spyder_omnichannel1",
+    "file": "spyder_omnichannel1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_omnichannel1.tmx"
+  },
+  {
+    "id": "spyder_omnichannel2",
+    "file": "spyder_omnichannel2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_omnichannel2.tmx"
+  },
+  {
+    "id": "spyder_omnichannel3",
+    "file": "spyder_omnichannel3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_omnichannel3.tmx"
+  },
+  {
+    "id": "spyder_omnichannel4",
+    "file": "spyder_omnichannel4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_omnichannel4.tmx"
+  },
+  {
+    "id": "spyder_paper_daycare",
+    "file": "spyder_paper_daycare.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_paper_daycare.tmx"
+  },
+  {
+    "id": "spyder_paper_daycare",
+    "file": "spyder_paper_daycare.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_paper_daycare.yaml"
+  },
+  {
+    "id": "spyder_paper_manor",
+    "file": "spyder_paper_manor.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_paper_manor.tmx"
+  },
+  {
+    "id": "spyder_paper_manor",
+    "file": "spyder_paper_manor.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_paper_manor.yaml"
+  },
+  {
+    "id": "spyder_paper_rival_bedroom",
+    "file": "spyder_paper_rival_bedroom.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_paper_rival_bedroom.tmx"
+  },
+  {
+    "id": "spyder_paper_rival_bedroom",
+    "file": "spyder_paper_rival_bedroom.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_paper_rival_bedroom.yaml"
+  },
+  {
+    "id": "spyder_paper_rival_downstairs",
+    "file": "spyder_paper_rival_downstairs.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_paper_rival_downstairs.tmx"
+  },
+  {
+    "id": "spyder_paper_rival_downstairs",
+    "file": "spyder_paper_rival_downstairs.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_paper_rival_downstairs.yaml"
+  },
+  {
+    "id": "spyder_paper_rival_office",
+    "file": "spyder_paper_rival_office.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_paper_rival_office.tmx"
+  },
+  {
+    "id": "spyder_paper_rival_office",
+    "file": "spyder_paper_rival_office.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_paper_rival_office.yaml"
+  },
+  {
+    "id": "spyder_paper_scoop",
+    "file": "spyder_paper_scoop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_paper_scoop.tmx"
+  },
+  {
+    "id": "spyder_paper_scoop",
+    "file": "spyder_paper_scoop.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_paper_scoop.yaml"
+  },
+  {
+    "id": "spyder_paper_town",
+    "file": "spyder_paper_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_paper_town.tmx"
+  },
+  {
+    "id": "spyder_radiotower",
+    "file": "spyder_radiotower.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_radiotower.tmx"
+  },
+  {
+    "id": "spyder_route1",
+    "file": "spyder_route1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_route1.tmx"
+  },
+  {
+    "id": "spyder_route2",
+    "file": "spyder_route2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_route2.tmx"
+  },
+  {
+    "id": "spyder_route3",
+    "file": "spyder_route3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_route3.tmx"
+  },
+  {
+    "id": "spyder_route4",
+    "file": "spyder_route4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_route4.tmx"
+  },
+  {
+    "id": "spyder_route5",
+    "file": "spyder_route5.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_route5.tmx"
+  },
+  {
+    "id": "spyder_route6",
+    "file": "spyder_route6.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_route6.tmx"
+  },
+  {
+    "id": "spyder_routea",
+    "file": "spyder_routea.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_routea.tmx"
+  },
+  {
+    "id": "spyder_routeb",
+    "file": "spyder_routeb.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_routeb.tmx"
+  },
+  {
+    "id": "spyder_routec",
+    "file": "spyder_routec.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_routec.tmx"
+  },
+  {
+    "id": "spyder_routed",
+    "file": "spyder_routed.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_routed.tmx"
+  },
+  {
+    "id": "spyder_routee",
+    "file": "spyder_routee.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_routee.tmx"
+  },
+  {
+    "id": "spyder_scoop1",
+    "file": "spyder_scoop1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_scoop1.tmx"
+  },
+  {
+    "id": "spyder_scoop2",
+    "file": "spyder_scoop2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_scoop2.tmx"
+  },
+  {
+    "id": "spyder_scoop3",
+    "file": "spyder_scoop3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_scoop3.tmx"
+  },
+  {
+    "id": "spyder_scoop4",
+    "file": "spyder_scoop4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_scoop4.tmx"
+  },
+  {
+    "id": "spyder_test_map",
+    "file": "spyder_test_map.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_test_map.tmx"
+  },
+  {
+    "id": "spyder_timber_cafe",
+    "file": "spyder_timber_cafe.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_timber_cafe.tmx"
+  },
+  {
+    "id": "spyder_timber_cafe",
+    "file": "spyder_timber_cafe.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_timber_cafe.yaml"
+  },
+  {
+    "id": "spyder_timber_center",
+    "file": "spyder_timber_center.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_timber_center.tmx"
+  },
+  {
+    "id": "spyder_timber_center",
+    "file": "spyder_timber_center.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/spyder_timber_center.yaml"
+  },
+  {
+    "id": "spyder_timber_house",
+    "file": "spyder_timber_house.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_timber_house.tmx"
+  },
+  {
+    "id": "spyder_timber_scoop",
+    "file": "spyder_timber_scoop.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_timber_scoop.tmx"
+  },
+  {
+    "id": "spyder_timber_town",
+    "file": "spyder_timber_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_timber_town.tmx"
+  },
+  {
+    "id": "spyder_timber_walledgarden1",
+    "file": "spyder_timber_walledgarden1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_timber_walledgarden1.tmx"
+  },
+  {
+    "id": "spyder_timber_walledgarden2",
+    "file": "spyder_timber_walledgarden2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_timber_walledgarden2.tmx"
+  },
+  {
+    "id": "spyder_tunnel",
+    "file": "spyder_tunnel.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_tunnel.tmx"
+  },
+  {
+    "id": "spyder_tunnel_below",
+    "file": "spyder_tunnel_below.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_tunnel_below.tmx"
+  },
+  {
+    "id": "spyder_wayfarer_inn1",
+    "file": "spyder_wayfarer_inn1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_wayfarer_inn1.tmx"
+  },
+  {
+    "id": "spyder_wayfarer_inn2",
+    "file": "spyder_wayfarer_inn2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/spyder_wayfarer_inn2.tmx"
+  },
+  {
+    "id": "start_tuxemon",
+    "file": "start_tuxemon.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/start_tuxemon.tmx"
+  },
+  {
+    "id": "start_tuxemon",
+    "file": "start_tuxemon.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/start_tuxemon.yaml"
+  },
+  {
+    "id": "taba_ba_br_1",
+    "file": "taba_ba_br_1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_br_1.tmx"
+  },
+  {
+    "id": "taba_ba_br_2",
+    "file": "taba_ba_br_2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_br_2.tmx"
+  },
+  {
+    "id": "taba_ba_br_3",
+    "file": "taba_ba_br_3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_br_3.tmx"
+  },
+  {
+    "id": "taba_ba_br_4",
+    "file": "taba_ba_br_4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_br_4.tmx"
+  },
+  {
+    "id": "taba_ba_br_master",
+    "file": "taba_ba_br_master.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_br_master.tmx"
+  },
+  {
+    "id": "taba_ba_br_master_foyer",
+    "file": "taba_ba_br_master_foyer.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_br_master_foyer.tmx"
+  },
+  {
+    "id": "taba_ba_foyer",
+    "file": "taba_ba_foyer.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_foyer.tmx"
+  },
+  {
+    "id": "taba_ba_main",
+    "file": "taba_ba_main.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_main.tmx"
+  },
+  {
+    "id": "taba_ba_passageway_1",
+    "file": "taba_ba_passageway_1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_passageway_1.tmx"
+  },
+  {
+    "id": "taba_ba_passageway_2",
+    "file": "taba_ba_passageway_2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_passageway_2.tmx"
+  },
+  {
+    "id": "taba_ba_passageway_3",
+    "file": "taba_ba_passageway_3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_passageway_3.tmx"
+  },
+  {
+    "id": "taba_ba_passageway_4",
+    "file": "taba_ba_passageway_4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_passageway_4.tmx"
+  },
+  {
+    "id": "taba_ba_stairwell_1",
+    "file": "taba_ba_stairwell_1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_stairwell_1.tmx"
+  },
+  {
+    "id": "taba_ba_stairwell_2",
+    "file": "taba_ba_stairwell_2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_ba_stairwell_2.tmx"
+  },
+  {
+    "id": "taba_house1",
+    "file": "taba_house1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_house1.tmx"
+  },
+  {
+    "id": "taba_house2",
+    "file": "taba_house2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_house2.tmx"
+  },
+  {
+    "id": "taba_house2_upstairs",
+    "file": "taba_house2_upstairs.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_house2_upstairs.tmx"
+  },
+  {
+    "id": "taba_house3",
+    "file": "taba_house3.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_house3.tmx"
+  },
+  {
+    "id": "taba_house3_upstairs",
+    "file": "taba_house3_upstairs.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_house3_upstairs.tmx"
+  },
+  {
+    "id": "taba_house4",
+    "file": "taba_house4.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_house4.tmx"
+  },
+  {
+    "id": "taba_town",
+    "file": "taba_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/taba_town.tmx"
+  },
+  {
+    "id": "tabathas",
+    "file": "tabathas.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/tabathas.tmx"
+  },
+  {
+    "id": "test_npcs",
+    "file": "test_npcs.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/test_npcs.tmx"
+  },
+  {
+    "id": "test_npcs",
+    "file": "test_npcs.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/test_npcs.yaml"
+  },
+  {
+    "id": "test_spyder_cotton_scoop",
+    "file": "test_spyder_cotton_scoop.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/test_spyder_cotton_scoop.yaml"
+  },
+  {
+    "id": "test_spyder_cotton_town",
+    "file": "test_spyder_cotton_town.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/test_spyder_cotton_town.yaml"
+  },
+  {
+    "id": "timber_town",
+    "file": "timber_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/timber_town.tmx"
+  },
+  {
+    "id": "tt_forest_route1",
+    "file": "tt_forest_route1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/tt_forest_route1.tmx"
+  },
+  {
+    "id": "tt_paper_town",
+    "file": "tt_paper_town.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/tt_paper_town.tmx"
+  },
+  {
+    "id": "tt_searoute1",
+    "file": "tt_searoute1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/tt_searoute1.tmx"
+  },
+  {
+    "id": "tunnel",
+    "file": "tunnel.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/tunnel.tmx"
+  },
+  {
+    "id": "tunnel_below",
+    "file": "tunnel_below.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/tunnel_below.tmx"
+  },
+  {
+    "id": "tuxe_mart_taba",
+    "file": "tuxe_mart_taba.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/tuxe_mart_taba.tmx"
+  },
+  {
+    "id": "wayfarer_inn1",
+    "file": "wayfarer_inn1.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/wayfarer_inn1.tmx"
+  },
+  {
+    "id": "wayfarer_inn2",
+    "file": "wayfarer_inn2.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/wayfarer_inn2.tmx"
+  },
+  {
+    "id": "witcher_route_7",
+    "file": "witcher_route_7.tmx",
+    "ext": "tmx",
+    "source": "tuxemon/maps/witcher_route_7.tmx"
+  },
+  {
+    "id": "xero",
+    "file": "xero.yaml",
+    "ext": "yaml",
+    "source": "tuxemon/maps/xero.yaml"
+  }
+]

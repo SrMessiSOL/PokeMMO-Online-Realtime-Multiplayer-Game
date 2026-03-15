@@ -1,0 +1,188 @@
+[
+  {
+    "slug": "37707_town",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/37707_town.yaml",
+    "raw": "monsters:\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 1\n  - 10\n  monster: fruitera\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 1\n  - 10\n  monster: dollfin\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 1\n  - 10\n  monster: legko\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 1\n  - 10\n  monster: rockitten\n  variables: []\nslug: 37707_town\n"
+  },
+  {
+    "slug": "37707_town_missing",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/37707_town_missing.yaml",
+    "raw": "monsters:\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 1\n  - 100\n  monster: f7u1t3ra\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 1\n  - 100\n  monster: d0llf1n\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 1\n  - 100\n  monster: l3gk0\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 13\n  - 37\n  monster: r0ck1tt3n\n  variables: []\nslug: 37707_town_missing\n"
+  },
+  {
+    "slug": "default_encounter",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/default_encounter.yaml",
+    "raw": "monsters:\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: eyenemy\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: dandicub\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: cardiling\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: budaye\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: cataspike\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: elofly\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: aardorn\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: nut\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: grimachin\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: spighter\n  variables: []\nslug: default_encounter\n"
+  },
+  {
+    "slug": "eclipse_lion_mountain",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/eclipse_lion_mountain.yaml",
+    "raw": "monsters:\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 55\n  - 65\n  monster: snowrilla\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 65\n  - 75\n  monster: snowrilla\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 55\n  - 65\n  monster: tadcool\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 65\n  - 75\n  monster: bumbulus\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 55\n  - 65\n  monster: chillimp\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 65\n  - 75\n  monster: bumbulus\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 55\n  - 65\n  monster: tux\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 65\n  - 75\n  monster: tux\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: eclipse_lion_mountain\n"
+  },
+  {
+    "slug": "eclipse_park",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/eclipse_park.yaml",
+    "raw": "- monsters:\n  - encounter_rate: 3.5\n    exp_req_mod: 1\n    held_items: []\n    level_range:\n    - 5\n    - 6\n    monster: pairagrim\n    variables: []\n  slug: eclipse_park\n"
+  },
+  {
+    "slug": "eclipse_route7",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/eclipse_route7.yaml",
+    "raw": "monsters:\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 15\n  - 20\n  monster: pairagrim\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 15\n  - 20\n  monster: aardart\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 15\n  - 20\n  monster: weavifly\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 15\n  - 20\n  monster: pantherafira\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 15\n  - 20\n  monster: flacono\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 15\n  - 20\n  monster: slichen\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: eclipse_route7\n"
+  },
+  {
+    "slug": "example_horde",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/example_horde.yaml",
+    "raw": "# Unique identifier for this encounter\nslug: \"example-horde-encounter\"\n\n# Encounter type is HORDE (multiple monsters together)\nencounter_type: horde\n\n# Horde definition\nhorde:\n  monsters:\n    - monster: \"pairagrin\"       # First monster in the horde\n      encounter_rate: 0.5           # 50% chance within the horde composition\n      held_items:\n        - item_slug: \"potion\"\n          probability: 0.4\n      level_range: [2, 4]\n      variables:\n        - key: stage_of_day\n          value: \"night\"\n      exp_req_mod: 1.0\n\n    - monster: \"nut\"      # Second monster in the horde\n      encounter_rate: 0.3\n      held_items:\n        - item_slug: \"potion\"\n          probability: 0.2\n      level_range: [3, 5]\n      variables:\n        - key: stage_of_day\n          value: \"night\"\n      exp_req_mod: 1.5\n\n    - monster: \"rockitten\"       # Third monster in the horde\n      encounter_rate: 0.2\n      held_items:\n        - item_slug: \"potion\"\n          probability: 0.1\n      level_range: [5, 7]\n      variables:\n        - key: stage_of_day\n          value: \"night\"\n      exp_req_mod: 2.0\n\n  horde_level_range: [3, 6]         # Base level range for the entire horde\n  horde_exp_mod: 1.3                # Horde XP modifier (30% more XP)\n\n# Zone-level scaling options\nscaling_zone: false                 # Scaling disabled for this zone\nscale_offset_range: null            # No scaling offset\nscale_multiplier: 1.0               # Default multiplier\noverride_level_range: false         # Do not override monster level ranges\n"
+  },
+  {
+    "slug": "example_single",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/example_single.yaml",
+    "raw": "# Unique identifier for this encounter\nslug: \"example-encounter\"\n\n# Encounter type is SINGLE (only one monster at a time)\nencounter_type: single\n\n# List of monsters that can appear in this encounter\nmonsters:\n  - monster: \"pairagrin\"          # Slug of the monster\n    encounter_rate: 0.6             # 60% chance to encounter this monster\n    held_items:                     # Items the monster may hold\n      - item_slug: \"potion\"      # Slug of the item\n        probability: 0.25           # 25% chance the Pairagrin holds this item\n    level_range: [3, 5]             # Pairagrin appears between level 3 and 5\n    variables:                      # Variables affecting encounter\n      - key: stage_of_day\n        value: \"night\"              # Example: only appears at night\n    exp_req_mod: 1.2                # 20% more XP required to defeat\n    level_offset: 1                 # Pairagrin level is shifted +1\n    min_player_level: 2             # Player must be at least level 2\n    max_player_level: 10            # Player must be at most level 10\n    scaling_enabled: true           # Enable scaling with party average\n    override_level_range: false     # Do not override declared level range\n    scaling_offset_range: [-1, 2]   # Random offset applied when scaling\n\n# Zone-level scaling options\nscaling_zone: true                  # Zone applies scaling to all monsters\nscale_offset_range: [-2, 3]         # Zone-wide scaling offset\nscale_multiplier: 1.0               # No multiplier applied\noverride_level_range: false         # Do not override monster level ranges\n"
+  },
+  {
+    "slug": "new_txmn",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/new_txmn.yaml",
+    "raw": "monsters:\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: chloragon\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: chillimp\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: coproblight\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: pilthropus\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: teddisun\n  variables: []\nslug: new_txmn\n"
+  },
+  {
+    "slug": "propellercat",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/propellercat.yaml",
+    "raw": "monsters:\n- encounter_rate: 1\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 2\n  - 64\n  monster: propellercat\n  variables: []\nslug: propellercat\n"
+  },
+  {
+    "slug": "rare_txmn",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/rare_txmn.yaml",
+    "raw": "monsters:\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 18\n  - 35\n  monster: legko\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 36\n  - 50\n  monster: moloch\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 18\n  - 35\n  monster: heronquak\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 36\n  - 50\n  monster: eaglace\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 18\n  - 35\n  monster: sapragon\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 36\n  - 50\n  monster: dragarbor\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 18\n  - 35\n  monster: gectile\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 36\n  - 50\n  monster: velocitile\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 18\n  - 35\n  monster: allagon\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 10\n  - 30\n  monster: aardart\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 18\n  - 35\n  monster: agnidon\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 36\n  - 50\n  monster: agnigon\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 18\n  - 35\n  monster: cardiwing\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 36\n  - 50\n  monster: cardinale\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 10\n  - 30\n  monster: corvix\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 18\n  - 35\n  monster: dracune\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 36\n  - 50\n  monster: fluttaflap\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 10\n  - 30\n  monster: noctalo\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 10\n  - 30\n  monster: possessun\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 1\n  held_items: []\n  level_range:\n  - 10\n  - 30\n  monster: sharpfin\n  variables: []\nslug: rare_txmn\n"
+  },
+  {
+    "slug": "spyder_citypark",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_citypark.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 5\n  - 8\n  monster: cardiling\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 8\n  - 11\n  monster: cardiwing\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 6\n  - 9\n  monster: cataspike\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 5\n  - 8\n  monster: eyenemy\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 8\n  - 12\n  monster: axolightl\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 8\n  - 12\n  monster: tourbidi\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 8\n  - 12\n  monster: squabbit\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 9\n  - 14\n  monster: puparmor\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_citypark\n"
+  },
+  {
+    "slug": "spyder_cotton_tunnel",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_cotton_tunnel.yaml",
+    "raw": "monsters:\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 35\n  - 40\n  monster: dinoflop\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 30\n  - 35\n  monster: furnursus\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 35\n  monster: boltnu\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 30\n  - 35\n  monster: metesaur\n  variables:\n    - key: daytime\n      value: \"true\"\nslug: spyder_cotton_tunnel\n"
+  },
+  {
+    "slug": "spyder_datacenter",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_datacenter.yaml",
+    "raw": "monsters:\n- encounter_rate: 0.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 45\n  - 50\n  monster: pythwire\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 0.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 45\n  - 50\n  monster: ouroboutlet\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 0.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 40\n  - 45\n  monster: sockeserp\n  variables:\n    - key: daytime\n      value: \"true\"\nslug: spyder_datacenter\n"
+  },
+  {
+    "slug": "spyder_dragonscave",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_dragonscave.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: agnite\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 25\n  monster: agnidon\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: embra\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 25\n  monster: ruption\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 28\n  - 30\n  monster: agnite\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: agnidon\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 28\n  - 30\n  monster: embra\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: ruption\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_dragonscave\n"
+  },
+  {
+    "slug": "spyder_dryadsgrove",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_dryadsgrove.yaml",
+    "raw": "monsters:\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: coleorus\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 25\n  monster: tourbidi\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: shybulb\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: narcileaf\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 28\n  - 30\n  monster: sapsnap\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: lambert\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_dryadsgrove\n"
+  },
+  {
+    "slug": "spyder_greenwash",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_greenwash.yaml",
+    "raw": "monsters:\n- encounter_rate: 5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 15\n  - 25\n  monster: cochini\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 15\n  - 25\n  monster: cateye\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 15\n  - 25\n  monster: sclairus\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 25\n  monster: bursa\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 25\n  monster: nut\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_greenwash\n"
+  },
+  {
+    "slug": "spyder_mansion",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_mansion.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 13\n  - 16\n  monster: cairfrey\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 13\n  - 16\n  monster: polyrock\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 14\n  - 17\n  monster: djinnbo\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 13\n  - 16\n  monster: pigabyte\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 14\n  - 18\n  monster: cairfrey\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 14\n  - 18\n  monster: polyrock\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 14\n  - 18\n  monster: djinnbo\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 14\n  - 18\n  monster: pigabyte\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_mansion\n"
+  },
+  {
+    "slug": "spyder_omnichannel",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_omnichannel.yaml",
+    "raw": "monsters:\n- encounter_rate: 0.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 30\n  - 31\n  monster: dark_robo\n  variables: []\n- encounter_rate: 0.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 30\n  - 31\n  monster: xeon_2\n  variables: []\nslug: spyder_omnichannel\n"
+  },
+  {
+    "slug": "spyder_route1",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_route1.yaml",
+    "raw": "monsters:\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: pairagrin\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: aardorn\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 2\n  - 4\n  monster: cataspike\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 5\n  monster: pairagrin\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 5\n  monster: aardorn\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 5\n  monster: cataspike\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_route1\n"
+  },
+  {
+    "slug": "spyder_route2",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_route2.yaml",
+    "raw": "monsters:\n- encounter_rate: 2.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: cardiling\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 2.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: aardorn\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 2.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: eyenemy\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 4\n  - 7\n  monster: axolightl\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 2.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: cataspike\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 2.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: cardiling\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 2.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 4\n  - 8\n  monster: aardorn\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 2.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 4\n  - 8\n  monster: eyenemy\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 5\n  - 8\n  monster: axolightl\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 2.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 4\n  - 8\n  monster: cataspike\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_route2\n"
+  },
+  {
+    "slug": "spyder_route3",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_route3.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 7\n  - 10\n  monster: cardiling\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 7\n  - 10\n  monster: elofly\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 8\n  - 11\n  monster: squabbit\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 7\n  - 10\n  monster: shybulb\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 9\n  - 12\n  monster: cardiling\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 9\n  - 12\n  monster: elofly\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 9\n  - 12\n  monster: squabbit\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 9\n  - 12\n  monster: shybulb\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_route3\n"
+  },
+  {
+    "slug": "spyder_route4",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_route4.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 11\n  - 14\n  monster: elofly\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 12\n  - 15\n  monster: sapsnap\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 11\n  - 14\n  monster: aardorn\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 11\n  - 14\n  monster: katapill\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 13\n  - 16\n  monster: elofly\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 13\n  - 16\n  monster: sapsnap\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 13\n  - 16\n  monster: aardorn\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 13\n  - 16\n  monster: katapill\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_route4\n"
+  },
+  {
+    "slug": "spyder_route5",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_route5.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 19\n  - 23\n  monster: foofle\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 16\n  - 20\n  monster: vamporm\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 18\n  - 22\n  monster: dracune\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 18\n  - 22\n  monster: anoleaf\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 26\n  monster: gectile\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_route5\n"
+  },
+  {
+    "slug": "spyder_route6",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_route6.yaml",
+    "raw": "monsters:\n- encounter_rate: 10\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 19\n  - 20\n  monster: dandicub\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 21\n  - 23\n  monster: dandylion\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 10\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 19\n  - 22\n  monster: capiti\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 10\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 24\n  monster: dandicub\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 24\n  monster: dandylion\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 10\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 24\n  monster: capiti\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_route6\n"
+  },
+  {
+    "slug": "spyder_routea",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_routea.yaml",
+    "raw": "monsters:\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 12\n  - 15\n  monster: shybulb\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 12\n  - 15\n  monster: katapill\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 12\n  - 15\n  monster: anoleaf\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 14\n  - 18\n  monster: katapill\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 14\n  - 18\n  monster: vamporm\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 14\n  - 18\n  monster: anoleaf\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_routea\n"
+  },
+  {
+    "slug": "spyder_routeb",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_routeb.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: toufigel\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 25\n  monster: pipis\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 28\n  monster: strella\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 20\n  - 25\n  monster: noctula\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 26\n  - 30\n  monster: noctalo\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 26\n  - 30\n  monster: cairfrey\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 26\n  - 30\n  monster: possessun\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 1\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 26\n  - 30\n  monster: rockat\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_routeb\n"
+  },
+  {
+    "slug": "spyder_routec",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/spyder_routec.yaml",
+    "raw": "monsters:\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 26\n  monster: nudiflot_male\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 26\n  monster: nudiflot_female\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 26\n  monster: nudimind\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 26\n  monster: nudikill\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 26\n  monster: manosting\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 26\n  monster: tweesher\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 22\n  - 26\n  monster: nostray\n  variables:\n    - key: daytime\n      value: \"true\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 29\n  monster: nudiflot_male\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 29\n  monster: nudiflot_female\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 29\n  monster: nudimind\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 29\n  monster: nudikill\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 29\n  monster: manosting\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 29\n  monster: tweesher\n  variables:\n    - key: daytime\n      value: \"false\"\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 25\n  - 29\n  monster: nostray\n  variables:\n    - key: daytime\n      value: \"false\"\nslug: spyder_routec\n"
+  },
+  {
+    "slug": "taba_ba_passageway_1",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/taba_ba_passageway_1.yaml",
+    "raw": "monsters:\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 2\n  - 5\n  monster: chloragon\n  variables: []\n- encounter_rate: 3.5\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 3\n  - 6\n  monster: aardorn\n  variables: []\n- encounter_rate: 0.2\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 4\n  - 7\n  monster: nut\n  variables: []\nslug: taba_ba_passageway_1\n"
+  },
+  {
+    "slug": "taba_ba_passageway_2",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/taba_ba_passageway_2.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 4\n  - 6\n  monster: mystikapi\n  variables: []\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 4\n  - 6\n  monster: aardorn\n  variables: []\n- encounter_rate: 1.6\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 5\n  - 8\n  monster: nut\n  variables: []\nslug: taba_ba_passageway_2\n"
+  },
+  {
+    "slug": "taba_ba_passageway_3",
+    "format": "yaml",
+    "source": "tuxemon/db/encounter/taba_ba_passageway_3.yaml",
+    "raw": "monsters:\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 5\n  - 7\n  monster: lambert\n  variables: []\n- encounter_rate: 3\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 5\n  - 7\n  monster: katapill\n  variables: []\n- encounter_rate: 0.8\n  exp_req_mod: 3\n  held_items: []\n  level_range:\n  - 6\n  - 8\n  monster: nut\n  variables: []\nslug: taba_ba_passageway_3\n"
+  }
+]

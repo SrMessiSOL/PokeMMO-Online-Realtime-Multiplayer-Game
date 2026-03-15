@@ -36,7 +36,7 @@ export class Scene1 extends Phaser.Scene {
     }
 
     async bootstrapGame() {
-        this.loadingText.setText("Loading game...\nSyncing Kanto Pokédex");
+        this.loadingText.setText("Loading game...\nSyncing Tuxemon Codex");
 
         await Promise.all([
             initializeGameState(),
