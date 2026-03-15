@@ -28,6 +28,9 @@ export class Scene2 extends Phaser.Scene {
 
         // Player Texture starter position
         this.playerTexturePosition = data.playerTexturePosition;
+        this.characterId = data.characterId || "misa";
+        this.playerName = data.playerName || "Player";
+        this.disableNpcs = Boolean(data.disableNpcs);
 
         // Set container
         this.container = [];
@@ -92,7 +95,9 @@ export class Scene2 extends Phaser.Scene {
             }
         });
         this.battleUi = new FireRedBattleUI(this);
-        this.npcManager = new NpcManager(this, this.dialogueUi);
+        if (!this.disableNpcs) {
+            this.npcManager = new NpcManager(this, this.dialogueUi);
+        }
         this.wildEncounterManager = new WildEncounterManager(this, this.battleUi);
         this.pokemonCenterManager = new PokemonCenterManager(this);
         room.then((currentRoom) => {
