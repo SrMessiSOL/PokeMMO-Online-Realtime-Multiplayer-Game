@@ -455,7 +455,87 @@ const NPC_DEFINITIONS = [
     }
 ];
 
-const RESOLVED_NPC_DEFINITIONS = validateNpcPlacements(NPC_DEFINITIONS);
+const EXTERNAL_NPC_DIRECTORIES = [
+    path.join(__dirname, "..", "..", "tuxemon", "npcs"),
+    path.join(__dirname, "..", "..", "client", "src", "assets", "tuxemon", "npcs")
+];
+
+function listJsonFiles(directory) {
+    if (!fs.existsSync(directory)) {
+        return [];
+    }
+
+    return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+        const entryPath = path.join(directory, entry.name);
+        if (entry.isDirectory()) {
+            return listJsonFiles(entryPath);
+        }
+
+        return entry.isFile() && entry.name.endsWith(".json") ? [entryPath] : [];
+    });
+}
+
+function normalizeExternalNpcDefinition(rawNpc) {
+    if (!rawNpc || !rawNpc.id || !rawNpc.name || !rawNpc.map) {
+        return null;
+    }
+
+    return {
+        id: String(rawNpc.id),
+        name: String(rawNpc.name),
+        title: String(rawNpc.title || "Traveler"),
+        map: String(rawNpc.map),
+        x: Number(rawNpc.x) || 0,
+        y: Number(rawNpc.y) || 0,
+        spriteKey: String(rawNpc.spriteKey || "players"),
+        spriteFrame: String(rawNpc.spriteFrame || "misa_front.png"),
+        clueId: String(rawNpc.clueId || `${rawNpc.id}-clue`),
+        clueTitle: String(rawNpc.clueTitle || `${rawNpc.name} Note`),
+        clueText: String(rawNpc.clueText || `${rawNpc.name} shared local town knowledge.`),
+        shareNeed: Number(rawNpc.shareNeed) || 0,
+        revealThreshold: Number(rawNpc.revealThreshold) || 1,
+        pressThreshold: Number(rawNpc.pressThreshold) || 3,
+        speakingStyle: String(rawNpc.speakingStyle || "Simple and direct."),
+        description: String(rawNpc.description || "A traveler from the tuxemon content pack."),
+        personality: rawNpc.personality || { O: 0.5, C: 0.5, E: 0.5, A: 0.5, N: 0.5, H: 0.5 },
+        goals: Array.isArray(rawNpc.goals) && rawNpc.goals.length ? rawNpc.goals : [
+            { id: `${rawNpc.id}-guide-player`, content: "Guide players through the region.", priority: 0.7, mutable: true, status: "active" }
+        ],
+        opening: String(rawNpc.opening || `${rawNpc.name} nods and waits for your question.`),
+        support: String(rawNpc.support || `${rawNpc.name} seems encouraged.`),
+        guarded: String(rawNpc.guarded || `${rawNpc.name} stays cautious for now.`),
+        pressure: String(rawNpc.pressure || `${rawNpc.name} does not like being rushed.`),
+        completion: String(rawNpc.completion || `${rawNpc.name} points you to the next destination.`)
+    };
+}
+
+function loadExternalNpcDefinitions() {
+    const loadedDefinitions = [];
+
+    EXTERNAL_NPC_DIRECTORIES.forEach((directory) => {
+        listJsonFiles(directory).forEach((npcFilePath) => {
+            try {
+                const parsedPayload = JSON.parse(fs.readFileSync(npcFilePath, "utf8"));
+                const entries = Array.isArray(parsedPayload) ? parsedPayload : [parsedPayload];
+
+                entries.forEach((entry) => {
+                    const normalizedNpc = normalizeExternalNpcDefinition(entry);
+                    if (normalizedNpc) {
+                        loadedDefinitions.push(normalizedNpc);
+                    }
+                });
+            } catch (error) {
+                console.warn(`Unable to parse NPC file: ${npcFilePath}`, error.message);
+            }
+        });
+    });
+
+    return loadedDefinitions;
+}
+
+const mergedNpcDefinitions = [...NPC_DEFINITIONS, ...loadExternalNpcDefinitions()];
+const uniqueNpcDefinitions = Array.from(new Map(mergedNpcDefinitions.map((npc) => [npc.id, npc])).values());
+const RESOLVED_NPC_DEFINITIONS = validateNpcPlacements(uniqueNpcDefinitions);
 
 class NpcEmotionService {
     constructor() {

@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 import { fetchNpcs, interactWithNpc } from "./api/npcs";
-import { room } from "./SocketServer";
+import { connectToWorld } from "./SocketServer";
 import { ENTITY_SIZE } from "./constants/entity";
 
 const FONT_FAMILY = "\"Press Start 2P\"";
@@ -24,7 +24,7 @@ export default class NpcManager {
             padding: { x: 6, y: 4 }
         }).setScrollFactor(1).setDepth(40).setVisible(false);
 
-        this.readyPromise = room.then(async (currentRoom) => {
+        this.readyPromise = connectToWorld().then(async (currentRoom) => {
             this.playerId = currentRoom.sessionId;
             await this.loadForMap(this.scene.mapName);
         });

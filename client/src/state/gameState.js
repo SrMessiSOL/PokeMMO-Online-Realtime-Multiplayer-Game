@@ -7,7 +7,7 @@ const SAVE_DATA_VERSION = 1;
 const DEFAULT_TRAINER_NAME = "LANDON";
 const DEFAULT_RIVAL_NAME = "BLUE";
 const DEFAULT_PLAYER_ID = 12345;
-const DEFAULT_MONEY = 3000;
+const DEFAULT_MONEY = 0;
 const DEFAULT_SAVE_SLOT = 1;
 const DEFAULT_BOX_COUNT = 14;
 const DEFAULT_BOX_CAPACITY = 30;
@@ -30,6 +30,8 @@ const DEFAULT_PLAYER_STATE = {
     id: DEFAULT_PLAYER_ID,
     gender: "male",
     rival: DEFAULT_RIVAL_NAME,
+    characterId: "misa",
+    walletAddress: null,
     position: {
         mapId: "town",
         x: 352,
@@ -83,14 +85,7 @@ const FALLBACK_MOVE_BY_TYPE = {
     Bug: "tackle"
 };
 
-const PARTY_SEED = [
-    { id: 1, level: 12, exp: 36, stats: { hp: 95, maxHp: 95, attack: 49, defense: 49, spAttack: 65, spDefense: 65, speed: 45 }, status: null },
-    { id: 4, level: 12, exp: 41, stats: { hp: 72, maxHp: 95, attack: 52, defense: 43, spAttack: 60, spDefense: 50, speed: 65 }, status: null },
-    { id: 7, level: 11, exp: 32, stats: { hp: 84, maxHp: 96, attack: 48, defense: 65, spAttack: 50, spDefense: 64, speed: 43 }, status: null },
-    { id: 25, level: 9, exp: 19, stats: { hp: 28, maxHp: 90, attack: 55, defense: 40, spAttack: 50, spDefense: 50, speed: 90 }, status: "PSN" },
-    { id: 133, level: 10, exp: 25, stats: { hp: 61, maxHp: 88, attack: 55, defense: 50, spAttack: 45, spDefense: 65, speed: 55 }, status: null },
-    { id: 150, level: 50, exp: 5000, stats: { hp: 0, maxHp: 130, attack: 110, defense: 90, spAttack: 154, spDefense: 90, speed: 130 }, status: null }
-];
+const PARTY_SEED = [];
 
 const BADGE_NAMES = [
     "Boulder Badge",
@@ -105,152 +100,7 @@ const BADGE_NAMES = [
 
 const BAG_CATEGORIES = ["Items", "Poké Balls", "TM/HM", "Berries", "Key Items"];
 
-const BAG_ITEM_SEED = [
-    {
-        id: "potion",
-        name: "Potion",
-        category: "Items",
-        quantity: 5,
-        holdable: false,
-        effect: { type: "heal_hp", value: 20 },
-        desc: "Herstelt 20 HP van een Pokémon."
-    },
-    {
-        id: "super-potion",
-        name: "Super Potion",
-        category: "Items",
-        quantity: 2,
-        holdable: false,
-        effect: { type: "heal_hp", value: 50 },
-        desc: "Herstelt 50 HP van een Pokémon."
-    },
-    {
-        id: "antidote",
-        name: "Antidote",
-        category: "Items",
-        quantity: 2,
-        holdable: false,
-        effect: { type: "heal_status", status: "PSN" },
-        desc: "Geneest vergiftiging."
-    },
-    {
-        id: "burn-heal",
-        name: "Burn Heal",
-        category: "Items",
-        quantity: 1,
-        holdable: false,
-        effect: { type: "heal_status", status: "BRN" },
-        desc: "Geneest brandwonden."
-    },
-    {
-        id: "paralyze-heal",
-        name: "Paralyze Heal",
-        category: "Items",
-        quantity: 1,
-        holdable: false,
-        effect: { type: "heal_status", status: "PAR" },
-        desc: "Geneest verlamming."
-    },
-    {
-        id: "awakening",
-        name: "Awakening",
-        category: "Items",
-        quantity: 1,
-        holdable: false,
-        effect: { type: "heal_status", status: "SLP" },
-        desc: "Maakt een slapende Pokémon wakker."
-    },
-    {
-        id: "revive",
-        name: "Revive",
-        category: "Items",
-        quantity: 1,
-        holdable: false,
-        effect: { type: "revive" },
-        desc: "Brengt een fainted Pokémon terug met half HP."
-    },
-    {
-        id: "poke-ball",
-        name: "Poké Ball",
-        category: "Poké Balls",
-        quantity: 10,
-        holdable: false,
-        effect: { type: "capture" },
-        desc: "Een capsule om wilde Pokémon te vangen."
-    },
-    {
-        id: "great-ball",
-        name: "Great Ball",
-        category: "Poké Balls",
-        quantity: 3,
-        holdable: false,
-        effect: { type: "capture" },
-        desc: "Betere vangstkans dan een Poké Ball."
-    },
-    {
-        id: "tm35",
-        name: "TM35 Flamethrower",
-        category: "TM/HM",
-        quantity: 1,
-        holdable: false,
-        effect: { type: "tm", value: MOVE_IDS.flamethrower },
-        desc: "Leert FLAMETHROWER aan compatibele Pokémon."
-    },
-    {
-        id: "hm02",
-        name: "HM02 Fly",
-        category: "TM/HM",
-        quantity: 1,
-        holdable: false,
-        effect: { type: "tm", value: MOVE_IDS.fly },
-        desc: "Leert FLY aan compatibele Pokémon."
-    },
-    {
-        id: "oran-berry",
-        name: "Oran Berry",
-        category: "Berries",
-        quantity: 3,
-        holdable: true,
-        effect: { type: "heal_hp", value: 10 },
-        desc: "Een bes die 10 HP herstelt."
-    },
-    {
-        id: "pecha-berry",
-        name: "Pecha Berry",
-        category: "Berries",
-        quantity: 2,
-        holdable: true,
-        effect: { type: "heal_status", status: "PSN" },
-        desc: "Een bes die vergiftiging geneest."
-    },
-    {
-        id: "charcoal",
-        name: "Charcoal",
-        category: "Key Items",
-        quantity: 1,
-        holdable: true,
-        effect: { type: "key" },
-        desc: "Versterkt Fire-type moves als hij wordt vastgehouden."
-    },
-    {
-        id: "town-map",
-        name: "Town Map",
-        category: "Key Items",
-        quantity: 1,
-        holdable: false,
-        effect: { type: "key" },
-        desc: "Toont een kaart van de regio."
-    },
-    {
-        id: "bicycle",
-        name: "Bicycle",
-        category: "Key Items",
-        quantity: 1,
-        holdable: false,
-        effect: { type: "key" },
-        desc: "Een snelle fiets voor lange routes."
-    }
-];
+const BAG_ITEM_SEED = [];
 
 const NATURES = [
     "Hardy",
@@ -663,7 +513,7 @@ function normalizeParty(party) {
         .slice(0, 6)
         .map((pokemon) => normalizePokemon(pokemon, PARTY_SEED.find((entry) => entry.id === pokemon.id) || null));
 
-    return normalizedParty.length ? normalizedParty : PARTY_SEED.slice(0, 1).map((pokemon) => normalizePokemon(pokemon, pokemon));
+    return normalizedParty;
 }
 
 function normalizeBadges(badges) {
@@ -1118,6 +968,73 @@ export async function initializeGameState() {
     persistGameState();
     notifyPartyListeners();
     notifyStateListeners();
+    return getGameState();
+}
+
+
+
+export function createWalletSavePayload() {
+    const state = getGameState();
+    return {
+        schema: 1,
+        savedAt: Date.now(),
+        player: state.player,
+        party: state.party,
+        bag: state.bag,
+        badges: state.badges,
+        money: state.money,
+        playTime: state.playTime,
+        options: state.options,
+        saveSlot: state.saveSlot,
+        pokemonCenterState: state.pokemonCenterState
+    };
+}
+
+export function hydrateFromWalletGameState(remoteGameState) {
+    if (!remoteGameState || typeof remoteGameState !== "object") {
+        return getGameState();
+    }
+
+    const sourceState = remoteGameState.gameState && typeof remoteGameState.gameState === "object"
+        ? remoteGameState.gameState
+        : remoteGameState;
+
+    const nextState = {
+        ...cloneGameState(),
+        ...sourceState,
+        player: clonePlayer({
+            ...gameState.player,
+            ...(sourceState.player || {})
+        }),
+        party: normalizeParty(sourceState.party || gameState.party),
+        box: cloneBoxes(sourceState.box || gameState.box),
+        pokedex: normalizePokedex(sourceState.pokedex || gameState.pokedex, sourceState.party || gameState.party),
+        bag: normalizeBag(sourceState.bag || gameState.bag),
+        badges: normalizeBadges(sourceState.badges || gameState.badges),
+        options: {
+            ...DEFAULT_OPTIONS,
+            ...(sourceState.options || gameState.options || {})
+        },
+        pokemonCenterState: {
+            ...DEFAULT_POKEMON_CENTER_STATE,
+            ...(sourceState.pokemonCenterState || gameState.pokemonCenterState || {})
+        }
+    };
+
+    gameState.player = nextState.player;
+    gameState.party = nextState.party;
+    gameState.box = nextState.box;
+    gameState.pokedex = nextState.pokedex;
+    gameState.bag = nextState.bag;
+    gameState.badges = nextState.badges;
+    gameState.money = nextState.money ?? gameState.money;
+    gameState.playTime = Math.max(0, Number(nextState.playTime ?? gameState.playTime) || 0);
+    gameState.options = nextState.options;
+    gameState.saveSlot = nextState.saveSlot ?? gameState.saveSlot;
+    gameState.pokemonCenterState = nextState.pokemonCenterState;
+
+    markPartyCaughtInDex();
+    commitGameState();
     return getGameState();
 }
 
