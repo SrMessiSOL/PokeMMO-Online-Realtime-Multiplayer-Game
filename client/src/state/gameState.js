@@ -1124,30 +1124,52 @@ export async function initializeGameState() {
 }
 
 
+
+export function createWalletSavePayload() {
+    const state = getGameState();
+    return {
+        schema: 1,
+        savedAt: Date.now(),
+        player: state.player,
+        party: state.party,
+        bag: state.bag,
+        badges: state.badges,
+        money: state.money,
+        playTime: state.playTime,
+        options: state.options,
+        saveSlot: state.saveSlot,
+        pokemonCenterState: state.pokemonCenterState
+    };
+}
+
 export function hydrateFromWalletGameState(remoteGameState) {
     if (!remoteGameState || typeof remoteGameState !== "object") {
         return getGameState();
     }
 
+    const sourceState = remoteGameState.gameState && typeof remoteGameState.gameState === "object"
+        ? remoteGameState.gameState
+        : remoteGameState;
+
     const nextState = {
         ...cloneGameState(),
-        ...remoteGameState,
+        ...sourceState,
         player: clonePlayer({
             ...gameState.player,
-            ...(remoteGameState.player || {})
+            ...(sourceState.player || {})
         }),
-        party: normalizeParty(remoteGameState.party || gameState.party),
-        box: cloneBoxes(remoteGameState.box || gameState.box),
-        pokedex: normalizePokedex(remoteGameState.pokedex || gameState.pokedex, remoteGameState.party || gameState.party),
-        bag: normalizeBag(remoteGameState.bag || gameState.bag),
-        badges: normalizeBadges(remoteGameState.badges || gameState.badges),
+        party: normalizeParty(sourceState.party || gameState.party),
+        box: cloneBoxes(sourceState.box || gameState.box),
+        pokedex: normalizePokedex(sourceState.pokedex || gameState.pokedex, sourceState.party || gameState.party),
+        bag: normalizeBag(sourceState.bag || gameState.bag),
+        badges: normalizeBadges(sourceState.badges || gameState.badges),
         options: {
             ...DEFAULT_OPTIONS,
-            ...(remoteGameState.options || gameState.options || {})
+            ...(sourceState.options || gameState.options || {})
         },
         pokemonCenterState: {
             ...DEFAULT_POKEMON_CENTER_STATE,
-            ...(remoteGameState.pokemonCenterState || gameState.pokemonCenterState || {})
+            ...(sourceState.pokemonCenterState || gameState.pokemonCenterState || {})
         }
     };
 

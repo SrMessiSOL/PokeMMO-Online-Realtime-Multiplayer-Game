@@ -9,7 +9,7 @@ import NpcManager from "./NpcManager";
 import FireRedBattleUI from "./ui/FireRedBattleUI";
 import PokemonCenterManager from "./PokemonCenterManager";
 import WildEncounterManager from "./WildEncounterManager";
-import { getGameState, tickPlaySession } from "./state/gameState";
+import { createWalletSavePayload, tickPlaySession } from "./state/gameState";
 import { saveWalletGameState } from "./api/wallets";
 
 let cursors, socketKey;
@@ -204,7 +204,7 @@ export class Scene2 extends Phaser.Scene {
 
         this.isSavingWalletState = true;
         try {
-            await saveWalletGameState(this.walletAddress, getGameState());
+            await saveWalletGameState(this.walletAddress, createWalletSavePayload());
             this.lastWalletSyncAt = now;
         } catch (error) {
             console.warn("Unable to sync wallet save state", error);
