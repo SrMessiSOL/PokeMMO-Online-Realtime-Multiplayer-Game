@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { onlinePlayers, room } from './SocketServer';
+import { connectToWorld, disconnectFromWorld, onlinePlayers } from './SocketServer';
 
 import OnlinePlayer from "./OnlinePlayer";
 import Player from "./Player";
@@ -9,7 +9,8 @@ import NpcManager from "./NpcManager";
 import FireRedBattleUI from "./ui/FireRedBattleUI";
 import PokemonCenterManager from "./PokemonCenterManager";
 import WildEncounterManager from "./WildEncounterManager";
-import { tickPlaySession } from "./state/gameState";
+import { createWalletSavePayload, tickPlaySession } from "./state/gameState";
+import { saveWalletGameState } from "./api/wallets";
 
 let cursors, socketKey;
 
@@ -28,6 +29,12 @@ export class Scene2 extends Phaser.Scene {
 
         // Player Texture starter position
         this.playerTexturePosition = data.playerTexturePosition;
+        this.characterId = data.characterId || "misa";
+        this.playerName = data.playerName || "Player";
+        this.disableNpcs = Boolean(data.disableNpcs);
+        this.walletAddress = data.walletAddress || null;
+        this.lastWalletSyncAt = 0;
+        this.isSavingWalletState = false;
 
         // Set container
         this.container = [];
@@ -45,20 +52,28 @@ export class Scene2 extends Phaser.Scene {
 
         // Parameters are the name you gave the tileset in Tiled and then the key of the tileset image in
         // Phaser's cache (i.e. the name you used in preload)
-        const tileset = this.map.addTilesetImage("tuxmon-sample-32px-extruded", "TilesTown");
+        const tilesets = (this.map.tilesets || [])
+            .map((tilesetConfig) => this.resolveTileset(tilesetConfig))
+            .filter(Boolean);
+
+        const layerTilesets = tilesets.length ? tilesets : undefined;
 
         // Parameters: layer name (or index) from Tiled, tileset, x, y
-        this.belowLayer = this.map.createLayer("Below Player", tileset, 0, 0);
-        this.worldLayer = this.map.createLayer("World", tileset, 0, 0);
-        this.grassLayer = this.map.createLayer("Grass", tileset, 0, 0);
-        this.aboveLayer = this.map.createLayer("Above Player", tileset, 0, 0);
+        this.belowLayer = this.map.getLayer("Below Player") ? this.map.createLayer("Below Player", layerTilesets, 0, 0) : null;
+        this.worldLayer = this.map.getLayer("World") ? this.map.createLayer("World", layerTilesets, 0, 0) : null;
+        this.grassLayer = this.map.getLayer("Grass") ? this.map.createLayer("Grass", layerTilesets, 0, 0) : null;
+        this.aboveLayer = this.map.getLayer("Above Player") ? this.map.createLayer("Above Player", layerTilesets, 0, 0) : null;
 
-        this.worldLayer.setCollisionByProperty({collides: true});
+        if (this.worldLayer) {
+            this.worldLayer.setCollisionByProperty({collides: true});
+        }
 
         // By default, everything gets depth sorted on the screen in the order we created things. Here, we
         // want the "Above Player" layer to sit on top of the player, so we explicitly give it a depth.
         // Higher depths will sit on top of lower depth objects.
-        this.aboveLayer.setDepth(10);
+        if (this.aboveLayer) {
+            this.aboveLayer.setDepth(10);
+        }
 
         // Get spawn point from tiled map
         const spawnPoint = this.map.findObject("SpawnPoints", obj => obj.name === this.spawnPointName)
@@ -80,7 +95,9 @@ export class Scene2 extends Phaser.Scene {
 
         cursors = this.input.keyboard.createCursorKeys();
 
-        this.menuUi = new FireRedMenuUI(this);
+        this.menuUi = new FireRedMenuUI(this, {
+            onExit: () => this.openProfileHubFromMenu()
+        });
         this.dialogueUi = new FireRedDialogueUI(this, {
             onChoice: (npc, choice) => {
                 if (this.npcManager) {
@@ -92,10 +109,12 @@ export class Scene2 extends Phaser.Scene {
             }
         });
         this.battleUi = new FireRedBattleUI(this);
-        this.npcManager = new NpcManager(this, this.dialogueUi);
+        if (!this.disableNpcs) {
+            this.npcManager = new NpcManager(this, this.dialogueUi);
+        }
         this.wildEncounterManager = new WildEncounterManager(this, this.battleUi);
         this.pokemonCenterManager = new PokemonCenterManager(this);
-        room.then((currentRoom) => {
+        connectToWorld().then((currentRoom) => {
             if (this.isSceneShuttingDown) {
                 return;
             }
@@ -147,6 +166,8 @@ export class Scene2 extends Phaser.Scene {
                 this.pokemonCenterManager = null;
             }
 
+            this.syncWalletState(true);
+
             if (this.socketTimerEvent) {
                 this.socketTimerEvent.remove(false);
                 this.socketTimerEvent = null;
@@ -175,8 +196,64 @@ export class Scene2 extends Phaser.Scene {
                     y: Math.round(this.player.y),
                     facing: this.player.facing || this.playerTexturePosition || "front"
                 }, 1);
+
+                this.syncWalletState();
             }
         });
+    }
+
+    resolveTileset(tilesetConfig) {
+        const fallbackKey = "tuxmon-sample-32px-extruded";
+        const imagePath = String(tilesetConfig?.image || "");
+        const imageFileName = imagePath.split("/").pop() || "";
+        const imageKey = imageFileName.replace(/\.[^/.]+$/, "") || fallbackKey;
+
+        try {
+            return this.map.addTilesetImage(tilesetConfig.name, imageKey);
+        } catch (error) {
+            if (imageKey !== fallbackKey) {
+                return this.map.addTilesetImage(tilesetConfig.name, fallbackKey);
+            }
+
+            console.warn(`Unable to load tileset for map ${this.mapName}:`, tilesetConfig?.name, error);
+            return null;
+        }
+    }
+
+
+    async openProfileHubFromMenu() {
+        await this.syncWalletState(true);
+        await disconnectFromWorld();
+
+        if (typeof window !== "undefined" && typeof window.__pokemmoOpenProfileHub === "function") {
+            window.__pokemmoOpenProfileHub({
+                walletAddress: this.walletAddress,
+                gameState: createWalletSavePayload()
+            });
+        }
+
+        this.scene.stop();
+    }
+
+    async syncWalletState(force = false) {
+        if (!this.walletAddress || this.isSavingWalletState) {
+            return;
+        }
+
+        const now = Date.now();
+        if (!force && now - this.lastWalletSyncAt < 2000) {
+            return;
+        }
+
+        this.isSavingWalletState = true;
+        try {
+            await saveWalletGameState(this.walletAddress, createWalletSavePayload());
+            this.lastWalletSyncAt = now;
+        } catch (error) {
+            console.warn("Unable to sync wallet save state", error);
+        } finally {
+            this.isSavingWalletState = false;
+        }
     }
 
     update(time, delta) {
@@ -218,7 +295,7 @@ export class Scene2 extends Phaser.Scene {
         if (cursors.left.isDown) {
             if (socketKey) {
                 if (this.player.isMoved()) {
-                    room.then((room) => room.send(
+                    connectToWorld().then((room) => room.send(
                          "PLAYER_MOVED",{
                         position: 'left',
                         x: this.player.x,
@@ -230,7 +307,7 @@ export class Scene2 extends Phaser.Scene {
         } else if (cursors.right.isDown) {
             if (socketKey) {
                 if (this.player.isMoved()) {
-                    room.then((room) => room.send(
+                    connectToWorld().then((room) => room.send(
                          "PLAYER_MOVED",{
                         position: 'right',
                         x: this.player.x,
@@ -245,7 +322,7 @@ export class Scene2 extends Phaser.Scene {
         if (cursors.up.isDown) {
             if (socketKey) {
                 if (this.player.isMoved()) {
-                    room.then((room) => room.send(
+                    connectToWorld().then((room) => room.send(
                         "PLAYER_MOVED",{
                         position: 'back',
                         x: this.player.x,
@@ -257,7 +334,7 @@ export class Scene2 extends Phaser.Scene {
         } else if (cursors.down.isDown) {
             if (socketKey) {
                 if (this.player.isMoved()) {
-                    room.then((room) => room.send(
+                    connectToWorld().then((room) => room.send(
                          "PLAYER_MOVED",{
                         position: 'front',
                         x: this.player.x,
@@ -270,16 +347,16 @@ export class Scene2 extends Phaser.Scene {
 
         // Horizontal movement ended
         if (Phaser.Input.Keyboard.JustUp(cursors.left) === true) {
-            room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED",{ position: 'left'}))
+            connectToWorld().then((room) => room.send( "PLAYER_MOVEMENT_ENDED",{ position: 'left'}))
         } else if (Phaser.Input.Keyboard.JustUp(cursors.right) === true) {
-            room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED",{ position: 'right'}))
+            connectToWorld().then((room) => room.send( "PLAYER_MOVEMENT_ENDED",{ position: 'right'}))
         }
 
         // Vertical movement ended
         if (Phaser.Input.Keyboard.JustUp(cursors.up) === true) {
-            room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'back'}))
+            connectToWorld().then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'back'}))
         } else if (Phaser.Input.Keyboard.JustUp(cursors.down) === true) {
-            room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'front'}))
+            connectToWorld().then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'front'}))
         }
     }
 
