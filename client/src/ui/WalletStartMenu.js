@@ -1,10 +1,17 @@
 import { DEFAULT_CHARACTER_ID, PLAYER_CHARACTER_OPTIONS } from "../constants/playerCharacters";
 import { getWalletProfile, saveWalletCharacter } from "../api/wallets";
+import PlayersAtlasJSON from "../assets/atlas/players";
+import PlayersAtlasPNG from "../assets/images/players/players.png";
 
 const SUPPORTED_WALLETS = [
     { id: "phantom", label: "Connect Phantom", providerKey: "solana" },
     { id: "solflare", label: "Connect Solflare", providerKey: "solflare" }
 ];
+
+function getFrameByName(frameName) {
+    const frames = PlayersAtlasJSON?.textures?.[0]?.frames || [];
+    return frames.find((entry) => entry.filename === frameName) || null;
+}
 
 export default class WalletStartMenu {
     constructor(onReady) {
@@ -66,7 +73,16 @@ export default class WalletStartMenu {
             option.type = "button";
             option.className = "character-option";
             option.dataset.characterId = character.id;
-            option.innerHTML = `<strong>${character.label}</strong><span>${character.id}</span>`;
+
+            const frame = getFrameByName(`${character.id}_front.png`);
+            const frameStyle = frame
+                ? `background-image:url('${PlayersAtlasPNG}');background-position:-${frame.frame.x}px -${frame.frame.y}px;width:${frame.frame.w}px;height:${frame.frame.h}px;`
+                : "";
+
+            option.innerHTML = `
+                <span class="character-thumb" style="${frameStyle}"></span>
+                <span class="character-label">${character.label}</span>
+            `;
 
             if (character.id === this.selectedCharacterId) {
                 option.classList.add("selected");
@@ -96,11 +112,12 @@ export default class WalletStartMenu {
                 throw new Error("Wallet address not available.");
             }
 
+            this.walletActionsEl.classList.add("hidden");
             this.statusEl.textContent = `Connected wallet: ${this.walletAddress}`;
 
             const { profile } = await getWalletProfile(this.walletAddress);
             if (profile) {
-                this.statusEl.textContent = `Welcome back ${profile.playerName} (${profile.characterId})`;
+                this.statusEl.textContent = `Welcome back ${profile.playerName}`;
                 this.finish(profile);
                 return;
             }

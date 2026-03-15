@@ -25,3 +25,20 @@ export async function saveWalletCharacter(address, payload) {
 
     return response.json();
 }
+
+export async function saveWalletGameState(address, gameState) {
+    const response = await fetch(`${API_BASE_URL}/wallets/${encodeURIComponent(address)}/state`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ gameState })
+    });
+
+    if (!response.ok) {
+        const errorPayload = await response.json().catch(() => ({}));
+        throw new Error(errorPayload.error || "Unable to save game state.");
+    }
+
+    return response.json();
+}

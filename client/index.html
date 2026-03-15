@@ -63,6 +63,10 @@
         margin: 12px 0;
       }
 
+      .wallet-actions.hidden {
+        display: none;
+      }
+
       .wallet-card button {
         cursor: pointer;
         background: #6f77ff;
@@ -100,9 +104,23 @@
       .character-option {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 6px;
         border: 1px solid #6f77ff;
         padding: 8px;
+        min-height: 78px;
+      }
+
+      .character-thumb {
+        display: inline-block;
+        background-repeat: no-repeat;
+        image-rendering: pixelated;
+        transform: scale(2);
+        transform-origin: center;
+      }
+
+      .character-label {
+        font-size: 8px;
       }
 
       .character-option.selected {

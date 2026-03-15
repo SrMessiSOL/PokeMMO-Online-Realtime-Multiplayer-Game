@@ -89,6 +89,7 @@ export class Scene1 extends Phaser.Scene {
             },
             characterId,
             playerName: player.name,
+            walletAddress: player.walletAddress || null,
             disableNpcs: true
         });
     }

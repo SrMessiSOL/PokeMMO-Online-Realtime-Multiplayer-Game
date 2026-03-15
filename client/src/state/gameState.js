@@ -31,6 +31,7 @@ const DEFAULT_PLAYER_STATE = {
     gender: "male",
     rival: DEFAULT_RIVAL_NAME,
     characterId: "misa",
+    walletAddress: null,
     position: {
         mapId: "town",
         x: 352,
@@ -1119,6 +1120,51 @@ export async function initializeGameState() {
     persistGameState();
     notifyPartyListeners();
     notifyStateListeners();
+    return getGameState();
+}
+
+
+export function hydrateFromWalletGameState(remoteGameState) {
+    if (!remoteGameState || typeof remoteGameState !== "object") {
+        return getGameState();
+    }
+
+    const nextState = {
+        ...cloneGameState(),
+        ...remoteGameState,
+        player: clonePlayer({
+            ...gameState.player,
+            ...(remoteGameState.player || {})
+        }),
+        party: normalizeParty(remoteGameState.party || gameState.party),
+        box: cloneBoxes(remoteGameState.box || gameState.box),
+        pokedex: normalizePokedex(remoteGameState.pokedex || gameState.pokedex, remoteGameState.party || gameState.party),
+        bag: normalizeBag(remoteGameState.bag || gameState.bag),
+        badges: normalizeBadges(remoteGameState.badges || gameState.badges),
+        options: {
+            ...DEFAULT_OPTIONS,
+            ...(remoteGameState.options || gameState.options || {})
+        },
+        pokemonCenterState: {
+            ...DEFAULT_POKEMON_CENTER_STATE,
+            ...(remoteGameState.pokemonCenterState || gameState.pokemonCenterState || {})
+        }
+    };
+
+    gameState.player = nextState.player;
+    gameState.party = nextState.party;
+    gameState.box = nextState.box;
+    gameState.pokedex = nextState.pokedex;
+    gameState.bag = nextState.bag;
+    gameState.badges = nextState.badges;
+    gameState.money = nextState.money ?? gameState.money;
+    gameState.playTime = Math.max(0, Number(nextState.playTime ?? gameState.playTime) || 0);
+    gameState.options = nextState.options;
+    gameState.saveSlot = nextState.saveSlot ?? gameState.saveSlot;
+    gameState.pokemonCenterState = nextState.pokemonCenterState;
+
+    markPartyCaughtInDex();
+    commitGameState();
     return getGameState();
 }
 

@@ -42,7 +42,9 @@ function getWalletProfile(walletAddress) {
 
 function saveWalletProfile(walletAddress, profile) {
     const store = readStore();
+    const current = store.wallets[walletAddress] || {};
     store.wallets[walletAddress] = {
+        ...current,
         walletAddress,
         playerName: profile.playerName,
         characterId: profile.characterId,
@@ -53,8 +55,24 @@ function saveWalletProfile(walletAddress, profile) {
     return store.wallets[walletAddress];
 }
 
+function saveWalletGameState(walletAddress, gameState) {
+    const store = readStore();
+    const current = store.wallets[walletAddress] || { walletAddress };
+
+    store.wallets[walletAddress] = {
+        ...current,
+        walletAddress,
+        gameState,
+        updatedAt: new Date().toISOString()
+    };
+
+    writeStore(store);
+    return store.wallets[walletAddress];
+}
+
 module.exports = {
     DATA_FILE,
     getWalletProfile,
-    saveWalletProfile
+    saveWalletProfile,
+    saveWalletGameState
 };

@@ -1,5 +1,5 @@
 const express = require("express");
-const { getWalletProfile, saveWalletProfile } = require("../services/walletProfileStore");
+const { getWalletProfile, saveWalletProfile, saveWalletGameState } = require("../services/walletProfileStore");
 
 const router = express.Router();
 
@@ -43,6 +43,22 @@ router.post("/wallets/:address/character", (req, res) => {
 
     const profile = saveWalletProfile(address, { playerName, characterId });
     return res.status(201).json({ profile });
+});
+
+router.put("/wallets/:address/state", (req, res) => {
+    const address = String(req.params.address || "").trim();
+    const gameState = req.body?.gameState;
+
+    if (!address) {
+        return res.status(400).json({ error: "Wallet address is required." });
+    }
+
+    if (!gameState || typeof gameState !== "object") {
+        return res.status(400).json({ error: "A valid gameState payload is required." });
+    }
+
+    const profile = saveWalletGameState(address, gameState);
+    return res.status(200).json({ profile });
 });
 
 module.exports = router;

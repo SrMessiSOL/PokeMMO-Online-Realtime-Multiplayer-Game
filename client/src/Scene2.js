@@ -9,7 +9,8 @@ import NpcManager from "./NpcManager";
 import FireRedBattleUI from "./ui/FireRedBattleUI";
 import PokemonCenterManager from "./PokemonCenterManager";
 import WildEncounterManager from "./WildEncounterManager";
-import { tickPlaySession } from "./state/gameState";
+import { getGameState, tickPlaySession } from "./state/gameState";
+import { saveWalletGameState } from "./api/wallets";
 
 let cursors, socketKey;
 
@@ -31,6 +32,9 @@ export class Scene2 extends Phaser.Scene {
         this.characterId = data.characterId || "misa";
         this.playerName = data.playerName || "Player";
         this.disableNpcs = Boolean(data.disableNpcs);
+        this.walletAddress = data.walletAddress || null;
+        this.lastWalletSyncAt = 0;
+        this.isSavingWalletState = false;
 
         // Set container
         this.container = [];
@@ -152,6 +156,8 @@ export class Scene2 extends Phaser.Scene {
                 this.pokemonCenterManager = null;
             }
 
+            this.syncWalletState(true);
+
             if (this.socketTimerEvent) {
                 this.socketTimerEvent.remove(false);
                 this.socketTimerEvent = null;
@@ -180,8 +186,31 @@ export class Scene2 extends Phaser.Scene {
                     y: Math.round(this.player.y),
                     facing: this.player.facing || this.playerTexturePosition || "front"
                 }, 1);
+
+                this.syncWalletState();
             }
         });
+    }
+
+    async syncWalletState(force = false) {
+        if (!this.walletAddress || this.isSavingWalletState) {
+            return;
+        }
+
+        const now = Date.now();
+        if (!force && now - this.lastWalletSyncAt < 2000) {
+            return;
+        }
+
+        this.isSavingWalletState = true;
+        try {
+            await saveWalletGameState(this.walletAddress, getGameState());
+            this.lastWalletSyncAt = now;
+        } catch (error) {
+            console.warn("Unable to sync wallet save state", error);
+        } finally {
+            this.isSavingWalletState = false;
+        }
     }
 
     update(time, delta) {
