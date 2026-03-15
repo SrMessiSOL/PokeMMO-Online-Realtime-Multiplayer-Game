@@ -19,7 +19,6 @@ const MENU_OPTIONS = [
     { id: "pokedex", label: "Pokédex" },
     { id: "pokemon", label: "Pokémon" },
     { id: "bag", label: "Bag" },
-    { id: "save", label: "Save" },
     { id: "option", label: "Option" },
     { id: "exit", label: "Exit" }
 ];
@@ -60,8 +59,9 @@ const COLORS = {
 };
 
 export default class FireRedMenuUI {
-    constructor(scene) {
+    constructor(scene, options = {}) {
         this.scene = scene;
+        this.onExit = typeof options.onExit === "function" ? options.onExit : null;
         this.state = getGameState();
         this.view = "closed";
         this.previousView = "start";
@@ -566,6 +566,9 @@ export default class FireRedMenuUI {
     activateStartOption(option) {
         if (option === "exit") {
             this.closeMenu();
+            if (this.onExit) {
+                this.onExit();
+            }
             return;
         }
         if (option === "pokemon") {
@@ -579,10 +582,6 @@ export default class FireRedMenuUI {
         }
         if (option === "bag") {
             this.openView("bag");
-            return;
-        }
-        if (option === "save") {
-            this.openView("save");
             return;
         }
         if (option === "option") {
