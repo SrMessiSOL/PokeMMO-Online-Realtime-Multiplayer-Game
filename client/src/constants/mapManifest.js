@@ -1,5 +1,21 @@
 const tilemapContext = require.context("../assets", true, /\.json$/);
 
+function resolveMapResource(resource) {
+    if (!resource) {
+        return null;
+    }
+
+    if (typeof resource === "string") {
+        return resource;
+    }
+
+    if (typeof resource === "object" && resource.default) {
+        return resource.default;
+    }
+
+    return resource;
+}
+
 function getMapId(resourcePath) {
     const normalizedPath = resourcePath.replace("./", "");
     if (!normalizedPath.includes("tilemaps/")) {
@@ -16,6 +32,11 @@ export const MAP_MANIFEST = tilemapContext.keys().reduce((manifest, resourcePath
         return manifest;
     }
 
-    manifest[mapId] = tilemapContext(resourcePath);
+    const mapResource = resolveMapResource(tilemapContext(resourcePath));
+    if (!mapResource) {
+        return manifest;
+    }
+
+    manifest[mapId] = mapResource;
     return manifest;
 }, {});
