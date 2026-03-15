@@ -1,18 +1,11 @@
 import Phaser from "phaser";
-import TownJSON from "./assets/tilemaps/town.json";
-import AshveldJSON from "./assets/tilemaps/ashveld.json";
-import CrysthavenJSON from "./assets/tilemaps/crysthaven.json";
-import PokemonCenterAshveldJSON from "./assets/tilemaps/pokemon_center_ashveld.json";
-import PokemonCenterCrysthavenJSON from "./assets/tilemaps/pokemon_center_crysthaven.json";
-import PokemonCenterTownJSON from "./assets/tilemaps/pokemon_center_town.json";
-import Route1JSON from "./assets/tilemaps/route1.json";
-import Route2JSON from "./assets/tilemaps/route2.json";
 import TilesTown from "./assets/tilesets/tuxmon-sample-32px-extruded.png";
 
 import PlayersAtlasJSON from "./assets/atlas/players";
 import PlayersAtlasPNG from "./assets/images/players/players.png";
 import { getPlayerData, getPokemonSpriteEntries, initializeGameState } from "./state/gameState";
 import { DEFAULT_CHARACTER_ID, PLAYER_CHARACTER_OPTIONS } from "./constants/playerCharacters";
+import { MAP_MANIFEST } from "./constants/mapManifest";
 
 export class Scene1 extends Phaser.Scene {
     constructor() {
@@ -20,18 +13,11 @@ export class Scene1 extends Phaser.Scene {
     }
 
     preload() {
-        // Load Town
         this.load.image("TilesTown", TilesTown);
-        this.load.tilemapTiledJSON("town", TownJSON);
 
-        // Load Route1
-        this.load.tilemapTiledJSON("route1", Route1JSON);
-        this.load.tilemapTiledJSON("ashveld", AshveldJSON);
-        this.load.tilemapTiledJSON("route2", Route2JSON);
-        this.load.tilemapTiledJSON("crysthaven", CrysthavenJSON);
-        this.load.tilemapTiledJSON("pokemon_center_town", PokemonCenterTownJSON);
-        this.load.tilemapTiledJSON("pokemon_center_ashveld", PokemonCenterAshveldJSON);
-        this.load.tilemapTiledJSON("pokemon_center_crysthaven", PokemonCenterCrysthavenJSON);
+        Object.entries(MAP_MANIFEST).forEach(([mapName, mapJson]) => {
+            this.load.tilemapTiledJSON(mapName, mapJson);
+        });
 
         // Load atlas
         this.load.atlas("players", PlayersAtlasPNG, PlayersAtlasJSON);
@@ -90,7 +76,7 @@ export class Scene1 extends Phaser.Scene {
             characterId,
             playerName: player.name,
             walletAddress: player.walletAddress || null,
-            disableNpcs: true
+            disableNpcs: false
         });
     }
 

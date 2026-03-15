@@ -40,7 +40,7 @@ function applyProfile(profile) {
     }
 }
 
-function openProfileHub(profile, { resume = false } = {}) {
+function openProfileHub(profile) {
     currentProfile = {
         ...(currentProfile || {}),
         ...(profile || {}),
@@ -59,16 +59,13 @@ function openProfileHub(profile, { resume = false } = {}) {
                 return;
             }
 
-            if (resume) {
-                game.scene.resume("playGame");
-                game.scene.wake("playGame");
-            }
+            game.scene.start("bootGame");
         }
     });
 }
 
 window.__pokemmoOpenProfileHub = (profile) => {
-    openProfileHub(profile, { resume: true });
+    openProfileHub(profile);
 };
 
 new WalletStartMenu((profile) => {

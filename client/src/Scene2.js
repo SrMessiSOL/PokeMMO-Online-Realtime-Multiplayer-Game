@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { onlinePlayers, room } from './SocketServer';
+import { connectToWorld, disconnectFromWorld, onlinePlayers } from './SocketServer';
 
 import OnlinePlayer from "./OnlinePlayer";
 import Player from "./Player";
@@ -55,17 +55,21 @@ export class Scene2 extends Phaser.Scene {
         const tileset = this.map.addTilesetImage("tuxmon-sample-32px-extruded", "TilesTown");
 
         // Parameters: layer name (or index) from Tiled, tileset, x, y
-        this.belowLayer = this.map.createLayer("Below Player", tileset, 0, 0);
-        this.worldLayer = this.map.createLayer("World", tileset, 0, 0);
-        this.grassLayer = this.map.createLayer("Grass", tileset, 0, 0);
-        this.aboveLayer = this.map.createLayer("Above Player", tileset, 0, 0);
+        this.belowLayer = this.map.getLayer("Below Player") ? this.map.createLayer("Below Player", tileset, 0, 0) : null;
+        this.worldLayer = this.map.getLayer("World") ? this.map.createLayer("World", tileset, 0, 0) : null;
+        this.grassLayer = this.map.getLayer("Grass") ? this.map.createLayer("Grass", tileset, 0, 0) : null;
+        this.aboveLayer = this.map.getLayer("Above Player") ? this.map.createLayer("Above Player", tileset, 0, 0) : null;
 
-        this.worldLayer.setCollisionByProperty({collides: true});
+        if (this.worldLayer) {
+            this.worldLayer.setCollisionByProperty({collides: true});
+        }
 
         // By default, everything gets depth sorted on the screen in the order we created things. Here, we
         // want the "Above Player" layer to sit on top of the player, so we explicitly give it a depth.
         // Higher depths will sit on top of lower depth objects.
-        this.aboveLayer.setDepth(10);
+        if (this.aboveLayer) {
+            this.aboveLayer.setDepth(10);
+        }
 
         // Get spawn point from tiled map
         const spawnPoint = this.map.findObject("SpawnPoints", obj => obj.name === this.spawnPointName)
@@ -106,7 +110,7 @@ export class Scene2 extends Phaser.Scene {
         }
         this.wildEncounterManager = new WildEncounterManager(this, this.battleUi);
         this.pokemonCenterManager = new PokemonCenterManager(this);
-        room.then((currentRoom) => {
+        connectToWorld().then((currentRoom) => {
             if (this.isSceneShuttingDown) {
                 return;
             }
@@ -195,8 +199,9 @@ export class Scene2 extends Phaser.Scene {
     }
 
 
-    openProfileHubFromMenu() {
-        this.syncWalletState(true);
+    async openProfileHubFromMenu() {
+        await this.syncWalletState(true);
+        await disconnectFromWorld();
 
         if (typeof window !== "undefined" && typeof window.__pokemmoOpenProfileHub === "function") {
             window.__pokemmoOpenProfileHub({
@@ -205,7 +210,7 @@ export class Scene2 extends Phaser.Scene {
             });
         }
 
-        this.scene.pause();
+        this.scene.stop();
     }
 
     async syncWalletState(force = false) {
@@ -268,7 +273,7 @@ export class Scene2 extends Phaser.Scene {
         if (cursors.left.isDown) {
             if (socketKey) {
                 if (this.player.isMoved()) {
-                    room.then((room) => room.send(
+                    connectToWorld().then((room) => room.send(
                          "PLAYER_MOVED",{
                         position: 'left',
                         x: this.player.x,
@@ -280,7 +285,7 @@ export class Scene2 extends Phaser.Scene {
         } else if (cursors.right.isDown) {
             if (socketKey) {
                 if (this.player.isMoved()) {
-                    room.then((room) => room.send(
+                    connectToWorld().then((room) => room.send(
                          "PLAYER_MOVED",{
                         position: 'right',
                         x: this.player.x,
@@ -295,7 +300,7 @@ export class Scene2 extends Phaser.Scene {
         if (cursors.up.isDown) {
             if (socketKey) {
                 if (this.player.isMoved()) {
-                    room.then((room) => room.send(
+                    connectToWorld().then((room) => room.send(
                         "PLAYER_MOVED",{
                         position: 'back',
                         x: this.player.x,
@@ -307,7 +312,7 @@ export class Scene2 extends Phaser.Scene {
         } else if (cursors.down.isDown) {
             if (socketKey) {
                 if (this.player.isMoved()) {
-                    room.then((room) => room.send(
+                    connectToWorld().then((room) => room.send(
                          "PLAYER_MOVED",{
                         position: 'front',
                         x: this.player.x,
@@ -320,16 +325,16 @@ export class Scene2 extends Phaser.Scene {
 
         // Horizontal movement ended
         if (Phaser.Input.Keyboard.JustUp(cursors.left) === true) {
-            room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED",{ position: 'left'}))
+            connectToWorld().then((room) => room.send( "PLAYER_MOVEMENT_ENDED",{ position: 'left'}))
         } else if (Phaser.Input.Keyboard.JustUp(cursors.right) === true) {
-            room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED",{ position: 'right'}))
+            connectToWorld().then((room) => room.send( "PLAYER_MOVEMENT_ENDED",{ position: 'right'}))
         }
 
         // Vertical movement ended
         if (Phaser.Input.Keyboard.JustUp(cursors.up) === true) {
-            room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'back'}))
+            connectToWorld().then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'back'}))
         } else if (Phaser.Input.Keyboard.JustUp(cursors.down) === true) {
-            room.then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'front'}))
+            connectToWorld().then((room) => room.send( "PLAYER_MOVEMENT_ENDED", {position: 'front'}))
         }
     }
 

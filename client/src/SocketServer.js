@@ -13,12 +13,44 @@ const SOCKET_URL = `${SOCKET_PROTOCOL}://${SOCKET_HOST}:${SOCKET_PORT}`;
 /*================================================
 | Colyseus connection with server
 */
-var client = new Colyseus.Client(SOCKET_URL);
-let room = client.joinOrCreate("poke_world").then(room => {
-    console.log(room.sessionId, "joined", room.name);
-    return room
-}).catch(e => {
-    console.log("JOIN ERROR", e);
-});
+const client = new Colyseus.Client(SOCKET_URL);
+let roomPromise = null;
 
-export {onlinePlayers, room};
+function connectToWorld() {
+    if (roomPromise) {
+        return roomPromise;
+    }
+
+    roomPromise = client.joinOrCreate("poke_world")
+        .then((connectedRoom) => {
+            console.log(connectedRoom.sessionId, "joined", connectedRoom.name);
+            return connectedRoom;
+        })
+        .catch((error) => {
+            roomPromise = null;
+            console.log("JOIN ERROR", error);
+            throw error;
+        });
+
+    return roomPromise;
+}
+
+async function disconnectFromWorld() {
+    if (!roomPromise) {
+        return;
+    }
+
+    try {
+        const activeRoom = await roomPromise;
+        await activeRoom.leave(true);
+    } catch (error) {
+        console.warn("LEAVE ERROR", error);
+    } finally {
+        roomPromise = null;
+        onlinePlayers = {};
+    }
+}
+
+connectToWorld();
+
+export { onlinePlayers, connectToWorld, disconnectFromWorld };
