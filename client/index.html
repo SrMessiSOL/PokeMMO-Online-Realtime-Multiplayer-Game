@@ -119,13 +119,51 @@
         transform-origin: center;
       }
 
-      .character-label {
-        font-size: 8px;
-      }
 
       .character-option.selected {
         background: #2e39ad;
       }
+
+      .profile-hub-menu {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        font-family: "Press Start 2P", monospace;
+      }
+
+      .profile-hub-card {
+        width: min(560px, 92vw);
+        background: #141733;
+        border: 2px solid #6f77ff;
+        color: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .profile-hub-card h2 {
+        margin-top: 0;
+      }
+
+      .profile-hub-card p {
+        font-size: 10px;
+        line-height: 1.6;
+      }
+
+      .profile-hub-card button {
+        font-family: "Press Start 2P", monospace;
+        font-size: 10px;
+        cursor: pointer;
+        background: #6f77ff;
+        color: #fff;
+        border: none;
+        padding: 10px 14px;
+        margin-top: 10px;
+      }
+
 
       canvas {
         display: block;

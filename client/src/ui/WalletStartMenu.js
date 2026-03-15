@@ -33,7 +33,7 @@ export default class WalletStartMenu {
                     <input type="text" id="player-name" maxlength="16" placeholder="Your trainer name" />
                     <label>Character</label>
                     <div class="character-grid" id="character-grid"></div>
-                    <button id="save-character">Save Character</button>
+                    <button id="continue-character">Continue</button>
                 </div>
             </div>
         `;
@@ -44,7 +44,7 @@ export default class WalletStartMenu {
         this.characterFormEl = this.root.querySelector("#character-form");
         this.playerNameEl = this.root.querySelector("#player-name");
         this.characterGridEl = this.root.querySelector("#character-grid");
-        this.saveCharacterButton = this.root.querySelector("#save-character");
+        this.continueButton = this.root.querySelector("#continue-character");
         this.walletActionsEl = this.root.querySelector(".wallet-actions");
 
         this.selectedCharacterId = DEFAULT_CHARACTER_ID;
@@ -53,7 +53,7 @@ export default class WalletStartMenu {
         this.renderWalletButtons();
         this.renderCharacterOptions();
 
-        this.saveCharacterButton.addEventListener("click", () => this.handleSaveCharacter());
+        this.continueButton.addEventListener("click", () => this.handleCreateCharacter());
     }
 
     renderWalletButtons() {
@@ -79,10 +79,7 @@ export default class WalletStartMenu {
                 ? `background-image:url('${PlayersAtlasPNG}');background-position:-${frame.frame.x}px -${frame.frame.y}px;width:${frame.frame.w}px;height:${frame.frame.h}px;`
                 : "";
 
-            option.innerHTML = `
-                <span class="character-thumb" style="${frameStyle}"></span>
-                <span class="character-label">${character.label}</span>
-            `;
+            option.innerHTML = `<span class="character-thumb" style="${frameStyle}"></span>`;
 
             if (character.id === this.selectedCharacterId) {
                 option.classList.add("selected");
@@ -117,13 +114,12 @@ export default class WalletStartMenu {
 
             const { profile } = await getWalletProfile(this.walletAddress);
             if (profile) {
-                this.statusEl.textContent = `Welcome back ${profile.playerName}`;
                 this.finish(profile);
                 return;
             }
 
             this.characterFormEl.classList.remove("hidden");
-            this.statusEl.textContent = "No character found. Create your character to enter the map.";
+            this.statusEl.textContent = "No character found. Create your character to continue.";
         } catch (error) {
             this.statusEl.textContent = error.message || "Wallet connection failed.";
         }
@@ -137,7 +133,7 @@ export default class WalletStartMenu {
         return window[providerKey];
     }
 
-    async handleSaveCharacter() {
+    async handleCreateCharacter() {
         if (!this.walletAddress) {
             this.statusEl.textContent = "Connect wallet first.";
             return;
@@ -157,7 +153,7 @@ export default class WalletStartMenu {
 
             this.finish(profile);
         } catch (error) {
-            this.statusEl.textContent = error.message || "Unable to save character.";
+            this.statusEl.textContent = error.message || "Unable to create character.";
         }
     }
 

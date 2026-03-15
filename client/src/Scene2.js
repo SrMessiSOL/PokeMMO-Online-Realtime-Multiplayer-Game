@@ -87,7 +87,9 @@ export class Scene2 extends Phaser.Scene {
 
         cursors = this.input.keyboard.createCursorKeys();
 
-        this.menuUi = new FireRedMenuUI(this);
+        this.menuUi = new FireRedMenuUI(this, {
+            onExit: () => this.openProfileHubFromMenu()
+        });
         this.dialogueUi = new FireRedDialogueUI(this, {
             onChoice: (npc, choice) => {
                 if (this.npcManager) {
@@ -190,6 +192,20 @@ export class Scene2 extends Phaser.Scene {
                 this.syncWalletState();
             }
         });
+    }
+
+
+    openProfileHubFromMenu() {
+        this.syncWalletState(true);
+
+        if (typeof window !== "undefined" && typeof window.__pokemmoOpenProfileHub === "function") {
+            window.__pokemmoOpenProfileHub({
+                walletAddress: this.walletAddress,
+                gameState: createWalletSavePayload()
+            });
+        }
+
+        this.scene.pause();
     }
 
     async syncWalletState(force = false) {
