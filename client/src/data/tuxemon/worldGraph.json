@@ -1,0 +1,269 @@
+{
+  "generatedFrom": "tilemap-world-objects",
+  "nodeCount": 8,
+  "edgeCount": 14,
+  "nodes": [
+    {
+      "id": "ashveld",
+      "isRuntimeMap": true,
+      "defaultSpawnPoint": "Spawn Point",
+      "spawnPoints": [
+        "from-pokemon-center",
+        "from-route1",
+        "from-route2",
+        "Spawn Point"
+      ],
+      "edges": [
+        {
+          "toMap": "pokemon_center_ashveld",
+          "spawnPointName": "from-exterior",
+          "facing": "back",
+          "triggerName": "pokemon_center_ashveld",
+          "triggerBounds": {
+            "x": 192,
+            "y": 256,
+            "width": 64,
+            "height": 32
+          }
+        },
+        {
+          "toMap": "route1",
+          "spawnPointName": "from-ashveld",
+          "facing": "back",
+          "triggerName": "route1",
+          "triggerBounds": {
+            "x": 544,
+            "y": 0,
+            "width": 192,
+            "height": 32
+          }
+        },
+        {
+          "toMap": "route2",
+          "spawnPointName": "from-ashveld",
+          "facing": "front",
+          "triggerName": "route2",
+          "triggerBounds": {
+            "x": 544,
+            "y": 1120,
+            "width": 192,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "crysthaven",
+      "isRuntimeMap": true,
+      "defaultSpawnPoint": "Spawn Point",
+      "spawnPoints": [
+        "from-pokemon-center",
+        "from-route2",
+        "Spawn Point"
+      ],
+      "edges": [
+        {
+          "toMap": "pokemon_center_crysthaven",
+          "spawnPointName": "from-exterior",
+          "facing": "back",
+          "triggerName": "pokemon_center_crysthaven",
+          "triggerBounds": {
+            "x": 160,
+            "y": 256,
+            "width": 64,
+            "height": 32
+          }
+        },
+        {
+          "toMap": "route2",
+          "spawnPointName": "from-crysthaven",
+          "facing": "back",
+          "triggerName": "route2",
+          "triggerBounds": {
+            "x": 672,
+            "y": 0,
+            "width": 192,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "pokemon_center_ashveld",
+      "isRuntimeMap": true,
+      "defaultSpawnPoint": "Spawn Point",
+      "spawnPoints": [
+        "from-exterior",
+        "Spawn Point"
+      ],
+      "edges": [
+        {
+          "toMap": "ashveld",
+          "spawnPointName": "from-pokemon-center",
+          "facing": "front",
+          "triggerName": "ashveld",
+          "triggerBounds": {
+            "x": 128,
+            "y": 256,
+            "width": 64,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "pokemon_center_crysthaven",
+      "isRuntimeMap": true,
+      "defaultSpawnPoint": "Spawn Point",
+      "spawnPoints": [
+        "from-exterior",
+        "Spawn Point"
+      ],
+      "edges": [
+        {
+          "toMap": "crysthaven",
+          "spawnPointName": "from-pokemon-center",
+          "facing": "front",
+          "triggerName": "crysthaven",
+          "triggerBounds": {
+            "x": 128,
+            "y": 256,
+            "width": 64,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "pokemon_center_town",
+      "isRuntimeMap": true,
+      "defaultSpawnPoint": "Spawn Point",
+      "spawnPoints": [
+        "from-exterior",
+        "Spawn Point"
+      ],
+      "edges": [
+        {
+          "toMap": "town",
+          "spawnPointName": "from-pokemon-center",
+          "facing": "front",
+          "triggerName": "town",
+          "triggerBounds": {
+            "x": 128,
+            "y": 256,
+            "width": 64,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "route1",
+      "isRuntimeMap": true,
+      "defaultSpawnPoint": "Spawn Point",
+      "spawnPoints": [
+        "from-ashveld",
+        "from-town",
+        "Spawn Point"
+      ],
+      "edges": [
+        {
+          "toMap": "ashveld",
+          "spawnPointName": "from-route1",
+          "facing": "front",
+          "triggerName": "ashveld",
+          "triggerBounds": {
+            "x": 544,
+            "y": 864,
+            "width": 192,
+            "height": 32
+          }
+        },
+        {
+          "toMap": "town",
+          "spawnPointName": "from-route1",
+          "facing": "back",
+          "triggerName": "town",
+          "triggerBounds": {
+            "x": 544,
+            "y": 0,
+            "width": 192,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "route2",
+      "isRuntimeMap": true,
+      "defaultSpawnPoint": "Spawn Point",
+      "spawnPoints": [
+        "from-ashveld",
+        "from-crysthaven",
+        "Spawn Point"
+      ],
+      "edges": [
+        {
+          "toMap": "ashveld",
+          "spawnPointName": "from-route2",
+          "facing": "back",
+          "triggerName": "ashveld",
+          "triggerBounds": {
+            "x": 544,
+            "y": 0,
+            "width": 192,
+            "height": 32
+          }
+        },
+        {
+          "toMap": "crysthaven",
+          "spawnPointName": "from-route2",
+          "facing": "front",
+          "triggerName": "crysthaven",
+          "triggerBounds": {
+            "x": 544,
+            "y": 928,
+            "width": 192,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "town",
+      "isRuntimeMap": true,
+      "defaultSpawnPoint": "Spawn Point",
+      "spawnPoints": [
+        "from-pokemon-center",
+        "from-route1",
+        "Spawn Point"
+      ],
+      "edges": [
+        {
+          "toMap": "pokemon_center_town",
+          "spawnPointName": "from-exterior",
+          "facing": "back",
+          "triggerName": "pokemon_center_town",
+          "triggerBounds": {
+            "x": 256,
+            "y": 544,
+            "width": 64,
+            "height": 32
+          }
+        },
+        {
+          "toMap": "route1",
+          "spawnPointName": "from-town",
+          "facing": "front",
+          "triggerName": "route1",
+          "triggerBounds": {
+            "x": 544,
+            "y": 1216,
+            "width": 192,
+            "height": 32
+          }
+        }
+      ]
+    }
+  ]
+}

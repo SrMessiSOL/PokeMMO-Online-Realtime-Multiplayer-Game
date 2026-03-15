@@ -49,6 +49,12 @@ const DEFAULT_POKEMON_CENTER_STATE = {
     healCount: 0
 };
 
+const DEFAULT_MAP_PROGRESS_STATE = {
+    discoveredLocations: [],
+    respawnPoints: {},
+    lastWarp: null
+};
+
 const MOVE_IDS = {
     tackle: 33,
     scratch: 10,
@@ -135,7 +141,8 @@ export const gameState = {
     playTime: 0,
     options: { ...DEFAULT_OPTIONS },
     saveSlot: DEFAULT_SAVE_SLOT,
-    pokemonCenterState: { ...DEFAULT_POKEMON_CENTER_STATE }
+    pokemonCenterState: { ...DEFAULT_POKEMON_CENTER_STATE },
+    mapProgress: { ...DEFAULT_MAP_PROGRESS_STATE }
 };
 
 function canUseStorage() {
@@ -363,6 +370,26 @@ function cloneBag(bag) {
     return result;
 }
 
+function cloneMapProgress(mapProgress) {
+    return {
+        discoveredLocations: Array.isArray(mapProgress?.discoveredLocations)
+            ? [...new Set(mapProgress.discoveredLocations.filter(Boolean))].sort((first, second) => first.localeCompare(second))
+            : [],
+        respawnPoints: {
+            ...((mapProgress && typeof mapProgress.respawnPoints === "object" && mapProgress.respawnPoints) || {})
+        },
+        lastWarp: mapProgress?.lastWarp && typeof mapProgress.lastWarp === "object"
+            ? {
+                fromMapId: mapProgress.lastWarp.fromMapId || null,
+                toMapId: mapProgress.lastWarp.toMapId || null,
+                spawnPointName: mapProgress.lastWarp.spawnPointName || "Spawn Point",
+                facing: mapProgress.lastWarp.facing || "front",
+                timestamp: mapProgress.lastWarp.timestamp || Date.now()
+            }
+            : null
+    };
+}
+
 function cloneGameState(state = gameState) {
     return {
         player: clonePlayer(state.player),
@@ -381,7 +408,8 @@ function cloneGameState(state = gameState) {
         pokemonCenterState: {
             ...DEFAULT_POKEMON_CENTER_STATE,
             ...(state.pokemonCenterState || {})
-        }
+        },
+        mapProgress: cloneMapProgress(state.mapProgress)
     };
 }
 
@@ -607,7 +635,8 @@ function loadPersistedGameState() {
             playTime: 0,
             options: { ...DEFAULT_OPTIONS },
             saveSlot: DEFAULT_SAVE_SLOT,
-            pokemonCenterState: { ...DEFAULT_POKEMON_CENTER_STATE }
+            pokemonCenterState: { ...DEFAULT_POKEMON_CENTER_STATE },
+            mapProgress: { ...DEFAULT_MAP_PROGRESS_STATE }
         };
     }
 
@@ -640,7 +669,8 @@ function loadPersistedGameState() {
         pokemonCenterState: {
             ...DEFAULT_POKEMON_CENTER_STATE,
             ...(persistedState.pokemonCenterState || {})
-        }
+        },
+        mapProgress: cloneMapProgress(persistedState.mapProgress || DEFAULT_MAP_PROGRESS_STATE)
     };
 }
 
@@ -969,6 +999,7 @@ export async function initializeGameState() {
         ...DEFAULT_POKEMON_CENTER_STATE,
         ...(persistedState.pokemonCenterState || {})
     };
+    gameState.mapProgress = cloneMapProgress(persistedState.mapProgress || DEFAULT_MAP_PROGRESS_STATE);
 
     markPartyCaughtInDex();
     persistGameState();
@@ -992,7 +1023,8 @@ export function createWalletSavePayload() {
         playTime: state.playTime,
         options: state.options,
         saveSlot: state.saveSlot,
-        pokemonCenterState: state.pokemonCenterState
+        pokemonCenterState: state.pokemonCenterState,
+        mapProgress: state.mapProgress
     };
 }
 
@@ -1024,7 +1056,8 @@ export function hydrateFromWalletGameState(remoteGameState) {
         pokemonCenterState: {
             ...DEFAULT_POKEMON_CENTER_STATE,
             ...(sourceState.pokemonCenterState || gameState.pokemonCenterState || {})
-        }
+        },
+        mapProgress: cloneMapProgress(sourceState.mapProgress || gameState.mapProgress || DEFAULT_MAP_PROGRESS_STATE)
     };
 
     gameState.player = nextState.player;
@@ -1038,6 +1071,7 @@ export function hydrateFromWalletGameState(remoteGameState) {
     gameState.options = nextState.options;
     gameState.saveSlot = nextState.saveSlot ?? gameState.saveSlot;
     gameState.pokemonCenterState = nextState.pokemonCenterState;
+    gameState.mapProgress = nextState.mapProgress;
 
     markPartyCaughtInDex();
     commitGameState();
@@ -1149,6 +1183,70 @@ export function updatePlayerPosition(position) {
             ...(position || {})
         }
     }));
+}
+
+export function getMapProgress() {
+    return cloneMapProgress(gameState.mapProgress);
+}
+
+export function markMapDiscovered(mapId) {
+    if (!mapId) {
+        return getMapProgress();
+    }
+
+    const discoveredLocations = new Set(gameState.mapProgress?.discoveredLocations || []);
+    discoveredLocations.add(mapId);
+
+    gameState.mapProgress = cloneMapProgress({
+        ...(gameState.mapProgress || DEFAULT_MAP_PROGRESS_STATE),
+        discoveredLocations: Array.from(discoveredLocations)
+    });
+
+    commitGameState({ notifyParty: false });
+    return getMapProgress();
+}
+
+export function setRespawnPoint(mapId, spawnPointName = "Spawn Point") {
+    if (!mapId) {
+        return getMapProgress();
+    }
+
+    gameState.mapProgress = cloneMapProgress({
+        ...(gameState.mapProgress || DEFAULT_MAP_PROGRESS_STATE),
+        respawnPoints: {
+            ...(gameState.mapProgress?.respawnPoints || {}),
+            [mapId]: spawnPointName || "Spawn Point"
+        }
+    });
+
+    commitGameState({ notifyParty: false });
+    return getMapProgress();
+}
+
+export function recordMapWarp({ fromMapId = null, toMapId = null, spawnPointName = "Spawn Point", facing = "front" } = {}) {
+    gameState.mapProgress = cloneMapProgress({
+        ...(gameState.mapProgress || DEFAULT_MAP_PROGRESS_STATE),
+        lastWarp: {
+            fromMapId,
+            toMapId,
+            spawnPointName: spawnPointName || "Spawn Point",
+            facing,
+            timestamp: Date.now()
+        }
+    });
+
+    commitGameState({ notifyParty: false });
+    return getMapProgress();
+}
+
+export function getPreferredSpawnPoint(mapId, fallbackSpawnPoint = "Spawn Point") {
+    const lastWarp = gameState.mapProgress?.lastWarp;
+    if (lastWarp?.toMapId === mapId && lastWarp.spawnPointName) {
+        return lastWarp.spawnPointName;
+    }
+
+    const respawnPoint = gameState.mapProgress?.respawnPoints?.[mapId];
+    return respawnPoint || fallbackSpawnPoint;
 }
 
 export function incrementPlayTime(seconds = 1) {

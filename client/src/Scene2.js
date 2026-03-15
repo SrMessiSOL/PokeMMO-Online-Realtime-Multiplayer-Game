@@ -9,10 +9,18 @@ import NpcManager from "./NpcManager";
 import FireRedBattleUI from "./ui/FireRedBattleUI";
 import PokemonCenterManager from "./PokemonCenterManager";
 import WildEncounterManager from "./WildEncounterManager";
-import { createWalletSavePayload, tickPlaySession } from "./state/gameState";
+import {
+    createWalletSavePayload,
+    getPreferredSpawnPoint,
+    markMapDiscovered,
+    recordMapWarp,
+    setRespawnPoint,
+    tickPlaySession
+} from "./state/gameState";
 import { saveWalletGameState } from "./api/wallets";
 import { MAP_REGISTRY } from "./constants/mapManifest";
 import { TILESET_MANIFEST } from "./constants/tilesetManifest";
+import { hasMapNode, isValidMapTransition, resolveWorldTransition } from "./constants/worldGraph";
 
 let cursors, socketKey;
 
@@ -26,7 +34,7 @@ export class Scene2 extends Phaser.Scene {
     init(data) {
         // Map data
         this.mapName = data.map;
-        this.spawnPointName = data.spawnPointName || "Spawn Point";
+        this.spawnPointName = getPreferredSpawnPoint(data.map, data.spawnPointName || "Spawn Point");
         this.playerPosition = data.playerPosition || null;
         this.isMapTransitioning = false;
         this.isSceneShuttingDown = false;
@@ -46,6 +54,9 @@ export class Scene2 extends Phaser.Scene {
 
     create() {
         this.map = this.make.tilemap({key: this.mapName});
+
+        markMapDiscovered(this.mapName);
+        setRespawnPoint(this.mapName, this.spawnPointName || "Spawn Point");
 
         console.log("this.mapName",this.mapName);
         console.log("this.map",this.map);
@@ -514,10 +525,43 @@ export class Scene2 extends Phaser.Scene {
         delete onlinePlayers[sessionId];
     }
 
+    resolveWorldMapTransition(worldObject) {
+        const transition = resolveWorldTransition(this.mapName, worldObject);
+        if (!transition) {
+            console.warn(`Blocked invalid world transition from ${this.mapName} to`, worldObject?.name);
+            return null;
+        }
+
+        if (!hasMapNode(transition.map)) {
+            console.warn(`Blocked transition to unknown map node ${transition.map}`);
+            return null;
+        }
+
+        return transition;
+    }
+
     transitionToMap(data) {
         if (this.isMapTransitioning) {
             return;
         }
+
+        const targetMapId = data?.map;
+        if (!targetMapId || !hasMapNode(targetMapId)) {
+            console.warn("Blocked transition to invalid target map:", targetMapId);
+            return;
+        }
+
+        if (!isValidMapTransition(this.mapName, targetMapId)) {
+            console.warn(`Blocked transition outside world graph: ${this.mapName} -> ${targetMapId}`);
+            return;
+        }
+
+        recordMapWarp({
+            fromMapId: this.mapName,
+            toMapId: targetMapId,
+            spawnPointName: data?.spawnPointName || "Spawn Point",
+            facing: data?.playerTexturePosition || this.playerTexturePosition || "front"
+        });
 
         this.isMapTransitioning = true;
         const camera = this.cameras.main;

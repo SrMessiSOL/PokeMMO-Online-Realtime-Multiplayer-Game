@@ -164,21 +164,24 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
         console.log('Player is by world entry: ' + world.name);
 
-        const playerTexturePosition = world.properties?.find((property) => property.name === 'playerTexturePosition');
-        const spawnPoint = world.properties?.find((property) => property.name === 'spawnPoint');
-        const nextFacing = playerTexturePosition?.value || this.facing || this.scene.playerTexturePosition || "front";
+        const transition = this.scene.resolveWorldMapTransition(world);
+        if (!transition) {
+            return;
+        }
+
+        const nextFacing = transition.playerTexturePosition || this.facing || this.scene.playerTexturePosition || "front";
 
         this.scene.playerTexturePosition = nextFacing;
 
         this.scene.transitionToMap({
-            map: world.name,
+            map: transition.map,
             playerTexturePosition: nextFacing,
-            spawnPointName: spawnPoint?.value || "Spawn Point"
+            spawnPointName: transition.spawnPointName || "Spawn Point"
         });
 
         connectToWorld().then((room) => room.send(
              "PLAYER_CHANGED_MAP",{
-            map: world.name
+            map: transition.map
         }));
     }
 
